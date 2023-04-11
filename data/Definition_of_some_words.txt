@@ -2,3 +2,4 @@ Nesnesi: radieux
 xar-kanam: face:visage
 ruumandaat: commenter entre soi une rumeur
 bëj-gànnaar: Nord
+Kiris: crucifix
