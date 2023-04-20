@@ -1,0 +1,11 @@
+setup.py
+wolof_translate/__init__.py
+wolof_translate.egg-info/PKG-INFO
+wolof_translate.egg-info/SOURCES.txt
+wolof_translate.egg-info/dependency_links.txt
+wolof_translate.egg-info/top_level.txt
+wolof_translate/pipe/__init__.py
+wolof_translate/pipe/nlp_pipeline.py
+wolof_translate/utils/__init__.py
+wolof_translate/utils/sent_unification.py
+wolof_translate/utils/tokenize_text.py
