@@ -222,6 +222,8 @@ class TextPipeProcessing:
             n_time_freq (Union[int, list], optional): The frequency. Defaults to 1.
             n_words (int, optional): The number of words to display. Defaults to 100.
         """
+        pd.options.display.max_rows = n_words
+        
         n_time_freq = [n_time_freq] if type(n_time_freq) is int else n_time_freq
         
         size = self._frequency[self._frequency['frequency'].isin(n_time_freq)].shape[0]
