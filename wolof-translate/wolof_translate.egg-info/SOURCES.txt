@@ -20,6 +20,8 @@ wolof_translate/tokenizers/tokenizer_v1.json
 wolof_translate/tokenizers/__pycache__/__init__.cpython-310.pyc
 wolof_translate/utils/__init__.py
 wolof_translate/utils/evaluation.py
+wolof_translate/utils/extract_poems.py
+wolof_translate/utils/extract_sentences.py
 wolof_translate/utils/sent_corrections.py
 wolof_translate/utils/sent_transformers.py
 wolof_translate/utils/sent_unification.py
