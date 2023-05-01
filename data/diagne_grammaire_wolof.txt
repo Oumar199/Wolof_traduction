@@ -3002,7 +3002,7 @@ Détermination simple.
 Elle est ainsi définie par opposition à la détermination
 démonstrative. Contrairement à cette dernière, elle n'a pas une
 valeur d'insistance. Le déterminatif simple comporte trois formes
-monématiques représentées par des éléments vocaliques : i, u, a.
+
 
 Ces formes ont comme particularité commune d'indiquer que le
 fait exprimé par l'élément nominal qu'il détermine est connu.
@@ -3526,7 +3526,7 @@ lëf lenn réerul ¹ : rien ne s'est égaré
 
 gayndé genn réerul : aucun lion ne s'est égaré
 
-Selon le contexte, on peut avoir comme sens : aucun, un seul,
+
 nul, rien, etc...
 
 — La syntaxe du monème numéral est variable. En plaçant le
@@ -4794,7 +4794,7 @@ en particulier après une voyelle :
 
 góor gi di dem : góor giy dem
 
-waa ja di raam, di raam : waa jay raam, di raam, etc...
+
 
 B) La forme doon a valeur d'inactuel et de passé défini. Elle peut
 être associée à une forme nominale pour indiquer un état ancien :
@@ -5656,7 +5656,7 @@ LE SYNTAGME PRONOMINAL          131
 
 En fait ces formes de singulier ne  sont généralement pas
 employées comme monèmes pronominaux sinon en association avec
-un fait de détermination et dans le sens de : tout, chaque : béppu nit :
+
 tout homme, tout (d'un) homme. Dans les rares cas, à propos
 desquels on aurait pu solliciter leur usage pour représenter un
 nominal donné, il est courant de préférer une forme unique lépp de
@@ -6944,8 +6944,7 @@ préjudiciable
 di tel-teli doõõ ²÷ taxul sotal dara : s'agiter simplement ne suffit à
 rien résoudre
 
-maa õgii gis leen ma ²÷ du jëfu nit ku yiw : « me voici, regar-
-dez-moi » n'est pas le fait d'un homme serein
+
 
 wóoy ! ²÷ taxul mu yabbi : Aïe ! ne suffit pas pour qu'il lâche
 
@@ -9553,7 +9552,7 @@ araféef wu léer : consonne sonore.
 
 araféef wu tëx : consonne sourde.
 
-arafal : bole ay araf yóo xam ni tabbalnañu aw maas syllabe, syllabation.
+
 
 arafu digg : phonème médian.
 arafu ndorte : phonème initial.

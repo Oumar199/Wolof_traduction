@@ -110,7 +110,7 @@ def add_mark_space(sentences: Union[list, str], marks: list = ['?', '!', '–', 
     
     return sentences
 
-def remove_mark_space(sentences: Union[list, str], marks: list = ["…", "'", "-"]):
+def remove_mark_space(sentences: Union[list, str], marks: list = ["'", "-"]):
     
     if type(sentences) is str: sentences = [sentence]
     
