@@ -9,6 +9,7 @@ wolof_translate/__pycache__/dataset_v1.cpython-310.pyc
 wolof_translate/__pycache__/sent_transformers.cpython-310.pyc
 wolof_translate/data/__init__.py
 wolof_translate/data/dataset_v1.py
+wolof_translate/data/dataset_v2.py
 wolof_translate/data/__pycache__/__init__.cpython-310.pyc
 wolof_translate/data/__pycache__/dataset_v1.cpython-310.pyc
 wolof_translate/models/__init__.py
@@ -18,6 +19,8 @@ wolof_translate/tokenizers/__init__.py
 wolof_translate/tokenizers/adverse_tokenizer.json
 wolof_translate/tokenizers/tokenizer_v1.json
 wolof_translate/tokenizers/__pycache__/__init__.cpython-310.pyc
+wolof_translate/tokenizers/t5_tokenizers/fr_tokenizer_v1.json
+wolof_translate/tokenizers/t5_tokenizers/wf_tokenizer_v1.json
 wolof_translate/utils/__init__.py
 wolof_translate/utils/evaluation.py
 wolof_translate/utils/extract_poems.py
