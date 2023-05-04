@@ -88,7 +88,6 @@ tal,avoir le temps
 fat,ranger
 daaw,année dernière
 fad,abriter
-fad,ranger
 rax,mélanger
 nax,tromper
 far,effacer
@@ -141,13 +140,11 @@ an,enlever des ordures
 Ndar,Saint-Louis
 nar,part
 an,enlever
-an,enlever des ordures
 and,fourneau en argile
 xac,chien
 xañc,écorce
 sañc,bâtir
 sañc,bâtir une ville
-car,branche
 ñcar,branche
 njël,aube
 jël,prendre
@@ -198,14 +195,7 @@ jaww,atmosphère
 taax,bâtiment
 fab,prendre
 fap,prendre
-fat,ranger
-fad,ranger
-faj,soigner
-fac,soigner
 tag,se poser
-tak,se poser
-fab,prendre
-fap,prendre
 fabal,prendre pour quelqu'un
 fatal,ranger pour quelqu'un
 faji,aller soigner
@@ -309,7 +299,6 @@ daa,encre
 muumë,muet
 wér,guérir
 wër,faire le tour
-wéer,adosser
 géer,homme de noble caste
 gisóo,voir ensemble
 baaxal,rendre bon
@@ -324,7 +313,6 @@ kër,maison
 rëbb,chasser
 bañ,refuser
 dóor,frapper
-jëf,acte
 laaf,aile
 mën,pouvoir
 ñaaw,vilain
@@ -338,7 +326,6 @@ ndof,folie
 sas,charge
 taal,allumer
 fày,éteindre
-sàmp,planter
 lamb,tâter
 gént,rêver
 lañc,bouchée
@@ -347,7 +334,6 @@ taõg,chaud
 saõx,il y a un moment
 bopp,tête
 saq,grenier
-jaww,atmosphère
 gajj,scarifier
 dagg,couper
 wall,secours
@@ -393,7 +379,6 @@ Daõõar,nom
 saññi,déboucher
 iñaan,jaloux
 añaan,jaloux
-aaye,interdire
 urus,or
 óbbëli,bailler
 ommeeku,s'essuyer la bouche
@@ -431,7 +416,6 @@ téeré,livre
 duggo,frayer ensemble
 ndugóor,fruit
 dawal,faire courir
-sagar,torchon
 reeaale,rire en même temps
 deaale,mourir en même temps
 reewaale,feindre en riant
@@ -439,7 +423,6 @@ reewaale,rire en même temps de
 sawaale,expliquer en même temps
 jiyaale,semer en même temps
 reeaatle,rire encore avec quelqu'un
-obali,bailler
 leqaliku,s'épanouir
 fatarñi,déboucher
 gent,déserter
@@ -472,16 +455,13 @@ buy,fruit du baobab
 fas,cheval
 pas,petit cheval
 far,être allié
-par,allié
 par,alliance
 wàlaf,habitant du Lof
 jolof,pays du Lof
 jolof,pays wolof
 far naa,je suis allié
-par,alliance
 ajoor,habitant de l'intérieur
 Kajoor,Cayor
-añaan,jaloux
 kañaan,jalousie
 aaréen,arachide
 kaaréen,petite quantité d'arachide
@@ -562,7 +542,6 @@ moyaal,détournement
 moyaal,quemande
 liggéey,travailler
 bokk,détenir en commun
-wày,chanter
 wày,louer
 wàyaan,louer
 wàyaan,quémander
@@ -676,7 +655,6 @@ dindéeku,se détacher
 dindéeku,lâcher
 dindiku,se détacher
 waññiku,se retourner
-nit,homme
 nit,être humain
 as nit,un bout d'homme
 war,mouton
@@ -694,8 +672,6 @@ joor,arrière-pays
 kaw,haut
 Lof,région du Sénégal
 waa Lof,habitant du Lof
-wàlaf,habitant du Lof
-Ndar,Saint-Louis
 waa Ndar,Saint-Louisien
 waandar,Saint-Louisien
 Raw,village sénégalais
@@ -739,33 +715,22 @@ and,vase en argile
 kandar,vase qui sert à mesurer
 om,maigre
 komre,maigreur
-samp,planter
 cemp,variété d'herbe aromatique
 cempit,portion extraite
-def,faire
-jëf,acte
 jëfkat,homme d'action
-boot,porter sur le dos
 bootaay,manière de porter sur le dos
 mbootaay,association
-dog,couper
 dogal,pourboire
 ndogal,destin
 jam,piquer
 jam,emporter un enjeu
-jamaale,concurrent
 njamaale,concurrence
 dog,arrêter
 aji dogal,juge
 aji dogal,qui peut décider
-def,faire
-defar,arranger
 aji-defar,esprit constructif
-def,faire
-defar,arranger
 defarkat,agent
 defarkat,constructeur
-sopp,estimer
 soppal,estimer à cause de quelqu'un
 soppalante,s'épauler dans l'estime
 soppi,changer
@@ -773,28 +738,20 @@ coppeeku,changement
 coppalin,manière de changer
 coppeekuwaay,manière de changer
 wax,dire
-weddi,nier
 weddikat,qui nie
-neex,agréable
-naqadi,désagréable
 naqadil,rendre
-dog,couper
 dogalante,se faire de petits cadeaux
 ndogalante,concession mutuelle
-jiitu,précéder
 jiital,mettre en tête
 jiitëlante,se mettre en rang
 jiitalante,série
 jiitalante,succession
-wax,parler
-waxaale,marchander
 waxaalelu,faire marchander
 waxalelukat,qui fait marchander
 jéem,essayer
 jëmentu,s'exercer
 jëmentalukaay,terrain d'essai
 jiitu,être en tête
-jiital,mettre en tête
 wuutu,se substituer
 wuutal,substituer
 xéewal,bonne fortune
@@ -817,7 +774,6 @@ biir,ventre
 jaam,esclave
 buur,roi
 jaambur,homme libre
-wër,faire le tour
 sëg,cimetière
 wërsëg,chance
 jambuur,homme libre
@@ -837,26 +793,20 @@ moom-sa-réew,rentrer en possession de son pays
 na jaay,qu'il vende
 na jaay,oncle
 jarabibaat,femme qui épouse son oncle
-jarabibaat,femme qui épouse son oncle
 bax,bon
 baxbax-lu,faire semblant d'être gentil
-góor,mâle
 góorgóor-lu,se conduire en homme
-wër,faire le tour
 wër-wër,va et vient
 wër wër lu,aller à droite et à gauche
-xam,savoir
 xam-xam,science
 xam xam lu,jouer au savant
 xar,fendre
-xar-xar,fente
 xar xar le,simuler l'agonie
 daõ-daõ,trépidation
 daõ daõ,trépigner
 daõ daõ lu,trépigner
 raõ-raõ,fracas
 raõ raõ lu,faire du vacarme
-jaambur,homme libre
 jaambur-jaambur,habitant du Diambour
 jaambur jaamburlu,jouer au sage
 xar xar,fente
@@ -883,7 +833,6 @@ Nit la.,C'est un homme.
 Nit kii ci sama wet.,Cet homme près de moi.
 Nit kookuu ci sa wet.,Cet homme là près de toi.
 Gis õga nit kale ?,Tu vois cet homme là-bas ?
-Gis õga nit kookale ?,"Tu sais, cet homme ?"
 Gis õga nit kookale ?,"Tu sais, cet homme ?"
 Gis õga nit kee ?,Tu vois cet homme là ?
 Gis õga nit kookee ?,"Tu sais, cet homme là ?"
@@ -984,7 +933,6 @@ Gisoon naa ñooñale nit ñan.,J'ai vu ces gens.
 Gisoon naa xar yi yépp.,J'ai vu tous ces moutons-ci.
 Gisoon naa xar yi yépp.,J'ai déjà vu tous les moutons.
 Gisoon naa xar yi yépp.,J'ai déjà vu tous ces moutons-ci.
-Gisoon naa xar yi yépp.,J'ai vu tous ces moutons-ci.
 Nit kenn réerul.,Aucun homme ne s'est égaré.
 Xar menn réerul.,Aucun mouton ne s'est égaré.
 Fas wenn réerul.,Aucun cheval ne s'est égaré.
@@ -1078,7 +1026,6 @@ Gis õga xale bii ?,Tu vois ce garçon-là ?
 Gis õga xale bii woon ?,"Tu vois, ce garçon-là ?"
 Gis õga xale bii woon ?,Tu vois ce garçon-là ?
 "Xammee õga sa far, woowee woon ?",Tu reconnais ton amour d'autrefois ?
-Nit la.,C'est un homme.
 Jigéen lanu.,C'est des femmes.
 Nit lawoon !,Ce fut un homme !
 Nit lawoon !,"Ce fut un homme, un vrai !"
@@ -1221,7 +1168,6 @@ Bu ñu dem,Qu'il ne parte pas
 Góor gi bëgg na,L'homme veut
 Yéen dem õgeen,"Vous, vous avez été"
 Yéen bëgg õgeen,"Vous, vous voulez"
-Góor gi demul,L'homme n'a pas été
 Góor gi demul,L'homme ne part pas
 Góor gi bëggul,L'homme ne veut pas
 Góor gi bëggul,L'homme n'a pas voulu
@@ -1337,7 +1283,6 @@ Duma dem,Je n'irai pas
 Góor gi du ñibbi.,L'homme ne rentrera pas chez lui.
 Góor gi du tëggu wurus.,L'homme n'est pas un orfèvre.
 Doo ñëw ?,Tu ne viendras pas ?
-Doo ñëw ?,Tu ne viendras pas ?
 Doo nitu jamm !,Tu n'es pas homme de paix !
 Doo nitu jamm !,Tu n'es pas un homme de paix !
 Duõgeen lekk,Vous ne mangez pas
@@ -1371,7 +1316,6 @@ Dama dem,C'est que j'ai été
 Dama dem,C'est que j'ai effectivement été
 Dem naa,J'ai été
 Maay dem,C'est moi qui pars
-Maa di dem,C'est moi qui pars
 Damay dem,Moi je partirai
 Dama di dem,Moi je partirai
 Dinaa dem,Je partirai
@@ -1446,7 +1390,6 @@ na mu,qu'il
 na,qu'il
 ki,celui
 ku,lequel
-ku,quiconque
 mi,celui
 ma,celui
 mu,lequel
@@ -1467,7 +1410,6 @@ googii,celui
 googa,celui
 googu,lequel
 googu,quiconque
-kii,celui-ci
 kii,lequel
 kuu,celui-ci tout près
 mee,celui-là
@@ -1479,7 +1421,6 @@ mii,celui-là
 muu,celle-ci
 mile,celui-là
 mile,lequel
-mule,celle-ci
 mule,celle-ci
 kookii,celui-ci
 kookii,celui-ci près de toi
@@ -1806,7 +1747,6 @@ ni,que
 ndegam,si
 kon nag,dans ce cas
 kon nag,alors
-ci,parmi
 ci,dans
 ak,avec
 ak,en compagnie de
@@ -1837,7 +1777,6 @@ ndeke,mais
 ndeke,cependant
 ndeke,toutefois
 waaye,mais
-waaye,cependant
 waaye,toutefois
 bu,que ne pas
 na,que
@@ -1857,13 +1796,10 @@ bon nag,dans ce cas
 bon nag,alors
 "Bon nag, maa õgi dem","Dans ce cas, je pars"
 "Bonag, dey mu ñibbi","Dans ce cas, qu'il rentre"
-kon nag,dans ce cas
 kon nag,s'il en est ainsi
 "Kon nag, dàwul !","Dans ce cas, fuis !"
 kon nag dey,dans ce cas alors
 "Kon nag dey, buleen dem","Alors, ne partez pas"
-waaye,mais
-waaye,cependant
 waaye,malheureusement
 "Waaye, kenn demul","Malheureusement, nul n'a été"
 waaye sax,par contre
@@ -1900,7 +1836,6 @@ Te demuloo fenn ?,Et tu n'as été nulle part ?
 "Te sax, ma õgii dem !","D'ailleurs, je m'en vais !"
 te kat,et surtout
 "Te kat, na õga ma nég !","Et surtout, attends-moi !"
-foofu,là
 foofu,alors
 foofu,en cet endroit
 foofu,en ce moment
@@ -1920,17 +1855,13 @@ déedéed !,non !
 xanaa !,bien sur !
 xëyna !,peut-être !
 Loo gis ci biti,Qu'as-tu vu dehors ?
-nit,homme
 nit,un homme
 Kooy waxal ?,À qui parles-tu ?
-buur,roi
 buur,au roi
-Ndar,Saint-Louis
 Ki kan la ?,Qui est-ce celui-ci ?
 jaambur,un quidam
 jaambur,un certain individu
 Loo bëgg def ?,Que veux-tu faire ?
-dem,partir
 Looy ñaan ?,Tu pries pour quoi ?
 rafet,beauté
 rafet,pour la beauté
@@ -1971,11 +1902,9 @@ rafet,de n'être pas belle
 rafet,d'être pas belle
 Doo dem ?,Tu ne pars pas ?
 Dem naa,Je pars
-Nit la.,C'est un homme.
 Nit la ci lu wér !,C'est vraiment un homme !
 Nit la ku baax !,C'est un homme gentil !
 Loo gis ?,Qui as-tu vu ?
-nit,un homme
 Nit ki ñëw,L'homme qui est venu
 Ko gis ?,Qui as-tu vu ?
 kooku,celui-là
@@ -1988,7 +1917,6 @@ Mi õgi foofule ci biir.,Il est là à l'intérieur.
 Dem na ci biir.,Il est allé à l'intérieur.
 Bëgg na õga dem,Il veut que tu viennes
 Õgor dem ?,Ngor peut-il partir ?
-Ku dem ?,Qui est parti ?
 Góor gi dem Rao ?,L'homme peut-il aller à Rao ?
 Ku bëgg bii téere ?,Qui veut ce livre ?
 Ku la may bii téere ?,Qui t'a donné ce livre ?
@@ -2007,3 +1935,1034 @@ Berëb bi du foofu.,L'endroit ce n'est pas par-là.
 Ndaje mi ci biir la.,La réunion c'est à l'intérieur.
 Ndaje mi du gannaaw ëlëk ?,La réunion ce n'est pas après-demain ?
 "Yaakaar, nax sa bopp doõõ la.","Espérer, c'est se nourrir d'illusion."
+Góor gi dem,Le Monsieur est parti
+Mu dem,Il est parti
+Mu dem,Mais il est parti
+Ma ngii dem,Voilà qu'il est parti
+Góor ñi deekoon nanu.,Les gens en eussent été morts.
+Maa demulkoon,C'est moi qui n'aurais pas été
+Góor demul,Homme n'a été
+Góor demul,Un homme n'a été
+Góor demul,Nul n'a été
+Xar yu ñuul dinañu feeñ.,Les moutons noirs seront retrouvés.
+Góor gi moo demulwoon,C'est l'homme qui n'a pas été
+"Dem, rafetoon na !","Avoir été, eût été bon !"
+Sarxe baaxkoon na !,L'aumône eut été une bonne chose !
+Man dem në,Moi j'ai été
+Man mii demuma,Moi-même je n'ai pas été
+Kooku du nit !,Celui-là n'est pas sain d'esprit !
+Maa demoon,C'est moi qui ai été
+Më õgile demkoon,Voilà que j'aurais été
+Kenn demul,Nul n'a été
+Yéen dem õgeen,Vous avez été
+Ku dem ?,Qui a été ?
+Ñooñii dunu demi,Ceux-là n'iront pas
+Wóoy ! taxul mu yabbi,Aïe ! ne suffit pas pour qu'il lâche
+Dem naa doyunu,« j'ai été » ne nous suffit pas
+Demkoon doon na ma fi war.,J'ai failli être dans l'obligation d'y aller.
+Bëgguma du yar !,Je ne veux pas est une forme impolie !
+Góor dem na,Un homme est parti
+Góor ñi dem nañu,Les hommes sont partis
+Seen gaynde gi xar la.,Leur lion c'est un mouton.
+Seni gaynde yi ay xar lañu.,Leurs lions c'est des moutons.
+Nit ag gaynde duñu dëkkóo.,Homme et lion ne cohabitent.
+Nit ag gaynde duñu dëkkóo.,Homme et lion ne cohabitent pas.
+Nit ag gaynde duñu dëkkóo.,Homme et lion ne peuvent cohabiter ensemble.
+Liggéeykat yi man ag yaw la.,Les travailleurs c'est toi et moi.
+Liggéeykat yi ñun la.,Les travailleurs c'est nous.
+Liggéeykat ya xale ya la woon.,Les travailleurs c'était les enfants.
+Dama bëgg dem,C'est que je veux partir
+Dafa bëgg xaalis.,C'est qu'il veut de l'argent.
+Dafa bañ rewande.,C'est qu'il déteste l'impolitesse.
+Bëgg na gëléem.,Il aime le chameau.
+Gis na ndaw.,Il a vu un messager.
+Góor gi gisul xale boobale woon.,L'homme n'a pas vu cet enfant-là.
+Négël xale bu rafet bi.,Attends la belle jeune fille.
+Góor gi bëgg na di dem,L'homme veut partir de temps à autre
+Sërin bi bëgg na mayewoon alalam ji ba mënkoon yalwaan tay.,Le maître souhaiterait avoir donné toute sa fortune pour pouvoir demander aujourd'hui l'aumône.
+Góor gi ragal na juubuwoon.,L'homme craint d'avoir interrompu son jeûne par inadvertance.
+Ndaw si réccu na amoon.,La femme regrette d'avoir eu une fortune.
+Ragal naa joxoon ka doom bi,Je crains de lui avoir donné la clé
+Góor gi bëgg na kii.,L'homme aime celui-là.
+Góor gi gis na kookale.,L'homme a vu cet autre-là.
+Yaw xamuloo kenn,Toi tu connais personne
+Seetal beneen bi.,Cherche l'autre.
+Góor gi nee mi õgi fi.,L'homme affirme qu'il est là.
+Góor gi gisu la,L'homme ne t'a pas vu
+Góor gi gisu la woon,L'homme ne t'avait pas vu
+Góor gi gisóon na la,L'homme t'avait vu
+Góor gi giskoon na la,L'homme t'aurait vu
+Góor gi moo la gisul,C'est l'homme qui ne t'a pas vu
+Góor gi di la gis,L'homme te voit
+Góor gi daan na la gis,L'homme te voyait
+Góor gi daawu la gis,L'homme ne te voyait pas
+Góor gi giskoon na la,L'homme t'eût vu
+Góor gi nee na ma : ci biti !,L'homme m'a dit : dehors !
+Waaji nee.,Mi õgi ci biti.
+Nil : wóoy !,Dis : « woy » !
+Nil : wóoy !,Crie !
+Góor gi ni : dawleen !,L'homme de dire : fuyez !
+Jox na nit ki dara.,Il a donné à la personne quelque chose.
+May na waa ji xaalis.,Il a offert à l'homme de l'argent.
+Deõk na jigéen ji walis.,Il a confié à la femme une valise.
+Wax na Musa dara.,Il a dit à Moussa quelque chose.
+Góor gi may na Bacc.,L'homme a fait un cadeau à Bathe.
+Joxal téere bi doomu nit ku yaru kooku !,Donnes le livre à ce fils bien élevé !
+Deõkël lëf li kenn ki !,Confie la chose à l'un !
+Deõkël lëf li kenn ki !,Confie la chose à l'un d'eux !
+Deõkël lëf li kenn ki !,Confie la chose à l'un d'entre eux !
+Jox na la dagit wi.,Il t'a donné le morceau.
+Abalu la xalima gi,Il ne t'a pas prêté la plume
+Wutëli leen gaal !,Va leur chercher une barque !
+Joxoon na la juuti bi,Il t'avait remis la taxe
+Joxu la woon juuti bi,Il ne t'avait pas remis la taxe
+Duma ka ka jox.,Je ne le lui donnerai pas.
+Wattaliwuma la ka woon.,Je n'avais pas été te le cueillir.
+Gis õga lan ?,Tu as vu quoi ?
+Aw gaynde ci biir néeg bi !,Un lion dans la chambre !
+Wax na ba mi õgi.,Il a tant parlé que le voilà.
+Laajal ndax mi õgi fi !,Demande s'il est là !
+Sindax bi ci foofuu !,Un lézard par là !
+Kañ õga ka gis ?,Quand l'as-tu vu ?
+Tay ci õgoon.,Aujourd'hui dans la soirée.
+Bëgg õga lan ?,Tu veux quoi ?
+tuuti xaalis ci yaw,un peu d'argent de toi
+Kañ ñgay dem ?,Quand pars-tu ?
+"Tay, ci subë.","Aujourd'hui, le matin."
+Tay ci subë.,"Aujourd'hui, le matin."
+Àna õga ?,Où es-tu ?
+Maa õgi ci biti.,Me voilà à l'extérieur.
+Maa õgi ci bir kär gi.,Je suis dans la maison.
+Kooy set ?,Qui cherches-tu ?
+Kenn ki ci kaw !,Celui qui est en haut !
+Nit la ci lan ?,C'est un homme pour quelles raisons ?
+Mag la ndax iy atam.,C'est un homme âgé de par ses années.
+Dóor na ka ba mi õgi.,Il l'a battu à telle enseigne qu'il est là.
+Dóor na ka ba mi õgi.,Il l'a battu à tel point qu'il est là.
+Kookule la ci biir.,C'est celui-là à l'intérieur.
+Kookule la ci biti.,C'est celui-là qui est dehors.
+Loo bëgg ?,Que veux-tu ?
+Demoon ba Ndar.,Avoir pu aller jusqu'à Saint-Louis.
+Dem naa ba Ndar.,J'ai été jusqu'à Saint-Louis.
+"Woo naa ka, ba mi õgi","Je l'ai appelé, aussi est-il là"
+ndax,à cause de
+ndax,grâce à
+Dikk na ndax yaw.,Il est venu à cause de toi.
+Waxul ndax góor gi.,Il n'a rien dit à cause de l'homme.
+Ñaaw na ndax keneen ki.,Ce n'est pas gentil pour l'autre.
+Rusël ndax jigeen ñi !,Aie de la pudeur pour ces femmes !
+na,comme tel
+na,aussi
+Dafa reew na xaleel.,Il est mal élevé comme un gosse.
+Solul na góor !,Habille-toi en garçon !
+Wayafuloo na sa nday ji.,Tu n'es pas aussi modeste que ta mère.
+Defal naka sa moroom yi !,Fais comme tes pairs !
+Daõga tayal naka keneen kee.,Tu es paresseuse comme cet autre-là.
+Daõgeen bëggé naka ñoom !,Vous êtes aussi avares qu'eux !
+õgir,à cause de
+õgir,grâce à
+May na ka õgir yaw.,Il lui a donné à cause de toi.
+Bayyi ma õgir yalla !,"Laisse-moi de grâce, au nom de Dieu !"
+Dimëlé leen õgir ñooñe !,Aide-les à cause de ceux-là !
+gannaaw,sauf
+gannaaw,excepté
+Gis naa xale yi gannaaw yaw.,J'ai vu les enfants sauf toi.
+ci,au sujet
+Góor gi dem na ci biir.,L'homme est allé à l'intérieur.
+Waxal ci ñii !,Parle au sujet de ceux-ci !
+Bul bàkk ci ñooñu !,Ne fais pas partie de ceux-là !
+Demal ci moom !,Va jusqu'à lui !
+cu,de
+Dogul cu seen biir.,Il ne s'est pas mêlé à eux.
+Waxul cu li dara.,Il ne dit rien de cela.
+ca,à
+ca,parmi
+Demuloowoon ca biir,Tu n'avais pas été à l'intérieur
+Waxuloowoon ca loola dara !,Tu n'avais rien dit de cela !
+Dem na ca subë.,Il est parti ce matin.
+ba,à
+ba,jusqu'à
+Negal ba ëlëk !,Attends jusqu'à demain !
+Demal ba subë !,Va jusqu'à demain !
+Yéegël ba fii !,Monte jusqu'ici !
+Dem naa ba ci moom.,J'ai été jusqu'à lui.
+Liggéey naa ba ci õgoon.,J'ai travaillé jusqu'au soir.
+ak,par
+Àndal ak yar !,Sois poli !
+Àndal ak yar !,Sois avec politesse !
+Waxal ak ñooñule !,Parle avec ceux-là !
+Jubënti ko ak bant !,Redresse-le avec un baton !
+Yobul na fi góor gi xar.,Il y amena un mouton pour l'homme.
+Waa ji gor la fi !,L'homme y est magnifique !
+Xale ya mbër lañu fa woon !,Les gosses y furent formidables !
+Mi õgi fi.,Il y est.
+Ma õgoogule foofu.,Il est là.
+Ma õgoogule foofu.,"Le voilà, là."
+Buur bi buur la fii.,Le roi est souverain ici.
+Bumi bi du fi buur.,Le prétendant n'y est pas roi.
+"Góor gi dem fee, ana mu ?","L'homme qui a été là-bas, où est-il ?"
+Là bëggóon ?,Que souhaitais-tu ?
+Demoon fôfu,Y avoir été
+Tukki ëlëk,Voyager demain
+Demna saõx.,Il est parti il y a un instant.
+Góor gi rekk a ñëwul.,L'homme n'est pas venu.
+Góor gi rekk a ñëwul.,Seul l'homme n'est pas venu.
+Góor dëgg du fen !,Un homme de bien ne ment pas !
+Nit doõõ tiitëlu ko.,Un homme tout simplement ne saurait l'effrayer.
+Tay danaa dem !,J'irai aujourd'hui !
+Waxal ag Samba rekk !,Parle avec Samba seulement !
+Gisal Musaa doõõ !,Vois Moussa simplement !
+Defaral ci biir rekk !,Mets de l'ordre à l'intérieur seulement !
+Musaa rekk !,Moussa seulement !
+Ci biir doõõ !,À l'intérieur tout simplement !
+Nit rekk õga !,Tu es un mortel tout simplement !
+Góor doõõ õgeen !,Vous êtes des hommes tout simplement !
+Kooku rekk ñëwul.,Celui-là n'est pas venu seul.
+Loolu doõõ doyul,Cela seulement ne suffit pas
+Mi õgi noonu rekk,Le voilà tout simplement
+Mi õgi noonu rekk.,"Le voilà, là, tout simplement."
+Setal keneen ki rekk !,Cherche l'autre tout simplement !
+Waxtaanal ag ñooñu doõõ !,Cause tout simplement avec ceux-là !
+Joxeel foofu doõõ ñari yoon !,"Rien que là, donne deux fois !"
+Joxeel foofu doõõ ñari yoon !,Donne deux fois rien que là !
+Yaa õgoogu rekk !,Te voilà tout simplement !
+Yaa õgoogu rekk !,"Te voilà, quoi !"
+Loolu laa bëgg !,C'est là ce que je veux !
+Loolu doõõ !,Cela simplement !
+Kooku rekk la !,C'est celui-là tout simplement !
+Kooku doõõ la !,C'est là seulement !
+Demal rekk !,Vas-y seulement !
+Demal dëgg !,Vas-y vraiment !
+Lëf ki weex na tàll.,La chose est d'un blanc éclatant.
+Lëf ki ñuul na kukk.,La chose est d'un noir obscur.
+Lëf ki leer na nàññ.,La chose est d'une clarté lumineuse.
+Góor gi Musaa dem na.,Monsieur Moussa est parti.
+Gis naa góor gi Musaa.,J'ai vu Monsieur Moussa.
+"Góor gi, moom demul !","L'homme, lui, ne s'en alla pas !"
+"Jigéen ji, moom waxatul !","La vieille, elle, ne parla plus !"
+Góor gi dem,L'homme qui est parti
+Góor gi dem,L'homme qui s'en alla
+Wooyil Musaa moom mi di dem,Rappelle Moussa qui s'en va
+Góor gi mi õgi !,Voila l'homme !
+"Moom, Musaa, dem na","Lui, Moussa, est parti"
+"Gis na ka, moom, Musâ !","Il l'a vu, lui, Moussa !"
+Demal ça moom góor gi !,Va voir l'homme lui-même !
+"Kookule, moom, du naõgu !","Celui-là, lui, il refusera !"
+Kii moom dafa naqadi deret !,Celui-là a mauvais caractère !
+"Yaw, yaa õgi !","Toi, tu es là !"
+Góor gi ak xale bi génn nañu.,L'homme et l'enfant sont partis.
+Waa ji ag gëléemam gi dañu niróo !,L'individu et son chameau se ressemblent !
+Man ak yaw ñooy ànd !,Toi et moi irons ensemble !
+"Kooka ak kile, bokkuñu !",Celui-là et celui-ci n'ont rien de commun !
+"Kooka ak kile, bokkuñu !",Celui-là et celui-ci ne se ressemble pas !
+"Kooka ak kile, bokkuñu !",Celui-là et celui-ci ne se ressemble en rien !
+Yaw walla moom am na ci ku dem,"Toi ou lui, il en est un qui est parti"
+Góor u Nafi ak Soxna !,Frère de Nafi et Sokkna !
+Gis na góor gi ag doomam.,Il a vu l'homme et son enfant.
+Bëggulóo xaalis walla alal.,"Tu ne veux ni argent, ni fortune."
+Duggël ci biir mbaa ci fii !,Pénètre à l'intérieur ou ici !
+Dana tukki tay mbaa ëlëk.,Il voyagera aujourd'hui ou demain.
+"Jënd na xar, bëy, ganaar...","Il a acheté moutons, chèvres, poulets..."
+Ibraayima,Ibrahima
+Dem,Partir
+Ana õga ?,Où es-tu ?
+Maa õgii... !,Me voici... !
+Kooy waxal ?,A qui parles-tu ?
+Musaa !,A Moussa !
+Xalel õga !,Tu es jeune !
+Demõga ?,Tu pars ?
+Yaw la ?,C'est toi ?
+Góor googule mi õgii !,Cet homme le voilà !
+Koo gis?,Qui vois-tu ?
+Nit kookule woon,Cet homme dont il était question
+Ci biir fiy leer,Là où il y a de la lumière
+Ci biir kër googule,À l'intérieur de cette maison
+Ku def lii,Qui a fait ceci ?
+Góor gi !,Le Monsieur !
+Nit la woon ci dagg !,C'était un homme en vérité !
+Õga dem la ñooñu bëgg.,"Que tu partes, c'est ce que ceux-là veulent."
+Yaw mile mi fii !,À toi qui es-là !
+Ci fii,Par ici
+Ci keneen ki ñëw.,Chez l'autre qui est arrivé.
+Yéena õgoogule foofu ci biir !,Vous voilà là à l'intérieur !
+Mi õgi foofule !,Il est par-là !
+Yaw mile la !,C'est toi-même !
+Yéen ñile la !,C'est vous-mêmes !
+Góor gi dem ci biir kër gi ?,L'homme peut-il aller dans la maison ?
+Demumawoon fenn tày ci suba.,Je n'avais été nulle part ce matin.
+Aminta ñëw ?,Aminata peut-elle venir ?
+Su bëggée kañ !,"Si elle veut, bien sûr !"
+Mi õgii dem na,"Le voilà, il est parti"
+Na dem ca Laamin Ngom !,Qu'il aille chez Lamine NGom !
+Waaye man sax dama dul ñëw !,"Mais, moi, je n'ai pas été !"
+Waaye man sax dama dul ñëw !,"Mais, même moi, je n'ai pas été !"
+Waaye man sax dama dul ñëw !,"Mais, même moi, je ne viendrai pas !"
+Te bu fi kenn jogé !,Et que nul ne bouge !
+Te nag õgeen dem ñibbi !,Surtout rentrez chez vous !
+Ba õga ñëw rekk !,Que tu approches !
+Te bul ñëw jaõgu ba de !,Et ne viens surtout pas à l'école !
+Ba yaa õgii di dem !,"Ainsi, tu vas t'en aller !"
+Góor gi waxoon na,L'homme avait parlé
+Te õga dem kat !,Surtout pars !
+Góor gi dem,L'homme a été
+Góor gi waxkoon na,L'homme eût parlé
+Samba  mi ñëw ?,Samba  qui est venu ?
+Góor gi ñëw ?,L'homme qui est venu ?
+Góor gi xale bi woo,L'homme que l'enfant a appelé
+Ci bir : foofu di leer,À l'intérieur : où il fait clair
+Ana waa ji muy wax ?,Où est celui dont il parle ?
+Koo woowul ?,Qui n'as-tu pas appelé ?
+Góor gi mu àndi,L'homme qu'il a amené
+Googu góor mu àndal !,Cet homme qui l'accompagne !
+Kookule õgay waxal !,Celui-là avec qui tu parles !
+"Keneen, ki ñëw !","L'autre, celui qui est arrivé !"
+Ci foofu õga jëm !,Là où tu vas !
+Ci foofu ba õgeen dellusi !,Là-bas jusqu'à ce que vous reveniez !
+Keneen la ku yeksi ?,C'est un autre qui est venu ?
+Waaw,Oui
+Yooyu la góor gi bëgg,C'est ceux-là que l'homme désire
+Yaw la ndaw si sopp,C'est toi qui aimes la jeune femme
+Bëgg naa góor gi ñëw,Je veux que l'homme vienne
+Xale bi ne õgeen dugg !,L'enfant dit d'entrer !
+Kooy seet ?,Qui cherches-tu ?
+Góor gi waa ji wax,L'homme dont parle cet individu
+Ci kër gi waa ji wax,Dans la maison dont parle le Monsieur
+Góor gi kenn xamu ko !,Cet homme nul ne le connaît !
+"Ci biir foofu, mu bënn.","Là, où il a fait un trou."
+Ci ki mu wax.,Chez celui qu'il a indiqué.
+Baax na ?,C'est bien ?
+"Ba fi, mu tollu","Jusqu'ici, c'est bon"
+Looy def ?,Que fais-tu ?
+Li waa ji wax,Ce que cet homme a dit
+Ci foofu õga taxaw,Là où tu es
+Góor gi niwul mi õgi fi !,L'homme ne dit pas qu'il est là !
+Góor gii la xale yi wax.,C'est de l'homme que parlent les enfants.
+Samba õga woo ?,C'est Samba que tu appelles ?
+"Soo demée, mu ñëw.","Si tu pars, il vient."
+Ci biir õga wax ?,C'est à l'intérieur que tu dis ?
+Ci biir la ñu jëm ?,Nous allons à l'intérieur ?
+Ci biir la góor gi dugg.,C'est à l'intérieur qu'est entré l'homme.
+Ci biir õgeen jëm ?,C'est à l'intérieur que vous allez ?
+Ana góor gi mu wax ?,Où est l'homme dont il parle ?
+Kooku la xale yiy wax ?,C'est de celui-là que parlent les enfants ?
+Feneen fi la góor gi dëkk ?,C'est de l'autre côté qu'habite l'homme ?
+Man la góor gi woo ?,C'est moi que l'homme appelle ?
+Keneen ki la ñu xam.,C'est l'autre que nous connaissons.
+Man õga woo ?,C'est moi que tu appelles ?
+Yaw la bëgg.,C'est toi qu'elle veut.
+Defe naa mi õgiy ñëw !,Je crois qu'il vient !
+Lan la ?,Qu'est-ce qu'il y a ?
+Bëgg na góor gi dellusi,Il veut que l'homme revienne
+Wax naa ko mu ñibbi.,Je lui ai dit de rentrer.
+Góor gi nee ñépp dem !,L'homme demande à tous de partir !
+"Soo demee, mu ñëw.","Si tu pars, il vient."
+Demal góor gi gis la !,Va que l'homme te voie !
+Góor gi bëgg na õga ñëw.,L'homme veut que tu viennes.
+Nit ñi nee nañu mu dem.,Les gens demandent qu'ils partent.
+Nit ki ñëw la.,C'est l'homme qui est venu.
+Loo gis ?,Qu'as-tu vu ?
+Nit ku baax !,Quelqu'un de bien !
+Foo kay def ?,Où le mets-tu ?
+Ci teen boobu bënn,Dans ce puits qui coule
+Xale bi tawat la wax.,Il parle de l'enfant qui souffre.
+Góor gu baax réer na !,Un homme vertueux a disparu !
+Góor googule ga nëwoon dellu na,L'homme qui vint s'en est allé
+Gis naa góor gi ñëw !,J'ai vu l'homme qui est venu !
+Gis naa googii gan gi doon wax !,J'ai vu cet homme qui parlait !
+Gis naa googii gan gi doon wax !,J'ai vu ce visiteur qui parlait !
+Dem naa ci kër gu yaa !,J'ai été dans une maison spacieuse !
+Keneen ki ñëwulwoon kookee.,Cet autre qui n'était pas venu.
+Foo wax ?,Où dis-tu ?
+Feneen fi bëttóon foofu.,Cet autre endroit où il y avait une fuite.
+Feneen fi bëttul la.,C'est l'autre endroit qui n'a pas de trou.
+Kenn kooku yeksi lawoon.,C'est cet autre qui était venu.
+Kenn ki génn ki yeksi na.,Cet autre-ci qui est sorti est arrivé.
+Gis naa kenn ki ñëw,J'ai vu l'autre qui est venu
+Dem na feneen fu rafet.,Il a été dans un autre bel endroit.
+Dem naa ci keneen ku baax.,J'ai été chez un autre qui est gentil.
+"Toogal ci fépp, fu leer !","Mets-toi n'importe où, où il fait clair !"
+"Toogal fépp, fu leer !","Mets-toi n'importe où, où il fait clair !"
+Ma seetal la lan ?,Je veille sur quoi ?
+"Liggéey bii, ba mu sotti !","Sur le travail, jusqu'à ce qu'il soit fait !"
+Ci biir ! ndax mu dugg,À l'intérieur ! pour qu'il entre
+Jambaar la ba mu dooy !,C'est un brave à n'en pas douter !
+Jambaar la ba mu ëpp !,Il est « excessivement » courageux !
+"Ci fii, ba ma ñëw","Ici, jusqu'à ce qu'il vienne !"
+Ma toog fan ?,Où puis-je m'asseoir ?
+Ma def lan ?,Que dois-je faire ?
+"Loolu, ba mu sotti !","Cela, jusqu'à ce que ce soit terminé !"
+Maa õgi fi ba mu ñëw !,Je reste ici jusqu'à ce qu'il vienne !
+Demal ba ñëw !,Va et reviens !
+Dana dem ba õgeen beg.,Il ira afin que vous soyez heureux.
+Ni ka bu mu ñëw,Dis-lui qu'il ne vienne pas
+Nil waa ji na ñëw,Dis à la personne qu'elle vienne
+Tay jii góor gi dana dem,Aujourd'hui l'homme partira
+Góor gi dana dem tay ji,L'homme partira aujourd'hui
+"Tay jii, bul dem !","Aujourd'hui, ne sors pas !"
+Bul dem tay jii !,Ne sors pas aujourd'hui !
+Ci biir soo bëggul !,À l'intérieur si tu ne veux pas !
+"Soo bëggul, ci biir !","Si tu ne veux pas, à l'intérieur !"
+"Tay, Faatim la.","Aujourd'hui, c'est Fatim."
+"Faatim la, tay.","C'est Fatim, aujourd'hui."
+"Faatim la, mu ni.","C'est Fatim, dit-il."
+Mu ni Faatim la.,Il dit que c'est Fatim.
+"Ku dem, gaynde la !",C'est peut-être un lion !
+Yaakaar naa góor gi la !,Je crois que c'est l'homme !
+"Mi õgi fi, soo demee !","Il est là, peut-être !"
+"Cii fii kon, soo bëggul !","Ici alors, si tu refuses !"
+Kookule la soo demee !,"C'est celui-là, peut-être !"
+Kookule la soo demee !,C'est peut-être celui-là !
+Soo demee kookule la !,C'est peut-être celui-là !
+"Soo demee, kookule la !","C'est celui-là, peut-être !"
+"Keneen ki la, defe naa !","C'est l'autre, je crois !"
+Defe naa ni keneen ki la !,Je crois que c'est l'autre !
+"Keneen ki la, defe naa !",Je crois que c'est l'autre !
+Defe naa du kii !,Je crois que ce n'est pas celui-ci !
+Na dem su bëggul !,Qu'il parte s'il ne veut pas !
+Defe naa du ñëw !,Je crois qu'il ne viendra pas !
+"Góor gi dem na, ma defe !","L'homme est parti, je crois !"
+"Góor gi dem la, ma defe !","C'est l'homme qui part, je crois !"
+Na dugg ci biir su bëggée !,Qu'il entre !
+Na dugg ci biir su bëggée !,Qu'il entre à l'intérieur s'il veut !
+Na dugg su bëggée ci biir !,S'il veut qu'il entre !
+Na dugg su bëggée ci biir !,S'il veut qu'il entre à l'intérieur !
+Defe naa tày dana ñëw !,Je croie qu'aujourd'hui il viendra !
+Defe naa dana ñëw tày !,Je crois qu'il viendra aujourd'hui !
+Sa yay nee dana ñëw ci õgoon.,Ta mère dit qu'elle viendra ce soir.
+Sa yay nee na ci õgoon dana ñëw.,Ta mère dit qu'elle viendra ce soir.
+Góor gi nee na soo demee mi õgi fi.,L'homme dit qu'il serait peut-être là.
+Góor gi née na mi õgi fi soo demee.,L'homme dit qu'il serait peut-être là.
+Yan bes õga fa demoon ?,Tu y as été quels jours ?
+"Tay, demb, bërki demb","Hier, aujourd'hui, avant-hier"
+Foo jaõge xerëm ?,Où t'es-tu initié en sciences occultes ?
+Ci ñan õga jëm ?,Tu vas vers qui ?
+"Ci kii, ci kuu, ci kee","Vers celui que voilà, vers celui-ci, vers celui-là"
+Ma may ñan ?,Je donne à qui ?
+"Ñii, ñee, ñooñu","À ceux-ci, ceux-là, à ceux qui sont là-bas"
+"Yaa õgi, mi õgi","Te voilà, le voilà"
+Foo jaõge xërëm ?,Où as-tu été initié en sciences occultes ?
+Ya õgi te mi õgi !,Le voilà et le voilà !
+"Nit la, nit õga...","Il est homme, tu es homme..."
+"Ci biir la, ci biir a biir la !","C'est à l'intérieur, à l'intérieur même !"
+Kookule la kookule taxaw la !,"C'est celui-là, celui-là debout !"
+Kenn la kenn doõõ la !,"C'est un seul, un seul !"
+"Dem naa, dem õga, dem na...","J'ai été, tu as été, il a été..."
+"Dem naa, te dem õga, te dem na.",J'ai été et tu as été et lui il a été.
+Õga dem õga bañ dem dana ñëw !,Il viendra que tu veuilles ou non !
+Fo jëm,Où vas-tu ?
+Ci Séeréer yi ag Pël yi,Chez les Sérère et les Peul
+Té jëm ?,Où vas-tu ?
+Ci ñi ak ca nee,Chez ceux-ci et ceux-là
+Nit la te góor õga !,C'est un homme de chair et d'os et tu es un homme !
+"Kooku la, te keneen la.",C'est celui-là et c'est un autre.
+Dem naa te demuloo !,J'ai été et tu n'as pas été !
+Ñëwël ndax xale yi di mbër te it ñu di ay jambaar !,"Viens pour que les enfants soient des travailleurs, soient des braves !"
+Soppi leen ba ñu di ñeñeen te seeni xalaat di leneen.,Change-les à tel point qu'ils soient autres et que leur opinion aussi soit toute autre.
+Tay ag demb yépp ñëw na.,Il est venu hier et aujourd'hui.
+te,ensuite
+te,or
+mbaa,ou bien
+mbaa,ou alors
+Daõgeen di naõgu mbaa du dem !,Vous acceptez ou il ne part pas !
+Gis naa Samba.,J'ai vu Samba.
+Samba ?,Samba ?
+Waaw Samba !,Oui Samba !
+Gis naa ka ci bir.,Je l'ai vu à l'intérieur.
+Ci bir sax ?,À l'intérieur même ?
+Waaw ci bir !,Oui à l'intérieur !
+Xam na kookule ?,Il connaît celui-là ?
+Kii ?,Celui-ci ?
+Waw kookule !,Oui celui-là !
+Gis naa ka fii !,Je l'ai vu par ici !
+Ci fii ?,Par ici ?
+Waaw ci fii !,Oui par ici !
+Mi õgi fii ?,Il est là ?
+Gor gi dem ?,L'homme peut-il partir ?
+Dem õga ?,Tu pars ?
+Keneen la ?,C'est un autre ?
+Kookule la ?,C'est cet autre-là ?
+Samba la ?,C'est Samba ?
+Góor la ?,C'est un homme ?
+Kan dem na ?,Qui est parti ?
+Yan ñoo réer ?,Lesquels se sont égarés ?
+Ag ñan õga doon xeexal ?,Tu te battais avec qui ?
+Fan õga jëm?,Où vas-tu ?
+Koo jox xaalis ?,À qui as-tu donné de l'argent ?
+Ñu dikkul ?,Lesquels ne sont pas venus ?
+Fu mu jëm ?,Où va-t-il ?
+Fu mu ?,Où est-ce ?
+Ku mu ?,Qui est-ce ?
+Góor gan moo dem ?,Quel homme est parti ?
+Nit ñan õga wax ?,Tu parles de quels gens ?
+Keneen kan la ?,"Qui, est-ce d'autres ?"
+Keneen kan õga wax ?,Tu parles de qui d'autre ?
+Ana mu ?,Où est-il ?
+Ana foo jëm ?,Où est-ce que tu vas ?
+Ndax,Est-ce que ?
+Ndax dem na ?,Est-ce qu'il est parti ?
+Ndax góor gi moo dem ?,Est-ce l'homme qui est parti ?
+Ndax réew mi am na alal ?,Est-ce que le pays a des richesses ?
+Réew mi am na alal ndax ?,Est-ce que le pays a des richesses ?
+Xanaa ?,Est-ce par hasard ?
+"Doo dem, xanaa ?",Tu ne partiras donc pas ?
+Xanaa doo dem ?,Tu ne partiras donc pas ?
+Xanaa doo dem ?,"Donc, tu ne partiras pas ?"
+"Doo dem, xanaa ?","Donc, tu ne partiras pas ?"
+Xand kenn demul ?,Personne n'est donc parti ?
+Ñaata ?,Combien ?
+Ñaata õgeen ?,Combien êtes-vous ?
+Na ?,Comment ?
+Na õgeen def ?,Comment allez-vous ?
+Naka ?,Comment ?
+Naka ?,De quelle manière ?
+Naka õga def ?,Comment vas-tu ?
+Naka góor gi tudd ?,Comment s'appelle l'homme ?
+Naka õgeen bëggé góor gi dimëlé leen ?,Comment voulez-vous que l'homme vous aide ?
+Mbaa...,Est-ce que comme je le souhaite...
+Mbaa xale yi yeksi nañu ?,"Les enfants sont arrivés, j'espère ?"
+Mbaa kenn génnul ?,J'espère que nul n'est sorti ?
+Mbaa móo dem ?,J'espère que c'est lui qui a été ?
+amees,actuel
+ameef,aoriste
+amoon,inactuel
+amoon,passé défini
+àndandoo,combinaison
+addu,son
+addu,phonème
+mbóoleem-addu,entité phonique
+addooku,phonétique
+addooku,science phonétique
+adducaakoon,phonéticien
+fonetikkat,phonéticien
+araf,phonème
+araf,lettre
+araf céex,géminée
+araf céexal,gémination
+araf céexal,géminée
+araf séexal,gémination
+araf séexal,géminée
+araf wu séex,gémination
+araf wu séex,géminée
+araféef,consonne
+araf raññee,prolongement morphologique
+araf raññee,élément de « classé »
+araféef raññee,prolongement morphologique simple
+araf wu ubbéeku,fricative
+araf ubbéeku,fricative
+araf wu tëju,occlusive
+araf tëju,occlusive
+araféef wu léer,consonne sonore
+araféef wu tëx,consonne sourde
+arafu digg,phonème médian
+arafu ndorte,phonème initial
+arafu geen,phonème final
+apiko-dantaal,apico-dental
+apiko-weller,apicovélaire
+raññe ameef,catégorie de l'actuel
+"birël, leeral, génne, wàne","montrer, élucider, mettre en évidence, identifier"
+bares,pluriel
+raññe bares,catégorie de pluriel
+bareedi,singulier
+anal,ramasser des ordures pour quelqu'un
+amal,obtenir quelque chose pour quelqu'un
+wànal,montrer quelque chose
+wànal,montrer quelque chose à quelqu'un de la part de quelqu'un d'autre
+dac,toucher
+dac,entrer en contact avec
+dad,user par frottement
+xaañoo,se briser la tête mutuellement
+raf,clignoter
+raf,bouger de façon subreptice
+laaw,prendre dans un filet
+dar,écorché
+dar,usé par frottement
+law,s'étendre
+laf,bande d'étoffe grimpante
+siifal,accaparer quelque chose pour quelqu'un
+fay,abandonner le faj domicile conjugal
+xamp,mordre à pleines dents
+sat,battre quelqu'un à plusieurs
+sañ,manque de gêne
+sañ,faire preuve d'audace excessive
+laõ,s'exiler plus ou moins définitivement
+xajal,faire de la place à quelqu'un
+xajjal,frayer un chemin à quelqu'un
+dagu,adopter une attitude de serviteur vis-à-vis de quelqu'un
+jëxi,être sur le point de s'épuiser
+joor,terrain sablonneux
+maõkoo,être de connivence
+weõgalu,pencher d'un côté
+teõxu,jointure
+teõxu,articulation
+toskare,connaître un mauvais sort pied
+waa joor,habitant de l'Hinterland
+Waa joor,habitant des régions sablonneuse
+dogal,couper pour quelqu'un
+dogal,halte
+dogal,marché de bétail
+demal,accomplir une démarche pour quelqu'un
+liggéeyaan,louer son travail à l'extérieur
+bokkaan,copropriété
+bokkaan,posséder en commun
+jam,émoustiller
+jam,stimuler
+génnandoo,sortir ensemble
+génnandoo,sortie collective
+dendandoo,voisiner
+dendandoo,voisin
+dendandoo,voisinage
+gaawantu,se dépêcher
+gaawantu,empressement
+nobaate,amourette
+nobaate,nourrir une petite passion
+ñaanaatu,quémander
+ñaanaatu,mendier
+ñaanaatu,quémande
+jéexaatu,fouiller le sol avec insistance
+waxé,parler avec
+waxé,parler à partir d'un lieu donné
+goreel,annoblir
+goreel,ennoblissement
+goreel,libération
+ñaareel,deuxième épouse
+ñaareel,prendre une seconde femme
+wàññeeku,retournement
+wàññeeku,se retourner
+waa joor,habitants de l'arrière-pays
+waajoor,habitants de l'arrière-pays
+waa kaw,habitant de l'intérieur
+waakaw,habitant de l'intérieur
+naqadil,rendre désagréable
+xéewlu,bénéficier d'un sort favorable
+daõõ-daõõ,fracas
+daõõ-daõõ,de bruits et de mouvement
+raõõ-raõõ,fracas
+raõõ-raõõ,de bruits et de mouvement
+kër-kër,de bruits et de mouvement
+kër-kër,fracas
+ñaari goroõi,aller danser le naari goroõ
+Jambaar du bare wax.,Homme de courage n'abonde pas paroles.
+Jambaar du bare wax.,Homme de courage n'abonde pas en paroles.
+Jambaar du bare wax.,Un homme de courage n'abonde pas paroles.
+Jambaar du bare wax.,Un homme de courage n'abonde pas en paroles.
+Nit ki ci sama wet ak nit kooku mbokk la ñu.,Cet homme près de moi et celui là près de toi sont parents.
+Nit ka dem ag nit kooka dee duñu benn.,L'homme parti et l'homme décédé ne sont pas les mêmes.
+Xale yooya daan ñëw ñëwëtuñu.,Les enfants qui venaient ne viennent plus.
+Waaye nit kookii gaddaayoon nag dellusiwul.,"Par contre, cet homme qui s'exila ne revint pas."
+Jigéen joojule mu àndaloon mooy Ngóone.,C'est cette femme qu'il accompagnait qui est Ngone.
+Nit ñooñii génn ay mbër lanu.,Ces gens qui sont sortis sont des lutteurs.
+Xammee õga waa joojule ?,Tu reconnais cette personne-là ?
+Waa jii ag waa joojale duñu benn.,Cet homme-ci et cet homme-là ne sont pas les mêmes.
+Waa jii ag waa joojale duñu benn.,"Cet homme-ci, devant nous, et cet homme-là ne sont pas les mêmes."
+Xam õga xale bii ?,Tu connais cet enfant-ci ?
+Xam õga bii xale ?,Tu connais cet enfant-ci ?
+Seet õga néeg buu ?,Tu as regardé dans cette chambre-ci ?
+Seet õga buu néeg ?,Tu as regardé dans cette chambre-ci ?
+Xammee õga xale bee ?,Tu reconnais cet enfant-ci ?
+Xammee õga bee xale ?,Tu reconnais cet enfant-ci ?
+Xale bile ñëwul ?,Cet enfant-ci n'est pas venu ?
+Bile xale ñëwul ?,Cet enfant-ci n'est pas venu ?
+Xale bule laa wax ?,Je parle de cet enfant-ci ?
+Bule xale laa wax ?,Je parle de cet enfant-ci ?
+Xale bale laa wax ?,Je parle de cet enfant là-bas ?
+Bale xale laa wax ?,Je parle de cet enfant là-bas ?
+Gis naa xale booba ?,J'ai vu cet enfant-là ?
+Gis naa booba xale ?,J'ai vu cet enfant-là ?
+Xar muu duuful ?,Ce mouton n'est pas gras ?
+Muu xar duuful ?,Ce mouton n'est pas gras ?
+Waxuma xale yooyale ?,Je ne parle pas de ces enfants ?
+Waxuma yooyale xale ?,Je ne parle pas de ces enfants ?
+Séen naa am xar.,J'ai aperçu un mouton.
+Séen naa ab néeg.,J'ai aperçu une maison.
+Séen naa ag guy.,J'ai aperçu un baobab.
+Séen naa am guy.,J'ai aperçu un baobab.
+Séen naa aw fas.,J'ai aperçu un cheval.
+Séen naa as jigéen.,J'ai aperçu une femme.
+Séen naa as ndaw.,J'ai aperçu une jeune fille.
+Séen naa as lëf.,"J'ai aperçu une chose, une portion."
+Séen naa ay xar.,J'ai aperçu des moutons.
+Séen naa ay fas.,J'ai aperçu des chevaux.
+Séen naa ay yëf.,J'ai aperçu des choses.
+Séen naa ay gëléem.,J'ai aperçu des chameaux.
+Séen naa ay ndaw.,J'ai aperçu des messagers.
+Séen naa ay jigéen.,J'ai aperçu des femmes.
+Xar man moo réer ?,Quel moutons est égaré ?
+Man xar moo réer ?,Quel moutons est égaré ?
+Xar yan ñoo ñëw ?,Quels moutons sont arrivés ?
+Yan xar ñoo ñëw ?,Quels moutons sont arrivés ?
+Nit ñan ñoo ñëw ?,Quelles personnes sont venues ?
+Yan nit ñoo ñëw ?,Quelles personnes sont venues ?
+Xar yooyu yan õga moom ?,Quels moutons t'appartiennent ?
+Xar yooyu yan õga moom ?,Les quels moutons qui t'appartiennent ?
+Xar yooyu yan õga moom ?,Les quels moutons t'appartiennent ?
+Xar yooyu yan õga moom ?,Quels moutons qui t'appartiennent ?
+Teralal mépp nit !,Honore tout homme !
+Teralal bépp nit !,Honore tout homme !
+Yeewal bépp xar !,Attache tout mouton !
+Yeewal mépp xar !,Attache tout mouton !
+Xar mépp man ?,Quel mouton ?
+Xar mépp man ?,Quel mouton en entier ?
+Kenn nit ki ñëw na.,L'un des hommes est venu.
+Nit kenn ki ñëw na.,L'un des hommes est venu.
+Benn nit ki ñëw na.,L'un des hommes est venu.
+Nit ñenn ñi yegseeguñu.,Certaines personnes ne sont pas encore arrivées.
+Ñenn nit ñi yegseeguñu.,Certaines personnes ne sont pas encore arrivées.
+Nit ñenn ñooñii laa wax !,Je parle de ces autres individus !
+Ñenn nit ñooñii laa wax !,Je parle de ces autres individus !
+Yenn xar yooyuu laa wax !,Je parle des autres moutons !
+Yenn xar yooyuu laa wax !,Je parle de ceux-là !
+Xar yenn yooyu laa wax !,Je parle des autres moutons !
+Xar yenn yooyu laa wax !,Je parle de ceux-là !
+Xar menn man õga wax ?,Tu parles de quel mouton ?
+Menn xar man õga wax ?,Tu parles de quel mouton ?
+Yeneen fas laa bëgg !,C'est d'autres chevaux que je veux !
+Fas yéenen la bëgg !,C'est d'autres chevaux que je veux !
+Yeneen nit laa gis !,C'est d'autres gens que j'ai vus !
+Nit ñeñeen la gis !,C'est d'autres gens que j'ai vus !
+Gis õga jigéen ñeneen ñooñu ?,As-tu vu ces autres femmes ?
+Gis õga jigéen ñeneen ñooñu ?,As-tu vu ces autres femmes en question ?
+Yeneen fas yan õga gis ?,Quels autres chevaux as-tu vu ?
+Fas yeneen yan õga gis ?,Quels autres chevaux as-tu vu ?
+Gis õga sa yan xarit ?,Tu as vu quels amis à toi ?
+Gis õga sa xarit yan ?,Tu as vu quels amis à toi ?
+Gis õga sa yeneen xarit yi ?,Tu as vu les autres amis ?
+Gis õga sa xarit yeneen yi ?,Tu as vu tes autres amis ?
+Mbëggéelam googee woon a õgi fi ba tay.,C'est son amour d'antan qui survit encore.
+Nit laa !,J'ai été quelqu'un !
+Nit õga !,Tu as été quelqu'un !
+Nit la !,Il a été quelqu'un !
+Nit lanu !,Nous avons été quelqu'un !
+Nit õgeen !,Vous avez été quelqu'un !
+Nit lañu !,Ils ont été quelqu'un !
+Nit lañu !,Elles ont été quelqu'un !
+Laobe lë woon.,Je fus Laobé.
+Laobe õga woon.,Tu fus Laobé.
+Laobe la woon.,Il fut Laobé.
+Laobe lanu woon.,Nous fûmes Laobé.
+Laobe õgeen woon.,Vous fûtes Laobé.
+Laobe lañu woon.,Ils furent Laobé.
+Laobe lañu woon.,Elles furent Laobé.
+Gis naa nagu Tugël.,J'ai vu vache d'Europe.
+Gis naa nagu Tugal.,J'ai vu vache d'Europe.
+Gis naa nagu Tugël.,J'ai vu une vache d'Europe.
+Gis naa nagu Tugal.,J'ai vu une vache d'Europe.
+Gis naa nagu Tugal.,J'ai vu vaches d'Europe.
+Gis naa nagu Tugël.,J'ai vu vaches d'Europe.
+Gis naa nagu Tugal.,J'ai vu des vaches d'Europe.
+Gis naa nagu Tugël.,J'ai vu des vaches d'Europe.
+Gisóon õga doomu jigéen joojale jan ?,Tu as vu le fils de quelle femme ?
+Tann õga doomu benn jigéen jan ?,Tu as choisi la fille de quelle femme ?
+Jënd naa xaru beneen waa jan ?,J'aurais acheté le mouton de quelle autre personne ?
+Amul benn ardow Jéeri boo xamul !,Il n'est de Ardo du Dieri que tu ne connaisses !
+Dem naa...,Je pars...
+Dem naa...,Je suis parti...
+Dem õga...,Tu pars...
+Dem õga...,Tu es parti...
+Dem na...,Il part...
+Dem na...,Il est parti...
+Dem nañu...,Nous sommes partis...
+Dem nañu...,Nous partons...
+Dem õgeen...,Vous êtes partis...
+Dem õgeen...,Vous partez...
+Dem nañu...,Ils partent...
+Dem nañu...,Elles sont partis...
+Dem nañu...,Ils sont partis...
+"Soo ñëwóon, kon, demkoon naa !","Si tu étais venu, dans ce cas, je serais parti !"
+Fu mu bëgg ?,Où veut-il
+Fu mu bëgg ?,Quelle partie ?
+Mi õgii di dem !,Le voilà qui part !
+Mi õgiiy !,Le voilà qui part !
+Diõga dem ?,Tu iras ?
+Daõga dem ?,Tu iras ?
+Gor gii di Lawbe Ndar.,Cet homme est Laobe de Saint-Louis.
+Gor gii di Lawbe Ndar.,Cet homme qui est Laobe de Saint-Louis.
+Gor gii di Lawbe Ndar.,Cet homme est un Laobe de Saint-Louis.
+Gor gii di Lawbe Ndar.,Cet homme qui est un Laobe de Saint-Louis.
+Maa di dem !,C'est moi qui pars !
+Maa di dem !,C'est moi qui suis en train de partir !
+Maa di dem !,C'est moi qui dois partir !
+Maa di dem !,C'est moi qui vais partir !
+Góor gi doon dem,L'homme qui partait
+Góor gi doon dem,L'homme qui devait partir
+Góor gi doon dem,L'homme qui allait partir
+Su góor gi dee ñëw,Si l'homme vient
+Su góor gi dee ñëw,Si l'homme doit venir
+Su góor gi dee ñëw,Quand l'homme viendra
+Bi õga dee dem,Alors que tu partais
+Bi õga dee dem,Au moment où tu partais
+Bi õga dee dem,Du moment que tu pars
+Bi mu dee dem,Du moment qu'il part
+Bi mu dee dem,Du fait qu'il doit partir
+Wool góor gi dul Kajgaamu fii !,Appelle l'homme qui n'est pas Kangame d'ici !
+Wool góor gi dul Kajgaamu fii !,Appelle l'homme qui n'est pas un Kangame d'ici !
+Xam naa nit ñi dul Sërin !,Je connais les gens qui ne sont pas des Sérignes !
+Bu mu fen bi mu dul ñëw !,Qu'il ne mente pas du moment qu'il ne vient pas !
+Góor gi moo dulwoon boroom kër gi !,C'est l'homme qui n'était pas le maître de maison !
+Ñii dañu demul xanaa !,Ceux-ci ne partent peut-être pas !
+Ñii dañu demul xanaa !,Ceux-ci ne sont peut-être pas partis !
+Góor gi doon na di nit koo xam ni...,Il se trouve que l'homme est de ces gens qui...
+Na ma...,Que je...
+Naa...,Que je...
+Na mu...,Qu'il...
+Na...,Qu'il...
+ka,celui
+ñi,lesquels
+ñi,auxquels
+ña,lesquels
+ña,auxquels
+ñooña,lesquels
+ñooña,auxquels
+ñu,lesquels
+ñu,auxquels
+ñooñu,lesquels
+ñooñu,auxquels
+yi,lesquels
+yi,auxquels
+ya,lesquels
+ya,auxquels
+yooya,lesquels
+yooya,auxquels
+yu,lesquels
+yu,auxquels
+yooyu,lesquels
+yooyu,auxquels
+Góor gi bëgg na gis ki demoon,L'homme voudrait voir celui qui était parti
+"Nagi dëkk bii õga gis, wa ci ëpp sa baay Alfa moo ka moom.","Des boeufs que tu vois dans cette ville, le plus gros appartient à ton père Alfa."
+"Nagi dëkk bii õga gis, wa ci ëpp sa baay Alfa moo ka moom.","Des boeufs que tu vois dans cette ville, celui le plus gros appartient à ton père Alfa."
+Wante woowa ma la yóot it deey bonul.,Mais celui que je t'ai donné n'est pas mauvais non plus.
+Nuyul më ñépp te maarel ma bu baax ñooña õga dajeeloon.,Mon salut à tout le monde mais surtout honore de ma part ceux-là que tu rencontras.
+"Nit ñi õga ma wàn ñépp, kii laa ci wóolu.","Des gens que tu m'as présentés, celui que voici me dispose le plus à la confiance."
+"Gis õga nag yii yépp, woowuu moo ci gën.","Des boeufs que tu vois, celui-là est le meilleur."
+"Gis õga nag yii yépp, woowuu moo ci gën.","Des boeufs que tu vois, celui-là tout près est le meilleur."
+"Mii maa ka moom, waaye moomule deey, xawma fu mu bokk.",Celui-ci est à moi mais j'ignore d'où provient cet autre-là.
+"Mii maa ka moom, waaye moomule deey, xawma fu mu bokk.",Celui-ci est à moi mais j'ignore d'où provient cet autre-là près de toi.
+Yan fas õga bëggoon ak wan õga japp ?,Quels chevaux voulais-tu et lequel as-tu pris ?
+"Xëynë xar yi ñëw nañu, wante gisaguma wenn.","Les moutons sont peut-être déjà arrivés, mais j'en n'ai encore vu aucun."
+"Sa jarbaat yi, jenn gënu kë ci tayel.",Aucun de tes neveux n'est aussi paresseux que celui-là.
+Gis õga kooku,Tu as vu celui-ci ?
+Gis õga kookuu kan,Tu as vu celui-là lequel
+Gis õga kookale,Tu as vu celui-là ?
+Gis õga ñooñale ñan,Tu as vu ceux-là lesquels
+Gaynde gee lekk moomu mépp,C'est le lion qui a mangé entièrement celui-là
+Waxtaan õga ag keneen kookule kan ?,Tu aurais conversé avec qui d'autre ?
+ñenn nit,certaines gens
+ñenn nit,quelques-uns parmi les hommes
+yenniy kaddu,certaines paroles
+Taxawaayu kooka sax taxul nëw,La présence de celui-là même ne justifie pas qu'on vienne
+Ñéneen ñi sax demewuñu noonu !,Les autres mêmes ne sont pas si fameux !
+Ñooñu ñépp woon demuñu,Tous ceux-là ne sont pas partis
+Ñooñu ñépp woon demuñu,"Tous ceux-là, dont il fut question, ne sont pas partis"
+nile,de cette manière
+nule,de cette manière ci
+nale,de cette manière-là
+loolale,ce fait-là
+Népp noo defe baax na !,"De toute manière, quelle que soit ta façon d'agir, c'est bien !"
+"Foofu, góor gi dem, fu rafet la.","L'endroit, où l'homme est parti, est beau."
+Foofu góor gi dem fu rafet la.,Là où l'homme est parti est beau.
+Fépp fu mu jëm foofu jàmm dana fa wacc.,Partout où il ira la paix descendra là.
+Fépp fu mu jëm foofu jàmm dana fa wacc.,"Partout où il descend, là paix descendra."
+"Képp ku dem, kooku raggal la.","Quiconque s'en va, celui-là est un froussard."
+Kooku dem ku më bëgg la !,"C'est quelqu'un que j'apprécie, celui qui est parti !"
+Kooku dem ku më bëgg la !,"Celui qui est parti, c'est quelqu'un que j'apprécie !"
+Moom daal !,"Lui, aussi !"
+"Moom daal, léegi addina dafa soppeeku.","En fait, le monde a changé de nos jours."
+Mondé ci subë dafa naajoon !,Mais ce matin il y avait du soleil pourtant !
+Te dey addina laabiir dafa ci baax.,Du reste la générosité est une bonne chose dans la vie.
+Yéen ñi ci bir foofule lawoon.,C'est vous-même qui étiez là à l'intérieur.
+Ca ñoom noonule taxaw,Vers ceux qui sont debout là-bas
+"Wax ji yépp, bañ-õga-ñëw la.","Tout ce verbiage, c'est pour que tu ne viennes pas."
+"Wax ji yépp, bañ-õga-ñëw la.","Tout ce bavardage, c'est pour que tu ne viennes pas."
+Õga bañ ñëw rafetul.,Le fait que tu ne viennes pas est préjudiciable.
+Di tel-teli doõõ taxul sotal dara.,S'agiter simplement ne suffit à rien résoudre.
+"Maa õgii gis leen ma, du jëfu nit ku yiw.","« me voici, regardez-moi » n'est pas le fait d'un homme serein."
+Jigéen ji ag góor gi ñjool lañu.,La femme et l'homme sont de haute taille.
+Jigéen ñi ag góor ñi ñjóol lañu.,Les femmes et les hommes sont de haute taille.
+Góor gi soppul seen lekku Saalum yooyu.,L'homme n'apprécie pas votre cuisine du Saloum.
+Amet jaay na naaru-góoru Daawuda wa woon.,Ahmet a vendu le pur-sang que David possédait.
+Siré ñaanal na Umar mi taxaw.,Cire a prié pour Oumar qui se tient-là.
+Sëriñ bi ñaan na mayewoon alalam ji ba mënkóon yalwaan.,"Le marabout implora qu'il fût dans la situation de quelqu'un qui aurait fait don de sa fortune, pour être en mesure de demander l'aumône."
+Deõk naa la boobule woon.,Je te confie celui-là.
+Deõk naa la boobule woon.,Je te confie celui-là dont il fut question au passé.
+Góor gi nee na la fi saõx : ci bitiMark[ !] !,L'homme t'a dit ici il y a un instant : dehors !
+"Góor gi nee na la fi saõx, õga dem ci biti.",L'homme t'a dit ici il y a un instant de sortir.
+Góor gi ni : cam,L'homme fit : pouah !
+Góor gi may na nit dara.,L'homme a donné quelque chose à quelqu'un.
+Góor gi may na dara nit.,L'homme a donné quelque chose à quelqu'un.
+Góor gi wax na xale yi wax ju rafet.,L'homme a tenu aux enfants de bons propos.
+Deõk õga xalel liggéey bu rafetkon.,Tu confies à un enfant un travail qui eût été beau.
+Xale bi mayul dara kii.,L'enfant n'a rien donné à celui-ci.
+Xale bi mayul kii dara.,L'enfant n'a rien donné à celui-ci.
+Joxal kenn liggéey bi !,Donne le travail à un autre !
+Joxal liggéey bi kenn !,Donne le travail à un autre !
+Mayal ñépp benn !,Donne un à chacun !
+Mayal benn ñépp !,Donne un à chacun !
+"Abalal keneen ki demkoonul ki, sama téeré bi !","Prête à cet autre qui n'eût pas été, mon ouvrage !"
+Waxati ma la koon dara.,Je ne t'aurais rien répété.
+Waxati ma la koon dara.,Je ne te répéterai plus jamais rien.
+Ci keneen ki ci buntu kër gi.,Vers cet autre qui est devant la porte de la maison.
+Attekat õgeen ci ban yoon ?,Vous êtes des juges en vertu de quel droit ?
+Moom mile ci buntu kër gi la.,C'est celui-là même devant le seuil de la maison.
+Bul yaréediku niki waa jii !,Ne sois pas aussi impoli que cet individu !
+Waxtaan õga ag ñépp gannaaw nooñii.,Tu as discuté avec tous sauf avec ceux-là.
+Nit ki lekkul dara ak loxoom.,L'homme n'a rien mangé avec la main.
+Góor gi dem na ca tool ya.,L'homme est allé aux champs.
+Góor gi dem na tool ya.,L'homme est allé aux champs.
+Nit ki dóor na nag wi ak bant.,L'homme a frappé la vache avec un bâton.
+Waa ji day noyyee ak bakkan.,L'individu respire avec son nez.
+Waa ji day waxe bakkan.,L'individu parle avec son nez.
+Yobul na ka õgooñ tool ya.,Il lui a amené du fourrage au champ.
+Yobul na ka õgoon ca tool ya.,Il lui a amené du fourrage au champ.
+Yobul na góor gi xar kërëm.,Il a amené à l'homme un mouton chez lui.
+Yobul na fi xar góor gi.,Il y amena un mouton pour l'homme.
+"Noona Gelwar bi, buur bi, daldi ni tekk.",Alors le roi Guelwar s'immobilisa.
+Ñëwël ndax Musaa lamaanu réew mi !,"Viens pour Moussa, lamane de ce pays !"
+Jéeg yi ak jaõx yi it dañu ñëw,Les femmes mariées et les jeunes filles viendront
+Ndaw si ak waa ji itam dañu bëggul déggoo,La femme et l'homme non plus ne désirent s'entendre
+Sa xarit yi ag sa mbokk yi danañu ñëw,Tes parents et tes amis viendront
+Jox na doom ji ak yaayam séen wall.,Il a donné à l'enfant et à sa mère leur part.
+Set na ci biir ak ci biti itam.,Il a cherché à l'intérieur et à l'extérieur aussi.
+Gis naa la,Je t'ai vu
+Gis naa la ak moom !,Je t'ai vu avec lui !
+Gis naa la yaw ak moom !,Je t'ai vu avec lui !
+Gis naa la yaak moom !,Je t'ai vu avec lui !
+"Nit, gayndé, nag, àndoon nañu fi.","Homme, lion, boeuf, allaient de concert."
+"Nit, gayndé, nag... àndoon nañu fi.","Homme, lion, boeuf... allaient de concert."
+"Xale yi set nañu ci biir, ci biti gisuñu dara.","Les enfants ont cherché à l'intérieur, à l'extérieur, mais n'ont rien trouvé."
+"Nit, gaynde, xar, ak bukki duñu ànd.","Homme, lion, mouton et hyène, ne vont pas ensemble."
+"May na ka lëg, doomam ak nopp ya.","Il lui a donné le lièvre, ses petits et leurs oreilles."
+"Séetal ci bir, ci biti, ci suuf ak ci kaw.","Regarde à l'intérieur, à l'extérieur, en bas et en haut."
+Moontin góor gi jambaar la lool ci liggéey bi.,Et pourtant l'homme est dur à la tâche.
+Jigéen ñi demuñu Ndar ba tày.,Les femmes n'ont été à Saint-Louis jusqu'ici.
+Nit ku baax la.,C'est un homme gentil.
+Nit la ku baax.,C'est un homme gentil.
+Ndaw la góor gi di wut.,C'est un messager que cherche l'homme.
+"Õga dem la, góor gi bëgg.","Que tu partes, c'est ce que désire l'homme."
+Ci ki ñëw ba ñu xammee ka.,Chez celui qui est venu et qu'on a reconnu.
+Góor gi dem ba mu ñëw ?,L'homme peut-il partir jusqu'à ce qu'il vienne ?
+Na góor gi dem ba xale yi yeksi.,L'homme doit s'en aller jusqu'à ce que les enfants reviennent.
+Xale bi ne õgeen dugg mu gis leen.,L'enfant dit d'entrer pour qu'il vous voie.
+Li õga wax la ndaw si taamu.,C'est ce que tu as dit que la jeune femme préfère.
+Bëggóon õgeen dem rekk.,Le désir non exaucé de vous voir partir.
+Góor gi nee xale yi demkoon nañu fa.,L'homme soutient que les enfants y eussent été.
+"Góor googule ñëwóon, mi õgi !","Cet homme qui vint autrefois, le voilà !"
+Jox naa téere bi góor gi ñëw.,J'ai donné le livre à l'homme qui est venu.
+Abal naa téere bi góor googule gi dem.,J'ai prêté le livre à cet homme parti.
+Lépp lu baax la góor gii bëgg.,C'est tout ce qui est beau qui séduit cet homme.
+Keneen kooku génn yeksiwul !,Cet autre qui est sorti n'est pas encore arrivé !
+Jox na ka keneen ku sawar.,Il l'a donné à quelqu'un d'autre de très actif.
+May naa ka keneen ku ka gën.,Je l'ai donné à quelqu'un de meilleur que lui.
+"Ci kooku, ndax mu wettëliku !","Avec celui-là, afin qu'il ne soit pas seul !"
+Góor gaa õgoogule ndax kenn bañ génn !,Voilà l'homme ainsi nul ne bougera !
+Ñawoon la ba bi mu fiy joge.,C'était ceux-là même jusqu'à ce qu'il parte.
+Foofu la ba ba ñuy gis feneen.,C'est là jusqu'au moment où nous trouverons un autre lieu.
+Ci fii la ba ba ñuy gis feneen.,C'est là jusqu'à ce qu'on trouve un autre endroit.
+Amal õgor ba mën nekk nit !,Aie assez de sérénité pour conserver ta dignité !
+Faatim la soo demee !,"C'est Fatim, si on va au fond des choses !"
+Faatim la soo demee !,"C'est Fatim, peut-être !"
+Faatim la soo demee !,C'est peut-être Fatim !
+"Soo demee, Faatim la !","Si on va au fond des choses, c'est Fatim !"
+"Soo demee, Faatim la !","C'est Fatim, si on va au fond des choses !"
+"Soo demee, Faatim la !",C'est peut-être Fatim !
+"Gaynde la, ku dem !",C'est peut-être un lion !
+"Góor gi la, yaakaar naa !",Je crois que c'est l'homme !
+"So demee, mi õgiy wax !","Il est entrain de parler, peut-être !"
+"So demee, mi õgiy wax !",Il est peut-être entrain de parler !
+"Soo bëggul, ci fii kóon !","Ici alors, si tu refuses !"
+"Soo demee, kookule la !",C'est celui-là peut-être !
+"Defe naa, keneen kii la !",C'est l'autre je crois !
+"Du kii, defe naa !",Je crois que ce n'est pas celui-ci !
+"Su bëggul, na dem !",Qu'il parte s'il ne veut pas !
+"Du ñëw, defe naa !",Je crois qu'il ne viendra pas !
+Ma defe góor gi dem na !,L'homme est parti je crois !
+Ma defe góor gii dem la !,C'est l'homme qui part je crois !
+"Dellu biir Ndar, soo bëggée.","Retourne au centre de Saint-Louis, si tu veux."
+"Dellu, soo bëggée, biir Ndar !","Si tu veux, retourne au centre de Saint-Louis !"
+"Góor gee ni mi õgi fi, soo demee !","C'est l'homme qui a dit qu'il est là, certainement !"
+"Soo demee, góor gee ni mi õgi fi !","Certainement, c'est l'homme qui a dit qu'il est là !"
+"Góor gee ni, soo demee, mi õgi fi !","C'est l'homme, certainement, qui a dit qu'il est là !"
+"Góor gee ni nit la, soo demee !","C'est l'homme qui a soutenu qu'il est sain d'esprit, peut-être !"
+Soo demee góor gee ni nit la !,Peut-être est-ce l'homme qui a dit qu'il est sain d'esprit !
+Góor gee ni soo demee nit la !,L'homme a peut-être soutenu qu'il est sain d'esprit !
+"Góor gee ni kookule la, soo demee !","C'est l'homme qui a dit que c'est celui-là, peut-être !"
+Soo demee góor gee ni kookule la !,Peut-être l'homme a-t-il dit que c'est celui-là !
+"Góor gee ni kookule la, soo demee !","L'homme a dit que c'est celui-là, peut-être !"
+Sa yay nee soo yeggee dana dellusi.,Ta mère promet de revenir si tu vas jusqu'au bout.
+Sa yay nee dana dellusi soo yeggee.,Ta mère dit qu'elle reviendra si tu vas jusqu'au bout.
+"Ci Séeréer si, ci Pël yi, ci Ñomiõka yi...","Chez les Sérère, les Peul, les Niominka..."
+"Ci Pël yi ag ci Séeréer si, ag ci Ñomiõka yi.","Chez les Peul, les Sérère, et les Niominka."
+"Noona góor gi seet lëf ki, seetat mbir mi.","Alors l'homme reconsidéra la chose, reconsidéra l'affaire."
+"Dem õga, te dem na, te dem naa.",Tu as été et il a été et moi aussi j'ai été.
+"Noona góor gi dugg, xale yi gis ka, mu toog, ñépp toog.","Alors l'homme entra, les enfants le virent, il s'assit, tous s'assirent."
+"Bëgg naa góor ñi ñëw, xale yi ñëw, jigéen ñi toog !","Je souhaite que les hommes viennent, que les enfants viennent et que les femmes s'asseyent !"
+"Nee waa jii gor la, goor la, jambe la...","Il dit que ce Monsieur est un homme, il est noble, il est brave..."
+"Defe naa du kookuu, du kookee... !","Je crois que ce n'est pas celui-ci, ce n'est pas celui-là... !"
+"Demal ndax mu ñëw, ndax mu meddi... !","Vas-y pour qu'il vienne, pour qu'il ne soit plus fâché... !"
+"Ñëwël ndax xale yi di ay liggéeykat, di ay jambaar... !","Viens pour que les enfants soient des travailleurs, soient des braves... !"
+"Demal, ndax mu di, leneen, mu di feneen... !","Vas-y pour que ce soit autre chose, que ce soit ailleurs... !"
+Dana ñëw õga bañ dem õga dem !,Il viendra que tu veuilles ou non !
+"Tày ci suba, tày ci õgoon ma fiy nekk !",Ce matin ou ce soir c'est moi qui suis ici !
+"Maa fiy nekk tày ci õgoon, tày ci suba !",Ce matin ou ce soir c'est moi qui suis ici !
+"Bëgg në õga ñëw, mu bañ dem su nëjul... !","Je veux que tu viennes, qu'il refuse de partir s'il n'y a pas de soleil... !"
+Bëgg naa õga ñëw mu dem su õgeen noppée !,"Je veux, si vous avez fini, que tu viennes et qu'il parte !"
+Bëgg në õga ñëw ci subë ci juróomi waxtu ci sedd bi !,Je veux que tu viennes le matin à cinq heures dans la fraîcheur !
+"Bëgg naa ci juróomi waxtu, ci subë, õga ñëw !",Je veux que tu viennes le matin à cinq heures dans la fraîcheur !
+"Defewoon na, ci subë si, ci bes bi, daa dem !","Je croyais que tu irais, ce matin, ce jour... !"
+"Defewoon na, daa dem, ci bes bi ci subë si !","Je croyais que tu irais, ce matin, ce jour... !"
+Dans góor gi bëgg na õga dem te mu ñëw.,L'homme veut que tu ailles et qu'il vienne.
+Dem õga te ñëw na.,Tu as été et il est venu.
+Góor gi dem te xale yi dugg !,Que l'homme parte et que les enfants entrent !
+Góor gi bëgg na õga dem te xale yi toog.,L'homme souhaite que tu partes et que les enfants restent.
+Ne jigéen ji ñëw te mu toog.,Il demande que la femme vienne et que lui il reste.
+Defewoon naa góor gi mag la te ndaw si nit la !,Je croyais que l'homme était mûr et que la femme était saine d'esprit !
+"Defewoon naa góor gi kenn ki la, te xale bi kooku la !",Je croyais que l'homme c'était cet autre et que l'enfant c'était celui-là !
+Demal ndax mu ñëw ndax it mu génn !,Vas-y afin qu'il vienne et aussi afin qu'il sorte !
+"Soo demee ag soo demul itam, dana ñëw.","Que tu partes ou que tu ne partes pas, il viendra."
+Dana ñëw soo demul ag soo demee itam.,Que tu partes ou que tu ne partes pas il viendra.
+Ñëw na demb yépp ag tay.,Il est venu hier et aujourd'hui.
+"Bëgg na soo demee, mu dellusi te góor gi ñëw.","Il veut, lorsque tu iras que lui, il revienne et que l'homme aussi revienne."
+Bëgg na góor gi ñëw te mu dellusi soo demee.,"Il veut que l'homme vienne et que lui, il revienne si tu pars."
+Dañu defewoon ni daa dem ci subë ag ci õgoon yépp !,On croyait que tu allais partir matin et soir !
+Dañu defewoon ci õgoon ag ci suba yépp da dem !,On croyait que tu allais partir matin et soir !
+Góor ñi dañu tayel te jigéen ñi du ñu deglóo.,Les hommes sont des paresseux et les femmes ne savent pas écouter.
+"Xale yi bëgg nañu dikk, te mag ni ñaan nañu õgeen dem.",Les enfants veulent venir et les adultes souhaitent que vous partiez.
+Gis naa góor googu demoon Ndar te õga abaloon ka sa gaal.,J'ai vu l'homme qui était parti à Saint-Louis et auquel tu prêtas ta pirogue.
+Gis naa góor gi doon wax te toogoon ci suuf.,J'ai vu cet homme qui parlait et qui était assis par terre.
+Góor gee dem walla xale yee noppi ?,C'est l'homme qui est parti ou bien ce sont les enfants qui se sont tus ?
+Xale yee ñaan walla mag née bëgg õga dem ?,Ce sont les enfants qui ont demandé ou les adultes qui ont voulu que tu partes ?
+Demal Ndar mu mën ñëw walla mu yonnée !,Va à Saint-Louis pour qu'il puisse venir ou qu'il envoie quelqu'un !
+Géew bi day taxaw walla ma dem !,Le cercle se forme ou je m'en vais !
+Góor gee dem mba xale yee toog.,Ou l'homme est parti ou les enfants sont assis.
+Sa baay né õga dem mba õga nibbisi.,Ton père te demande de partir ou de rester à la maison.
+Góor gi dem na waaye xale yi demuñu.,L'homme est parti mais les enfants ne le sont pas.
+Sa bay bëggul õgeen di génn ag di wëndéelu.,Ton père n'aime pas que vous sortiez et que vous vous baladiez.
+Bëgg naa õga dem te it õga noppi !,Je veux que tu partes et aussi que tu te taises !
+May na la ndax xale yi beg te it õga ànd ak ñom.,Il t'a fait un cadeau pour que les enfants soient contents et que toi aussi tu les accompagnes.
+Jëgg day wut fu mu jaar ag itam na mu laqoo.,Le convoyeur doit chercher où passer et aussi comment se cacher.
+Jigéen ji ñaan na ndax xale yi agg te itam seen baay nekk fa.,La femme pria pour que les enfants arrivent et aussi pour que leur père soit dans les lieux.
+Bëgg na sa waajur ñëw te nak ñu fay kà.,Il veut que tes parents viennent et surtout qu'ils le payent.
+Góor gi dem na ndax õgeen ñëw te nak kenn bañ leen foog.,"L'homme est parti pour que vous veniez sans que personne, surtout, ne le soupçonne."
+Na õgeen dem ndax gerte gi ñëw te nak ñjaay mi jar benn yoon !,Allez pour que l'arachide arrive et qu'enfin les ventes marchent une fois pour toutes !
+Du bañ boo naõgoo ag it boo yaboo ci liggéey bi.,Il ne refusera pas si tu acceptes et aussi t'engages dans le travail.
+Du bañ boo naõgoo ag it boo yaboo ci liggéey bi.,Il ne refusera pas si tu acceptes et aussi si tu t'engages dans le travail.
+"Yaakaaroon na ni, mag ñi du ñu ci agg foofu te it xale yi nekkunu fi woon.",Il espérait que les gens d'âge n'en seraient pas arrivés là et aussi que les enfants étaient absents.
+te itam,et aussi
+te itam,et surtout
+te nak,et
+te nak,et aussi
+te nak,et encore
+te nak,et surtout
+te nak,et sans que
+te nak,et enfin
+ag it,mais aussi
+ag it,et aussi
+Jigéen ji bëgg na õgeen am waaye it õgeen di maye.,La dame voudrait bien que vous ayez mais aussi que vous donniez.
+Jigéen ji bëgg na õgeen am waaye it õgeen di maye.,La dame voudrait bien que vous ayez des richesses mais aussi que vous donniez.
+Mbaa... !,Est-ce comme je le crains que... !
+Kenn demul mbaa,Que personne n'est parti
+Kenn demul mbaa,J'espère que personne n'est parti
+Mbaa kenn demul,Que personne n'est parti
+Mbaa kenn demul,J'espère que personne n'est parti
+Lu tax ?,Pourquoi ?
+Lu tax ?,"Qu'est-ce, qui est la cause ?"
+Lu waral ?,Pourquoi ?
+Lu waral ?,"Qu'est-ce, qui est la cause ?"
