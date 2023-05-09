@@ -28,13 +28,13 @@ class T5SentenceDataset(Dataset):
         self.tokenizer = tokenizer
         
         # recuperate the first corpus' sentences
-        self.__sentences_1 = self.__sentences[corpus_1].to_list()
+        self._sentences_1 = self.__sentences[corpus_1].to_list()
         
         # recuperate the second corpus' sentences
-        self.__sentences_2 = self.__sentences[corpus_2].to_list()
+        self._sentences_2 = self.__sentences[corpus_2].to_list()
         
         # recuperate the length
-        self.__length = len(self.__sentences_1)
+        self._length = len(self.__sentences_1)
         
         # let us recuperate the max len
         self.max_len = max_len
@@ -57,9 +57,9 @@ class T5SentenceDataset(Dataset):
             tuple: The `sentence to translate' ids`, `the attention mask of the sentence to translate`
             `the labels' ids`
         """
-        sentence_1 = self.__sentences_1[index]
+        sentence_1 = self._sentences_1[index]
         
-        sentence_2 = self.__sentences_2[index]
+        sentence_2 = self._sentences_2[index]
         
         # apply transformers if necessary
         if not self.cp1_transformer is None:
@@ -84,7 +84,7 @@ class T5SentenceDataset(Dataset):
         
     def __len__(self):
         
-        return self.__length
+        return self._length
     
     def decode(self, labels: torch.Tensor):
         
@@ -95,3 +95,75 @@ class T5SentenceDataset(Dataset):
         sentences = self.tokenizer.batch_decode(labels, skip_special_tokens=True)
 
         return sentences
+
+
+class T5SentenceDataset2(T5SentenceDataset):
+
+    def __init__(
+        self,
+        data_path: str, 
+        tokenizer: PreTrainedTokenizerFast,
+        corpus_1: str = "french",
+        corpus_2: str = "wolof",
+        max_len: int = 51,
+        truncation: bool = False,
+        file_sep: str = ",",
+        cp1_transformer: Union[TransformerSequences, None] = None,
+        cp2_transformer: Union[TransformerSequences, None] = None,
+        **kwargs):
+        
+        super().__init__(data_path, 
+                        tokenizer,
+                        corpus_1,
+                        corpus_2,
+                        max_len,
+                        truncation,
+                        file_sep,
+                        cp1_transformer,
+                        cp2_transformer,
+                        **kwargs)
+        
+    def __getitem__(self, index):
+        """Recuperate ids and attention masks of sentences at index
+
+        Args:
+            index (int): The index of the sentences to recuperate
+
+        Returns:
+            tuple: The `sentence to translate' ids`, `the attention mask of the sentence to translate`
+            `the labels' ids`
+        """
+        sentence_1 = self._sentences_1[index]
+        
+        sentence_2 = self._sentences_2[index]
+        
+        # apply transformers if necessary
+        if not self.cp1_transformer is None:
+            
+            sentence_1 = self.cp1_transformer(sentence_1) 
+        
+        if not self.cp2_transformer is None:
+            
+            sentence_2 = self.cp2_transformer(sentence_2)
+        
+        # let us encode the sentences (we provide the second sentence as labels to the tokenizer)
+        data = self.tokenizer(
+            sentence_1,
+            truncation=self.truncation,
+            max_length=self.max_len, 
+            padding='max_length', 
+            return_tensors="pt")
+        
+        # let us encode the sentences (we provide the second sentence as labels to the tokenizer)
+        labels = self.tokenizer(
+            sentence_2,
+            truncation=self.truncation,
+            max_length=self.max_len, 
+            padding='max_length', 
+            return_tensors="pt")
+            
+        
+        return (data.input_ids.squeeze(0),
+                data.attention_mask.squeeze(0), 
+                labels.input_ids.squeeze(0),
+                labels.attention_mask.squeeze(0))
