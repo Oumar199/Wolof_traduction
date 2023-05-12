@@ -28,13 +28,13 @@ class T5SentenceDataset(Dataset):
         self.tokenizer = tokenizer
         
         # recuperate the first corpus' sentences
-        self._sentences_1 = self.__sentences[corpus_1].to_list()
+        self.sentences_1 = self.__sentences[corpus_1].to_list()
         
         # recuperate the second corpus' sentences
-        self._sentences_2 = self.__sentences[corpus_2].to_list()
+        self.sentences_2 = self.__sentences[corpus_2].to_list()
         
         # recuperate the length
-        self._length = len(self.__sentences_1)
+        self.length = len(self.sentences_1)
         
         # let us recuperate the max len
         self.max_len = max_len
@@ -57,9 +57,9 @@ class T5SentenceDataset(Dataset):
             tuple: The `sentence to translate' ids`, `the attention mask of the sentence to translate`
             `the labels' ids`
         """
-        sentence_1 = self._sentences_1[index]
+        sentence_1 = self.sentences_1[index]
         
-        sentence_2 = self._sentences_2[index]
+        sentence_2 = self.sentences_2[index]
         
         # apply transformers if necessary
         if not self.cp1_transformer is None:
@@ -84,7 +84,7 @@ class T5SentenceDataset(Dataset):
         
     def __len__(self):
         
-        return self._length
+        return self.length
     
     def decode(self, labels: torch.Tensor):
         
@@ -97,7 +97,7 @@ class T5SentenceDataset(Dataset):
         return sentences
 
 
-class T5SentenceDataset2(T5SentenceDataset):
+class SentenceDataset(T5SentenceDataset):
 
     def __init__(
         self,
@@ -133,9 +133,9 @@ class T5SentenceDataset2(T5SentenceDataset):
             tuple: The `sentence to translate' ids`, `the attention mask of the sentence to translate`
             `the labels' ids`
         """
-        sentence_1 = self._sentences_1[index]
+        sentence_1 = self.sentences_1[index]
         
-        sentence_2 = self._sentences_2[index]
+        sentence_2 = self.sentences_2[index]
         
         # apply transformers if necessary
         if not self.cp1_transformer is None:
