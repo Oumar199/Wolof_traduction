@@ -29,7 +29,7 @@ tokenizer = T5TokenizerFast(tokenizer_file=f"wolof-translate/wolof_translate/tok
 @st.cache_resource
 def get_model():
     
-    model = AutoModelForSeq2SeqLM.from_pretrained('data/checkpoints/t5_results_fw_v2_3/checkpoint-69460')
+    model = AutoModelForSeq2SeqLM.from_pretrained('data/checkpoints/t5_results_fw_v3/checkpoint-151698/')
 
     return model
 

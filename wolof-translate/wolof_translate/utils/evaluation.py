@@ -33,11 +33,11 @@ class TranslationEvaluation:
         
             preds = preds[0]
         
-        decoded_preds = tokenizer.batch_decode(preds, skip_special_tokens=True)
+        decoded_preds = self.tokenizer.batch_decode(preds, skip_special_tokens=True)
 
-        labels = np.where(labels != -100, labels, tokenizer.pad_token_id)
+        labels = np.where(labels != -100, labels, self.tokenizer.pad_token_id)
         
-        decoded_labels = tokenizer.batch_decode(labels, skip_special_tokens=True)
+        decoded_labels = self.tokenizer.batch_decode(labels, skip_special_tokens=True)
 
         decoded_preds, decoded_labels = self.postprocess_text(decoded_preds, decoded_labels)
 
@@ -45,7 +45,7 @@ class TranslationEvaluation:
         
         result = {"bleu": result["score"]}
 
-        prediction_lens = [np.count_nonzero(pred != tokenizer.pad_token_id) for pred in preds]
+        prediction_lens = [np.count_nonzero(pred != self.tokenizer.pad_token_id) for pred in preds]
         
         result["gen_len"] = np.mean(prediction_lens)
         

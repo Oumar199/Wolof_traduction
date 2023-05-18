@@ -1,1341 +1,1342 @@
-,french,wolof
-0,coiffure de jeune fille,paq
-1,terre humide,baq
-2,bois de chauffage,matt
-3,borgne,patt
-4,fermer,up
-5,porter malchance,um
-6,posséder ensemble,bokk
-7,être pulvérisé,mokk
-8,bracelet,lam
-9,se noyer,lap
-10,trouver quelque chose,amal
-11,prêter,abal
-12,mesurer,natt
-13,croire,gëm
-14,être meilleur,gën
-15,soigner,fac
-16,soin,pac
-17,sable,suuf
-18,teindre,suup
-19,souder,daf
-20,rejoindre,dap
-21,chevreau,tef
-22,faire,def
-23,suivre,topp
-24,oreille,nopp
-25,traîner,wàt
-26,montrer,wàn
-27,traîner,wàtal
-28,traîner pour quelqu'un,wàtal
-29,cacher,nëbb
-30,piller,dëbb
-31,ranger,fad
-32,où,fan
-33,grappe,cëgg
-34,piétiner,dëgg
-35,mentir,nar
-36,enduire,ñar
-37,tordre,wàñ
-38,branche,car
-39,se vendre bien,jar
-40,nourriture,ñam
-41,atteindre,daj
-42,toucher,daj
-43,caracoler,dañ
-44,se partager,xaajoo
-45,rugir,ŋar
-46,tendu,daŋ
-47,tendre,daŋal
-48,rendre tendu,daŋal
-49,caracoler,dañal
-50,qui,kan
-51,hôte,gan
-52,guetter,kar
-53,serviteur,dak
-54,couper,dok
-55,pierre,doc
-56,piocher,gabb
-57,tenir à bout de bras,ŋabb
-58,serviteur,dag
-59,mouton,xar
-60,tendu,dan
-61,beurre,dax
-62,fané,lax
-63,tranche médiane de poisson,lak
-64,caillou,xor
-65,homme libre,gor
-66,marcher,dox
-67,couper,dog
-68,couler,siit
-69,suinter,siit
-70,avoir peur,tiit
-71,inquiétude,tiis
-72,peur,tiit
-73,se nouer,fasu
-74,s'abriter,fatu
-75,s'enfermer chez soi,fatu
-76,être piquant,saf
-77,coudre deux bandes d'étoffe,xaf
-78,se coincer,tase
-79,s'aplatir contre une paroi,tafu
-80,presser,nal
-81,étendre,lal
-82,élire,fal
-83,amant,far
-84,lit,lal
-85,avoir le temps,tal
-86,ranger,fat
-87,année dernière,daaw
-88,abriter,fad
-89,mélanger,rax
-90,tromper,nax
-91,effacer,far
-92,souder un trou,daf
-93,tailler,dad
-94,polir,dad
-95,couler,wal
-96,publier,siiwal
-97,parler,wax
-98,bouillir,bax
-99,courir,daw
-100,rejoindre,dab
-101,souffler,wàl
-102,élection,pàl
-103,choses,yëf
-104,fait,jëf
-105,acte,jëf
-106,soigner,faj
-107,chose,lëf
-108,chanter,wày
-109,moudre,wàl
-110,tordre,wañ
-111,toi,yaw
-112,coudre,ñaw
-113,espèce de cheval,mpar
-114,allié,par
-115,planter,sàmp
-116,chanter (coq),sap
-117,variété de cheval,mpar
-118,avoir soif,mar
-119,savoir,xam
-120,filet,mbaal
-121,pardonner,baal
-122,flotter,tëmb
-123,sauter,tëb
-124,diminutif de Babacar,mbay
-125,donner,may
-126,avarié,xamb
-127,sorte de puits,ntëng
-128,femelle d'animal,tëng
-129,remercier,sant
-130,récipient,ndab
-131,rattraper,dab
-132,boue,ban
-133,baton,bant
-134,envoyé,ndaw
-135,souffle,naw
-136,sorte de fourneau,and
-137,enlever des ordures,an
-138,part,nar
-139,enlever,an
-140,fourneau en argile,and
-141,chien,xac
-142,écorce,xañc
-143,bâtir,sañc
-144,bâtir une ville,sañc
-145,branche,ñcar
-146,aube,njël
-147,prendre,jël
-148,boule de couscous,doñj
-149,pierre,doj
-150,canari,ñjaq
-151,sueur,ñaq
-152,se poser,tak
-153,pied,taŋk
-154,refuser,laŋk
-155,calebasse,tax
-156,puiser,taŋx
-157,faire pousser,saxal
-158,brisures de mil,saŋxal
-159,étourdi,sop
-160,trouver gentil,sopp
-161,pourri,nëb
-162,pourrir,nëbël
-163,cacher pour quelqu'un,nëbbël
-164,fermer les yeux,gëmm
-165,boucher,fatt
-166,fusil,fetal
-167,faire éclater,fettal
-168,abattre,fadd
-169,avaler,wànn
-170,soigner,tac
-171,éclater,facc
-172,chien,xaj
-173,séparer,xajj
-174,faire de la place à,xajal
-175,compter,wàññ
-176,s'enflammer,takk
-177,grand,mag
-178,grandir,magg
-179,pourboire,dagguu
-180,se tâcher,taq
-181,remuer,jeqi
-182,piler,wàl
-183,secours,wàll
-184,talus,tali
-185,s'étendre de tout son long,talli
-186,variété d'oiseau,coy
-187,rouge écarlate,coyy
-188,respirer,noyyi
-189,urinoir,sawu
-190,atmosphère,jaww
-191,bâtiment,taax
-192,prendre,fab
-193,prendre,fap
-194,se poser,tag
-195,prendre pour quelqu'un,fabal
-196,ranger pour quelqu'un,fatal
-197,aller soigner,faji
-198,épine,dek
-199,épine,deg
-200,épine de brousse,degu àll
-201,nom,tur
-202,verser,tuur
-203,quiconque,ku
-204,celui-là,kuu
-205,que voilà,kuu
-206,rien,tus
-207,éclabousser,tis
-208,recouvrir,muur
-209,avoir des vertiges,miir
-210,celui-là devant,kuu
-211,celui-ci,kii
-212,gosier,boli
-213,grand plat,bóoli
-214,se soulever,jog
-215,porter bonheur,jig
-216,teindre à l'indigo,suup
-217,plonger,sóop
-218,mou,tóoy
-219,humide,tooy
-220,trahir,wor
-221,jeûner,woor
-222,noble,gor
-223,s'affaisser,goor
-224,trahison,kor
-225,ombre,ker
-226,saison sèche,noor
-227,mal de mer,neer
-228,piler,wol
-229,effacer,fàr
-230,dent mal plantée,jaŋg
-231,étudier,jàŋg
-232,attiser un feu,xamb
-233,lieu de culte,xàmb
-234,homme,nit
-235,éclairer,niit
-236,lequel,ki
-237,venir,dikk
-238,aller voir,gisi
-239,se concerter,gise
-240,homme de caste,géer
-241,lignée,giir
-242,descendance,giir
-243,être guéri,wér
-244,adosser,wéer
-245,fibre de coton,wét
-246,côte,wet
-247,lune,weer
-248,berge,xer
-249,rivage,xer
-250,pierre,xeer
-251,ver de terre,wer
-252,s'évaporer,fer
-253,attendre,xaar
-254,monter,war
-255,étonner,waar
-256,passer par,jaar
-257,s'allumer,tàkk
-258,attacher,takk
-259,dent de travers,jaŋg
-260,vent,ëgg
-261,arriver,agg
-262,avoir une dysenterie,fër
-263,côte,faar
-264,être en vacance,bër
-265,beurre,bëër
-266,chair,sóox
-267,absorber une forte gorgée,góox
-268,envieux,iñaan
-269,arriver,egg
-270,déjeuner,añ
-271,avare,aay
-272,serviabilité,aajo
-273,fermer,ub
-274,bailler,obali
-275,être maigre,om
-276,prendre sur ses genoux,uuf
-277,genoux,óom
-278,maigre,oos
-279,dépasser les limites,ëpp
-280,excessif,ëpp
-281,naissance,juddu
-282,tissu,ndimo
-283,bras,lóxó
-284,celui-ci,kuu
-285,tout près,kuu
-286,se concerter,gisóo
-287,se couvrir avec,woddoo
-288,cet,ki
-289,que voici,ki
-290,amulette,téeré
-291,interdire,tere
-292,rien,dara
-293,rire,ree
-294,encre,daa
-295,muet,muumë
-296,guérir,wér
-297,faire le tour,wër
-298,homme de noble caste,géer
-299,voir ensemble,gisóo
-300,rendre bon,baaxal
-301,faire une offrande à une divinité.,tuurul
-302,coller,taf
-303,afficher,taf
-304,maison,kër
-305,chasser,rëbb
-306,refuser,bañ
-307,frapper,dóor
-308,aile,laaf
-309,pouvoir,mën
-310,vilain,ñaaw
-311,change,sëf
-312,éduquer,yar
-313,élection,mpal
-314,culture,mbay
-315,folie,ndof
-316,prise,ñjëg
-317,croyance,ŋgëm
-318,charge,sas
-319,allumer,taal
-320,éteindre,fày
-321,tâter,lamb
-322,rêver,gént
-323,bouchée,lañc
-324,indigo,ŋgëñj
-325,chaud,taŋg
-326,il y a un moment,saŋx
-327,tête,bopp
-328,grenier,saq
-329,scarifier,gajj
-330,couper,dagg
-331,secours,wall
-332,avoir pris l'habitude de,tamm
-333,choir,tann
-334,avarié,wàŋŋ
-335,tam tam,sabar
-336,façon d'être,ndemin
-337,feu,safara
-338,s'embourber,ñappati
-339,récipient,satala
-340,poulet,ganaar
-341,nom,Idi
-342,envie,kañaan
-343,torchon,sagar
-344,exil,laŋaay
-345,fumée train,saxaar
-346,demander pardon,bala
-347,puer,xasaw
-348,prendre partie pour,faral
-349,conduire,dawal
-350,interdire,aaye
-351,déraciner,sempi
-352,rebord,ñjambaas
-353,baptême,ŋgenté
-354,unité de mesure,andaar
-355,se coincer,tañcu
-356,cuivre,xañjar
-357,se taire,noppi
-358,éviter,wattu
-359,se pincer,tëccu
-360,être vacciné,ñakku
-361,se cacher,laqu
-362,être anémié,libbët
-363,répondre,addu
-364,défoncer,dajji
-365,enjamber,jéggi
-366,secourir,wàllu
-367,nom,sannar
-368,habituer,tammal
-369,nom,Daŋŋar
-370,déboucher,saññi
-371,jaloux,iñaan
-372,jaloux,añaan
-373,or,urus
-374,bailler,óbbëli
-375,s'essuyer la bouche,ommeeku
-376,se blottir,uufu
-377,faire maigrir,oosal
-378,se retrousser les manches,ëñu
-379,obligeance,itte
-380,ouvrir,ubbi
-381,séparer,atté
-382,juger,atté
-383,se gratter,okkatu
-384,retrousser,ëñ
-385,frapper,itt
-386,envelopper,ëmb
-387,limite,app
-388,maladie,opp
-389,amener,ëndi
-390,canari,ndaa
-391,plante de pied,testën
-392,piocheur,gabbkat
-393,aller mourir,deei
-394,semence,jiu
-395,aller rire,reei
-396,mourir en groupe,deeo
-397,mourir ensemble,deeo
-398,mourir ensemble,deewoo
-399,aller semer,jii
-400,aller semer,jiyi
-401,mourir pour ,déeal
-402,mourir pour ,deeal
-403,se renverser,juutu
-404,devancer,jitu
-405,se brouiller définitivement,dogoo
-406,livre,téeré
-407,frayer ensemble,duggo
-408,fruit,ndugóor
-409,faire courir,dawal
-410,rire en même temps,reeaale
-411,mourir en même temps,deaale
-412,feindre en riant,reewaale
-413,rire en même temps de,reewaale
-414,expliquer en même temps,sawaale
-415,semer en même temps,jiyaale
-416,rire encore avec quelqu'un,reeaatle
-417,s'épanouir,leqaliku
-418,déboucher,fatarñi
-419,déserter,gent
-420,recouvrir,saŋg
-421,tête,boppa
-422,boucher,fatta
-423,planter,samp
-424,planter,sampa
-425,être obstrué,Fattu
-426,mâle,góor
-427,boeuf,nag
-428,tambour,sabar
-429,femme,jigéen
-430,femelle,jigéen
-431,sentir,xeeñ
-432,abandonner,wàcc
-433,laisser tomber,wàcc
-434,partir,dem
-435,il part,dem-na
-436,le départ,dem-bi
-437,précéder,jiitu
-438,mettre en tête,fital
-439,méchant,soxor
-440,méchanceté,coxor
-441,musulman,sëriñ
-442,l'état de musulman,cëriñ
-443,islam,cëriñ
-444,baobab,guy
-445,fruit du baobab,buy
-446,cheval,fas
-447,petit cheval,pas
-448,être allié,far
-449,alliance,par
-450,habitant du Lof,wàlaf
-451,pays du Lof,jolof
-452,pays wolof,jolof
-453,je suis allié,far naa
-454,habitant de l'intérieur,ajoor
-455,jalousie,kañaan
-456,arachide,aaréen
-457,petite quantité d'arachide,kaaréen
-458,parole,kaddu
-459,tonnerre,kaddu
-460,instrument de mesure,andaar
-461,le même instrument,kandaar
-462,la maison,néeg bi
-463,la petite maison,néeg si
-464,le fait de partir,ndem
-465,départ,ndem
-466,désirer,bëgg
-467,désir,mbëgg
-468,faire une réunion,géew
-469,assemblée,ngéew
-470,homme,góor
-471,bravoure,ngóor
-472,manant,baadolo
-473,état de manant,mbaadolo
-474,être bon,baax
-475,bonté,mbaax
-476,allié,far
-477,alliance,mpar
-478,trahison,nkor
-479,porter sur le dos,boot
-480,la manière de porter sur le dos,bootaay
-481,laid,ñaaw
-482,la laideur,ñaawaay
-483,piquant,saf
-484,l'acidité,safaay
-485,le piquant,safaay
-486,illuminer,xuyy
-487,brûler,lakk
-488,aller,dem
-489,manière d'aller,demin
-490,l'état,demin
-491,façon de parler,waxin
-492,accent,waxin
-493,capacité,mënin
-494,changer,wecci
-495,petite monnaie,weccit
-496,morceau,daggit
-497,constituer un résidu,des
-498,résidus,desit
-499,travail,liggéey
-500,travailleur,liggéeykat
-501,bavard,waxkat
-502,locuteur,waxkat
-503,traire,ratt
-504,celui qui trait,rattkat
-505,s'épandre,law
-506,toute plante proliférante,lawtan
-507,amer,wex
-508,bile,wextan
-509,se courber,sëgg
-510,attendre,sëgg
-511,héritier du pouvoir,sëggtéef
-512,vilenie,ñaawtéef
-513,s'asseoir,toog
-514,siège,toogukaay
-515,manger,lekk
-516,plat,lekkukaay
-517,ignorer,xamadi
-518,ignorance,xamadi
-519,insolence,xamadi
-520,abstinence devant la nourriture,lekkadi
-521,manquer de noblesse,goreedi
-522,indignité,goreedi
-523,goûter,mos
-524,faire goûter,mosal
-525,pourboire,mosal
-526,voir,gis
-527,faire voir,gistal
-528,exhibitionnisme,gistal
-529,manquer un but,mooy
-530,dévier,mooy
-531,détournement,moyaal
-532,quemande,moyaal
-533,travailler,liggéey
-534,détenir en commun,bokk
-535,louer,wày
-536,louer,wàyaan
-537,quémander,wàyaan
-538,se moquer,reetaan
-539,ricaner,reetaan
-540,ricanement,reetaan
-541,causer,wax
-542,causer,waxtaan
-543,causerie,waxtaan
-544,regarder,seet
-545,sonder,seet
-546,spectacle,seetaan
-547,concurrencer,jamaale
-548,concurrent,jamaale
-549,marchander,waxaale
-550,marchandage,waxaale
-551,accompagner,demaale
-552,compagnon,demaale
-553,contribuer à un cadeau fait par quelqu'un,mayle
-554,estimer hautement,naw
-555,pair,nawle
-556,un égal,nawle
-557,sortir,génn
-558,voisiner,dend
-559,aller ensemble,ànd
-560,aller en groupe,àndandoo
-561,cohorte,àndandoo
-562,être impoli,reew
-563,impolitesse,reewande
-564,laideur,ñaawande
-565,attente,toogandi
-566,patienter,muñ
-567,patience,muñandi
-568,se rappeler,fattaliku
-569,ne pouvoir se rappeler,fattalikondi
-570,regarder,xool
-571,se regarder,xoolante
-572,aimer,bëgg
-573,s'aimer,bëggante
-574,amour,bëggante
-575,saluer,nuyu
-576,se saluer,nuyonte
-577,s'imposer à quelqu'un,duggu
-578,se lier,duggonte
-579,s'acquoquiner,duggonte
-580,faire semblant de manger,lekkantu
-581,rapide,gaaw
-582,avoir sommeil,gëmmentu
-583,jouer,fo
-584,jeu,fo
-585,jeu,po
-586,jouer,po
-587,jouer,fontu
-588,manquer de sérieux,fontu
-589,déboucher,fattarñi
-590,avaler de travers,fot
-591,arracher,fottarñi
-592,découper,daggat
-593,morceau,daggat
-594,morceau,xott
-595,déchiqueter,xottat
-596,morceau,xottat
-597,vieux,maggat
-598,vieillesse,maggat
-599,vieillir,maggat
-600,sucer,macc
-601,suçoter,maccaat
-602,filtrer,segg
-603,filtrer une fois encore,seggaat
-604,aimer,nob
-605,estimer,sopp
-606,estimer,soppaate
-607,demander,ñaan
-608,fouiller dans le sol,jéex
-609,lécher,maccaatu
-610,devoir aller,demi
-611,aller dire,waxi
-612,devoir répondre à l'avenir,adduji
-613,arranger,defar
-614,se crisper le visage,gaññ
-615,crispation du visage,gaññar
-616,manger avec,lekke
-617,se dresser,jóg
-618,venir de,jógé
-619,se redresser grâce à,jógé
-620,voir,gisé
-621,entrevue,gisé
-622,ami,soppe
-623,estimer à cause de,soppe
-624,ennemi,bañeel
-625,sol,suuf
-626,le bas,suuf
-627,rabaisser,suuféel
-628,deux,ñaar
-629,confier,déey
-630,se concerter,déeyóo
-631,confidence,déeyóo
-632,se disputer,wàñoo
-633,déchirement,wàñoo
-634,rupture,dogoo
-635,siège,toogu
-636,se mirer,seetu
-637,miroir,seetu
-638,plier,lem
-639,se plier,lemu
-640,se parler,waxtu
-641,jouer les devins,jabar
-642,charlatanisme,jabartu
-643,retourner,wàññi
-644,enlever,dindi
-645,se détacher,dindéeku
-646,lâcher,dindéeku
-647,se détacher,dindiku
-648,se retourner,waññiku
-649,être humain,nit
-650,un bout d'homme,as nit
-651,mouton,war
-652,un petit mouton,as xar
-653,un petit poulet,as gane
-654,griot,géwél
-655,un petit griot,as géwél
-656,donner naissance,jur
-657,parents,waa jur
-658,parents,waajur
-659,pays,réew
-660,nationaux,waaréw
-661,nationaux,waa réew
-662,arrière-pays,joor
-663,haut,kaw
-664,région du Sénégal,Lof
-665,habitant du Lof,waa Lof
-666,village sénégalais,Raw
-667,habitant de Rao,waa Raw
-668,habitant de Rao,waaraw
-669,équitation,ngawar
-670,brûlé,daay
-671,endroit déserté,daay
-672,émigrer,gaddaay
-673,émigration,gaddaay
-674,verre,sax
-675,pousse,sax
-676,ver de terre,gasax
-677,être agréable,neex
-678,plaisir,banneex
-679,avoir honte,rus
-680,honorer,rucci
-681,relever d'une honte,rucci
-682,attacher,yeew
-683,détacher,yewwi
-684,salé,wex
-685,dessaler,weqi
-686,nier,weddi
-687,agréable,neex
-688,désagréable,naqadi
-689,dénicher,taggi
-690,turbulent,sop
-691,turbulence,copte
-692,ami,coppe
-693,étonner,yéem
-694,merveille,kéemtaan
-695,spectacle,ceetaan
-696,être acide,saf
-697,acidité,cafka
-698,le fait de se mirer,ceetu
-699,se regarder dans le miroir,ceetu
-700,couvercle,kubéer
-701,recouvrir,odd
-702,manière de s'habiller,kodday
-703,vase en argile,and
-704,vase qui sert à mesurer,kandar
-705,maigre,om
-706,maigreur,komre
-707,variété d'herbe aromatique,cemp
-708,portion extraite,cempit
-709,homme d'action,jëfkat
-710,manière de porter sur le dos,bootaay
-711,association,mbootaay
-712,pourboire,dogal
-713,destin,ndogal
-714,piquer,jam
-715,emporter un enjeu,jam
-716,concurrence,njamaale
-717,arrêter,dog
-718,juge,aji dogal
-719,qui peut décider,aji dogal
-720,esprit constructif,aji-defar
-721,agent,defarkat
-722,constructeur,defarkat
-723,estimer à cause de quelqu'un,soppal
-724,s'épauler dans l'estime,soppalante
-725,changer,soppi
-726,changement,coppeeku
-727,manière de changer,coppalin
-728,manière de changer,coppeekuwaay
-729,dire,wax
-730,qui nie,weddikat
-731,rendre,naqadil
-732,se faire de petits cadeaux,dogalante
-733,concession mutuelle,ndogalante
-734,mettre en tête,jiital
-735,se mettre en rang,jiitëlante
-736,série,jiitalante
-737,succession,jiitalante
-738,faire marchander,waxaalelu
-739,qui fait marchander,waxalelukat
-740,essayer,jéem
-741,s'exercer,jëmentu
-742,terrain d'essai,jëmentalukaay
-743,être en tête,jiitu
-744,se substituer,wuutu
-745,substituer,wuutal
-746,bonne fortune,xéewal
-747,bénéficier d'un sort,xéewlu
-748,événement,xew
-749,piqûre,jam-jam
-750,percer,xar
-751,fente,xar-xar
-752,désir,bëgg-bëgg
-753,humidité,tooy-tooy
-754,événement,xew-xew
-755,nom de région,waalo
-756,habitant du Oualo,waalo-waalo
-757,chef de province,sax-sax
-758,jeune pousse,sax-sax
-759,noir,ñuul
-760,ventre,biir
-761,méchant,ñuulbiir
-762,méchanceté,ñuulbiir
-763,esclave,jaam
-764,roi,buur
-765,homme libre,jaambur
-766,cimetière,sëg
-767,chance,wërsëg
-768,homme libre,jambuur
-769,habitant de la région des hommes libres,jambuur-jambuur
-770,pas de cheval,kërbët
-771,galop de cheval,kërbët kërbët
-772,femme qui ne se porte pas bien,jigéenu wérul
-773,femme enceinte,jigéenu wérul
-774,prestation obligatoire,waru gar
-775,dot,waru gar
-776,littéralement maure mâle,naaru góor
-777,cheval pur sang arabe,naaru góor
-778,deux rythmes,ñaari goroŋ
-779,figures de danse,ñaari goroŋ
-780,indépendance,moom-sa-réew
-781,rentrer en possession de son pays,moom-sa-réew
-782,qu'il vende,na jaay
-783,oncle,na jaay
-784,femme qui épouse son oncle,jarabibaat
-785,bon,bax
-786,faire semblant d'être gentil,baxbax-lu
-787,se conduire en homme,góorgóor-lu
-788,va et vient,wër-wër
-789,aller à droite et à gauche,wër wër lu
-790,science,xam-xam
-791,jouer au savant,xam xam lu
-792,fendre,xar
-793,simuler l'agonie,xar xar le
-794,trépidation,daŋ-daŋ
-795,trépigner,daŋ daŋ
-796,trépigner,daŋ daŋ lu
-797,fracas,raŋ-raŋ
-798,faire du vacarme,raŋ raŋ lu
-799,habitant du Diambour,jaambur-jaambur
-800,jouer au sage,jaambur jaamburlu
-801,fente,xar xar
-802,agoniser,xarxarle
-803,qui simule l'agonie,xarxarlekat
-804,chance,wër sëg
-805,bénéficier de quelque chose,wërsëglóo
-806,trépidation,daŋ daŋ
-807,aller s'exciter quelque part,daŋdaŋluji
-808,courtisan,bëkknéeg
-809,se conduire en courtisan,bëkknéegu
-810,dot,warugar
-811,considérer comme une obligation,warugarloo
-812,figure de danse,ñaari goroŋ
-813,aller danser le naari,ñaari goroŋi
-814,être humain de sexe masculin,nit ku góor
-815,homme,nit ku góor
-816,hommes,nit ñu góor
-817,êtres humains de sexe masculin,nit ñu góor
-818,moi,man
-819,lui,moom
-820,nous,ñun
-821,vous,yéen
-822,eux,ñoom
-823,ce n'est pas lui !,du moom !
-824,me,ma
-825,te,ka
-826,vous,leen
-827,les,leen
-828,que je,na ma
-829,que je,naa
-830,qu'il,na mu
-831,qu'il,na
-832,celui,ki
-833,lequel,ku
-834,celui,mi
-835,celui,ma
-836,lequel,mu
-837,quiconque,mu
-838,celui,gi
-839,celui,ga
-840,lequel,gu
-841,quiconque,gu
-842,celui,kookii
-843,celui,kooka
-844,quiconque,kooku
-845,lequel,kooku
-846,celui,moomii
-847,celui,mooma
-848,lequel,moomu
-849,quiconque,moomu
-850,celui,googii
-851,celui,googa
-852,lequel,googu
-853,quiconque,googu
-854,lequel,kii
-855,celui-ci tout près,kuu
-856,celui-là,mee
-857,celle-ci,kile
-858,celle-ci,kule
-859,celle-ci,male
-860,lequel,mii
-861,celui-là,mii
-862,celle-ci,muu
-863,celui-là,mile
-864,lequel,mile
-865,celle-ci,mule
-866,celui-ci,kookii
-867,celui-ci près de toi,kookii
-868,celle-ci,kookuu
-869,celle-ci près de toi,kookuu
-870,celle-ci,kookee
-871,celui-ci,moomile
-872,celle-ci,moomule
-873,celle-ci,moomale
-874,ceux-ci,nii
-875,ceux-ci,nuu
-876,ceux-ci près de toi,nuu
-877,ceux-là,ñooñee
-878,celles-ci,yi
-879,celles-ci,yuu
-880,celles-là,joyee
-881,celles-ci,ñooñii
-882,celles-ci,ñooñuu
-883,celles-là,ñooñale
-884,celles-ci,yooyii
-885,celles-là,yooyale
-886,qui,yan
-887,lequel,yan
-888,qui,ñan
-889,lequel,ñan
-890,le tout,képp
-891,tout,képp
-892,chaque,képp
-893,le tout,mépp
-894,tout,mépp
-895,chaque,mépp
-896,le tout,lépp
-897,tout,lépp
-898,chaque,lépp
-899,le tout,wépp
-900,tout,wépp
-901,chaque,wépp
-902,le tout,sépp
-903,tout,sépp
-904,chaque,sépp
-905,le tout,bépp
-906,tout,bépp
-907,chaque,bépp
-908,le tout,gépp
-909,tout,gépp
-910,chaque,gépp
-911,le tout,jépp
-912,tout,jépp
-913,chaque,jépp
-914,tous,ñépp
-915,la totalité,ñépp
-916,tous,yépp
-917,la totalité,yépp
-918,un seul homme,kenn
-919,un seul homme,kennu nit
-920,quelques-uns parmi les hommes,ñenn
-921,quelques-uns parmi les hommes,yenn
-922,certaines gens,ñenn
-923,certaines gens,yenn
-924,certaines gens,ñennu nit
-925,certaines gens,yennu nit
-926,quelques-uns parmi les hommes,ñennu nit
-927,quelques-uns parmi les hommes,yennu nit
-928,un mâle,kenn ku góor ki
-929,une autre femme,keneen ku jigéen
-930,une autre femelle,keneen ku jigéen
-931,là où,fi
-932,alors que,fi
-933,dès que,fi
-934,là,foofa
-935,alors,foofa
-936,à ce moment,foofa
-937,ici,fu
-938,où,fu
-939,là,foofu
-940,alors à ce moment,foofu
-941,là où,fa
-942,à l'intérieur,ci
-943,dedans,ci
-944,parmi,ci
-945,sur,ci
-946,à l'intérieur,cu
-947,à l'intérieur,ca
-948,à cet endroit-là,ca
-949,sur,ca
-950,ce que,li
-951,ce qui,li
-952,ceci,looli
-953,le fait que,looli
-954,ce que,lu
-955,qu'est-ce qui,lu
-956,ce fait,loolu
-957,cela,la
-958,cela,loola
-959,ce fait-là,loola
-960,ici,fii
-961,là a cet endroit,foofii
-962,là a cet endroit,file
-963,là a cet endroit,foofile
-964,ici,fuu
-965,là tout près de toi,foofuu
-966,là tout près de toi alors,foofuu
-967,là tout près de toi,fule
-968,là tout près de toi alors,fule
-969,là tout près de toi,foofale
-970,là tout près de toi alors,foofale
-971,là-bas,fee
-972,là-bas,foofee
-973,à ce moment-là,foofee
-974,à ce moment-là,fale
-975,là-bas,fale
-976,là-bas,foofale
-977,à ce moment-là,foofale
-978,comme ci,nii
-979,ainsi,nii
-980,comme ça,noonii
-981,ainsi,noonii
-982,de cette,nile
-983,comme ci,nuu
-984,comme ça,noonuu
-985,ainsi,noonuu
-986,de cette manière,nule
-987,comme cela,nee
-988,de cette manière-là,nee
-989,comme cela,noonee
-990,de,nale
-991,de cette manière-ci,noonile
-992,de cette manière-là,noonule
-993,de cette manière-là,noonale
-994,ceci,lii
-995,ceci,loolii
-996,ceci,lile
-997,ce fait,loolule
-998,ceci,luu
-999,ceci,looluu
-1000,ceci,lule
-1001,ce fait-ci,loolule
-1002,cela là-bas,le
-1003,cela,loolee
-1004,cela,lale
-1005,là-bas,lale
-1006,de fait-là,lale
-1007,ce,loolale
-1008,comment,fan
-1009,de quelle manière,fan
-1010,de quelle manière,naan
-1011,comment,naan
-1012,en un lieu,fenn
-1013,nulle part,fenn
-1014,en aucune manière,nenn
-1015,une façon,nenn
-1016,une chose,lenn
-1017,tu ne vas nulle part,demuloo fenn
-1018,tu ne vas pas ailleurs,demuloo feneen
-1019,tu ne vas pas dans un autre lieu,demuloo feneen
-1020,de toute façon,népp
-1021,l'autre,leneen li
-1022,l'autre partie,leneen li
-1023,l'un là-basMark,lenn lale
-1024,l'une des parties qui est là-bas,lenn lale
-1025,l'une des choses qui est là-bas,lenn lale
-1026,l'une des choses là-bas,lenn lale
-1027,tout cela,lepp loolu
-1028,cela qui fut,loolu woon
-1029,ce qui fut,li woon
-1030,le fait passé,li woon
-1031,cet endroit là,fa woon
-1032,cet endroit là fut,fa woon
-1033,de la manière dont ce fut,na woon
-1034,tout cela,lépp loolu woon
-1035,cet autre fait-là,leneen loolee woon
-1036,cet autre chose qui fut,leneen loolee woon
-1037,autre chose seulement,leneen rekk
-1038,cela seulement,loolu doŋŋ
-1039,comme dès que,naka
-1040,du moment que,naka
-1041,derrière,gannaaw
-1042,après que,gannaaw
-1043,du moment que,gannaaw
-1044,après,gannaaw
-1045,tant que,soobeek
-1046,après que,ba
-1047,jusqu'au moment où,ba
-1048,lorsque,bi
-1049,au moment où,bi
-1050,lorsque,bu
-1051,quand,bu
-1052,lorsque,su
-1053,si,su
-1054,sans que,te
-1055,alors que,te
-1056,mais,te
-1057,afin que,ndax
-1058,est-ce que,ndax
-1059,afin aussi,ndax itam
-1060,sauf si,walla
-1061,à moins que,ba itam
-1062,ou alors que,ba itam
-1063,que,ni
-1064,si,ndegam
-1065,dans ce cas,kon nag
-1066,alors,kon nag
-1067,dans,ci
-1068,avec,ak
-1069,en compagnie de,ak
-1070,grâce à,ak
-1071,avant que,balaa
-1072,et,te
-1073,et aussi,te
-1074,aussi,itam
-1075,avec,ag
-1076,ou,walla
-1077,ou bien,walla
-1078,cependant,waaye
-1079,toutefois,wante
-1080,cependant,wante
-1081,mais,wante
-1082,mais aussi,te itam
-1083,et aussi,ag itam
-1084,et encore,ag itam
-1085,ou alors,walla nak
-1086,ou enfin,walla nak
-1087,alors,te
-1088,alors,noona nak
-1089,de ce fait,noona nak
-1090,de ce fait,te
-1091,sur ce,te
-1092,sur ce,noona nak
-1093,mais,ndeke
-1094,cependant,ndeke
-1095,toutefois,ndeke
-1096,mais,waaye
-1097,toutefois,waaye
-1098,que ne pas,bu
-1099,que,na
-1100,et pourtant,moontin
-1101,cependant,moontin
-1102,quoi qu'il en soit,moontin
-1103,en fait,moontin
-1104,et pourtant,moontin dey
-1105,en dépit de tout,moontin nag
-1106,dans ce cas,bon nag
-1107,alors,bon nag
-1108,s'il en est ainsi,kon nag
-1109,dans ce cas alors,kon nag dey
-1110,malheureusement,waaye
-1111,par contre,waaye sax
-1112,d'ailleurs,waaye sax
-1113,du reste,waaye sax
-1114,d'ailleurs,waaye nag
-1115,toutefois,waaye nag
-1116,malheureusement,waaye nag
-1117,mais (avec menace),waaye de
-1118,mais aussi,wante itam
-1119,mais non plus,wante itam
-1120,mais,wande nag
-1121,oui,waaw
-1122,alors,waaw
-1123,et puis,waaw
-1124,ainsi,moom nag
-1125,ainsi,ba
-1126,de sorte que,ba nag
-1127,ainsi donc,ba nag
-1128,et surtout,te kat
-1129,alors,foofu
-1130,en cet endroit,foofu
-1131,en ce moment,foofu
-1132,à ce moment,foofu nak
-1133,alors,foofu nak
-1134,les enfants alors se fâchèrent.,"xale yi, foofu nag, ñu mer."
-1135,ainsi,noonu
-1136,alors,noonu itam
-1137,sur ces entrefaites,noonu itam
-1138,tu as été ?,dem ŋga ?
-1139,non !,déedéed !
-1140,bien sur !,xanaa !
-1141,peut-être !,xëyna !
-1142,un homme,nit
-1143,au roi,buur
-1144,un quidam,jaambur
-1145,un certain individu,jaambur
-1146,beauté,rafet
-1147,pour la beauté,rafet
-1148,personne,kenn
-1149,celui-là,kookuu
-1150,boubou,mbubb
-1151,un boubou,mbubb
-1152,à l'intérieur,ci biir
-1153,vers celui-ci,ci biir
-1154,vers dedans,ci biir
-1155,le voici,mi ŋgile
-1156,de n'être pas belle,rafet
-1157,d'être pas belle,rafet
-1158,celui-là,kooku
-1159,de l'autre,keneen ki
-1160,vers eux,ca ñoom
-1161,« j'ai été » ne nous suffit pas,Dem naa doyunu
-1162,un peu d'argent de toi,tuuti xaalis ci yaw
-1163,à cause de,ndax
-1164,grâce à,ndax
-1165,comme tel,na
-1166,aussi,na
-1167,à cause de,ŋgir
-1168,grâce à,ŋgir
-1169,sauf,gannaaw
-1170,excepté,gannaaw
-1171,au sujet,ci
-1172,de,cu
-1173,à,ca
-1174,parmi,ca
-1175,à,ba
-1176,jusqu'à,ba
-1177,par,ak
-1178,ensuite,te
-1179,or,te
-1180,ou bien,mbaa
-1181,ou alors,mbaa
-1182,actuel,amees
-1183,aoriste,ameef
-1184,inactuel,amoon
-1185,passé défini,amoon
-1186,combinaison,àndandoo
-1187,son,addu
-1188,phonème,addu
-1189,entité phonique,mbóoleem-addu
-1190,phonétique,addooku
-1191,science phonétique,addooku
-1192,phonéticien,adducaakoon
-1193,phonéticien,fonetikkat
-1194,phonème,araf
-1195,lettre,araf
-1196,géminée,araf céex
-1197,gémination,araf céexal
-1198,géminée,araf céexal
-1199,gémination,araf séexal
-1200,géminée,araf séexal
-1201,gémination,araf wu séex
-1202,géminée,araf wu séex
-1203,consonne,araféef
-1204,prolongement morphologique,araf raññee
-1205,élément de « classé »,araf raññee
-1206,prolongement morphologique simple,araféef raññee
-1207,fricative,araf wu ubbéeku
-1208,fricative,araf ubbéeku
-1209,occlusive,araf wu tëju
-1210,occlusive,araf tëju
-1211,consonne sonore,araféef wu léer
-1212,consonne sourde,araféef wu tëx
-1213,phonème médian,arafu digg
-1214,phonème initial,arafu ndorte
-1215,phonème final,arafu geen
-1216,apico-dental,apiko-dantaal
-1217,apicovélaire,apiko-weller
-1218,catégorie de l'actuel,raññe ameef
-1219,"montrer, élucider, mettre en évidence, identifier","birël, leeral, génne, wàne"
-1220,pluriel,bares
-1221,catégorie de pluriel,raññe bares
-1222,singulier,bareedi
-1223,ramasser des ordures pour quelqu'un,anal
-1224,obtenir quelque chose pour quelqu'un,amal
-1225,montrer quelque chose,wànal
-1226,montrer quelque chose à quelqu'un de la part de quelqu'un d'autre,wànal
-1227,toucher,dac
-1228,entrer en contact avec,dac
-1229,user par frottement,dad
-1230,se briser la tête mutuellement,xaañoo
-1231,clignoter,raf
-1232,bouger de façon subreptice,raf
-1233,prendre dans un filet,laaw
-1234,écorché,dar
-1235,usé par frottement,dar
-1236,s'étendre,law
-1237,bande d'étoffe grimpante,laf
-1238,accaparer quelque chose pour quelqu'un,siifal
-1239,abandonner le faj domicile conjugal,fay
-1240,mordre à pleines dents,xamp
-1241,battre quelqu'un à plusieurs,sat
-1242,manque de gêne,sañ
-1243,faire preuve d'audace excessive,sañ
-1244,s'exiler plus ou moins définitivement,laŋ
-1245,faire de la place à quelqu'un,xajal
-1246,frayer un chemin à quelqu'un,xajjal
-1247,adopter une attitude de serviteur vis-à-vis de quelqu'un,dagu
-1248,être sur le point de s'épuiser,jëxi
-1249,terrain sablonneux,joor
-1250,être de connivence,maŋkoo
-1251,pencher d'un côté,weŋgalu
-1252,jointure,teŋxu
-1253,articulation,teŋxu
-1254,connaître un mauvais sort pied,toskare
-1255,habitant de l'Hinterland,waa joor
-1256,habitant des régions sablonneuse,Waa joor
-1257,couper pour quelqu'un,dogal
-1258,halte,dogal
-1259,marché de bétail,dogal
-1260,accomplir une démarche pour quelqu'un,demal
-1261,louer son travail à l'extérieur,liggéeyaan
-1262,copropriété,bokkaan
-1263,posséder en commun,bokkaan
-1264,émoustiller,jam
-1265,stimuler,jam
-1266,sortir ensemble,génnandoo
-1267,sortie collective,génnandoo
-1268,voisiner,dendandoo
-1269,voisin,dendandoo
-1270,voisinage,dendandoo
-1271,se dépêcher,gaawantu
-1272,empressement,gaawantu
-1273,amourette,nobaate
-1274,nourrir une petite passion,nobaate
-1275,quémander,ñaanaatu
-1276,mendier,ñaanaatu
-1277,quémande,ñaanaatu
-1278,fouiller le sol avec insistance,jéexaatu
-1279,parler avec,waxé
-1280,parler à partir d'un lieu donné,waxé
-1281,annoblir,goreel
-1282,ennoblissement,goreel
-1283,libération,goreel
-1284,deuxième épouse,ñaareel
-1285,prendre une seconde femme,ñaareel
-1286,retournement,wàññeeku
-1287,se retourner,wàññeeku
-1288,habitants de l'arrière-pays,waa joor
-1289,habitants de l'arrière-pays,waajoor
-1290,habitant de l'intérieur,waa kaw
-1291,habitant de l'intérieur,waakaw
-1292,rendre désagréable,naqadil
-1293,bénéficier d'un sort favorable,xéewlu
-1294,fracas,daŋŋ-daŋŋ
-1295,de bruits et de mouvement,daŋŋ-daŋŋ
-1296,fracas,raŋŋ-raŋŋ
-1297,de bruits et de mouvement,raŋŋ-raŋŋ
-1298,de bruits et de mouvement,kër-kër
-1299,fracas,kër-kër
-1300,aller danser le naari goroŋ,ñaari goroŋi
-1301,celui,ka
-1302,lesquels,ñi
-1303,auxquels,ñi
-1304,lesquels,ña
-1305,auxquels,ña
-1306,lesquels,ñooña
-1307,auxquels,ñooña
-1308,lesquels,ñu
-1309,auxquels,ñu
-1310,lesquels,ñooñu
-1311,auxquels,ñooñu
-1312,lesquels,yi
-1313,auxquels,yi
-1314,lesquels,ya
-1315,auxquels,ya
-1316,lesquels,yooya
-1317,auxquels,yooya
-1318,lesquels,yu
-1319,auxquels,yu
-1320,lesquels,yooyu
-1321,auxquels,yooyu
-1322,certaines gens,ñenn nit
-1323,quelques-uns parmi les hommes,ñenn nit
-1324,certaines paroles,yenniy kaddu
-1325,de cette manière,nile
-1326,de cette manière ci,nule
-1327,de cette manière-là,nale
-1328,ce fait-là,loolale
-1329,"« me voici, regardez-moi » n'est pas le fait d'un homme serein.","Maa ŋgii gis leen ma, du jëfu nit ku yiw."
-1330,et aussi,te itam
-1331,et surtout,te itam
-1332,et,te nak
-1333,et aussi,te nak
-1334,et encore,te nak
-1335,et surtout,te nak
-1336,et sans que,te nak
-1337,et enfin,te nak
-1338,mais aussi,ag it
-1339,et aussi,ag it
+french,wolof
+Saint-Louis,Ndar
+Moussa,Musaa
+partir,dem
+Est,sawwu
+coiffure de jeune fille,paq
+terre humide,baq
+bois de chauffage,matt
+borgne,patt
+Province du Sénégal,Kajoor
+Cayor,Kajoor
+Saint-Louisien,waa Ndar
+Saint-Louisien,waandar
+fermer,up
+porter malchance,um
+posséder ensemble,bokk
+être pulvérisé,mokk
+bracelet,lam
+se noyer,lap
+trouver quelque chose,amal
+prêter,abal
+mesurer,natt
+croire,gëm
+être meilleur,gën
+soigner,fac
+soin,pac
+sable,suuf
+teindre,suup
+souder,daf
+rejoindre,dap
+chevreau,tef
+faire,def
+suivre,topp
+oreille,nopp
+traîner,wàt
+montrer,wàn
+traîner,wàtal
+traîner pour quelqu'un,wàtal
+cacher,nëbb
+piller,dëbb
+ranger,fad
+où,fan
+grappe,cëgg
+piétiner,dëgg
+mentir,nar
+enduire,ñar
+tordre,wàñ
+branche,car
+se vendre bien,jar
+nourriture,ñam
+atteindre,daj
+toucher,daj
+caracoler,dañ
+se partager,xaajoo
+rugir,ŋar
+tendu,daŋ
+tendre,daŋal
+rendre tendu,daŋal
+caracoler,dañal
+qui,kan
+hôte,gan
+guetter,kar
+serviteur,dak
+couper,dok
+pierre,doc
+piocher,gabb
+tenir à bout de bras,ŋabb
+serviteur,dag
+mouton,xar
+tendu,dan
+beurre,dax
+fané,lax
+tranche médiane de poisson,lak
+caillou,xor
+homme libre,gor
+marcher,dox
+couper,dog
+couler,siit
+suinter,siit
+avoir peur,tiit
+inquiétude,tiis
+peur,tiit
+se nouer,fasu
+s'abriter,fatu
+s'enfermer chez soi,fatu
+être piquant,saf
+coudre deux bandes d'étoffe,xaf
+se coincer,tase
+s'aplatir contre une paroi,tafu
+presser,nal
+étendre,lal
+élire,fal
+amant,far
+lit,lal
+avoir le temps,tal
+ranger,fat
+année dernière,daaw
+abriter,fad
+mélanger,rax
+tromper,nax
+effacer,far
+souder un trou,daf
+tailler,dad
+polir,dad
+couler,wal
+publier,siiwal
+parler,wax
+bouillir,bax
+courir,daw
+rejoindre,dab
+souffler,wàl
+élection,pàl
+choses,yëf
+fait,jëf
+acte,jëf
+soigner,faj
+chose,lëf
+chanter,wày
+moudre,wàl
+tordre,wañ
+toi,yaw
+coudre,ñaw
+espèce de cheval,mpar
+allié,par
+planter,sàmp
+chanter (coq),sap
+variété de cheval,mpar
+avoir soif,mar
+savoir,xam
+filet,mbaal
+pardonner,baal
+flotter,tëmb
+sauter,tëb
+diminutif de Babacar,mbay
+donner,may
+avarié,xamb
+sorte de puits,ntëng
+femelle d'animal,tëng
+remercier,sant
+récipient,ndab
+rattraper,dab
+boue,ban
+baton,bant
+envoyé,ndaw
+souffle,naw
+sorte de fourneau,and
+enlever des ordures,an
+part,nar
+enlever,an
+fourneau en argile,and
+chien,xac
+écorce,xañc
+bâtir,sañc
+bâtir une ville,sañc
+branche,ñcar
+aube,njël
+prendre,jël
+boule de couscous,doñj
+pierre,doj
+canari,ñjaq
+sueur,ñaq
+se poser,tak
+pied,taŋk
+refuser,laŋk
+calebasse,tax
+puiser,taŋx
+faire pousser,saxal
+brisures de mil,saŋxal
+étourdi,sop
+trouver gentil,sopp
+pourri,nëb
+pourrir,nëbël
+cacher pour quelqu'un,nëbbël
+fermer les yeux,gëmm
+boucher,fatt
+fusil,fetal
+faire éclater,fettal
+abattre,fadd
+avaler,wànn
+soigner,tac
+éclater,facc
+chien,xaj
+séparer,xajj
+faire de la place à,xajal
+compter,wàññ
+s'enflammer,takk
+grand,mag
+grandir,magg
+pourboire,dagguu
+se tâcher,taq
+remuer,jeqi
+piler,wàl
+secours,wàll
+talus,tali
+s'étendre de tout son long,talli
+variété d'oiseau,coy
+rouge écarlate,coyy
+respirer,noyyi
+urinoir,sawu
+atmosphère,jaww
+bâtiment,taax
+prendre,fab
+prendre,fap
+se poser,tag
+prendre pour quelqu'un,fabal
+ranger pour quelqu'un,fatal
+aller soigner,faji
+épine,dek
+épine,deg
+épine de brousse,degu àll
+nom,tur
+verser,tuur
+quiconque,ku
+celui-là,kuu
+que voilà,kuu
+rien,tus
+éclabousser,tis
+recouvrir,muur
+avoir des vertiges,miir
+celui-là devant,kuu
+celui-ci,kii
+gosier,boli
+grand plat,bóoli
+se soulever,jog
+porter bonheur,jig
+teindre à l'indigo,suup
+plonger,sóop
+mou,tóoy
+humide,tooy
+trahir,wor
+jeûner,woor
+noble,gor
+s'affaisser,goor
+trahison,kor
+ombre,ker
+saison sèche,noor
+mal de mer,neer
+piler,wol
+effacer,fàr
+dent mal plantée,jaŋg
+étudier,jàŋg
+attiser un feu,xamb
+lieu de culte,xàmb
+homme,nit
+éclairer,niit
+lequel,ki
+venir,dikk
+aller voir,gisi
+se concerter,gise
+homme de caste,géer
+lignée,giir
+descendance,giir
+être guéri,wér
+adosser,wéer
+fibre de coton,wét
+côte,wet
+lune,weer
+berge,xer
+rivage,xer
+pierre,xeer
+ver de terre,wer
+s'évaporer,fer
+attendre,xaar
+monter,war
+étonner,waar
+passer par,jaar
+s'allumer,tàkk
+attacher,takk
+dent de travers,jaŋg
+vent,ëgg
+arriver,agg
+avoir une dysenterie,fër
+côte,faar
+être en vacance,bër
+beurre,bëër
+chair,sóox
+absorber une forte gorgée,góox
+envieux,iñaan
+arriver,egg
+déjeuner,añ
+avare,aay
+serviabilité,aajo
+fermer,ub
+bailler,obali
+être maigre,om
+prendre sur ses genoux,uuf
+genoux,óom
+maigre,oos
+dépasser les limites,ëpp
+excessif,ëpp
+naissance,juddu
+tissu,ndimo
+bras,lóxó
+celui-ci,kuu
+tout près,kuu
+se concerter,gisóo
+se couvrir avec,woddoo
+cet,ki
+que voici,ki
+amulette,téeré
+interdire,tere
+rien,dara
+rire,ree
+encre,daa
+muet,muumë
+guérir,wér
+faire le tour,wër
+homme de noble caste,géer
+voir ensemble,gisóo
+rendre bon,baaxal
+faire une offrande à une divinité.,tuurul
+coller,taf
+afficher,taf
+maison,kër
+chasser,rëbb
+refuser,bañ
+frapper,dóor
+aile,laaf
+pouvoir,mën
+vilain,ñaaw
+change,sëf
+éduquer,yar
+élection,mpal
+culture,mbay
+folie,ndof
+prise,ñjëg
+croyance,ŋgëm
+charge,sas
+allumer,taal
+éteindre,fày
+tâter,lamb
+rêver,gént
+bouchée,lañc
+indigo,ŋgëñj
+chaud,taŋg
+il y a un moment,saŋx
+tête,bopp
+grenier,saq
+scarifier,gajj
+couper,dagg
+secours,wall
+avoir pris l'habitude de,tamm
+choir,tann
+avarié,wàŋŋ
+tam tam,sabar
+façon d'être,ndemin
+feu,safara
+s'embourber,ñappati
+récipient,satala
+poulet,ganaar
+nom,Idi
+envie,kañaan
+torchon,sagar
+exil,laŋaay
+fumée train,saxaar
+demander pardon,bala
+puer,xasaw
+prendre partie pour,faral
+conduire,dawal
+interdire,aaye
+déraciner,sempi
+rebord,ñjambaas
+baptême,ŋgenté
+unité de mesure,andaar
+se coincer,tañcu
+cuivre,xañjar
+se taire,noppi
+éviter,wattu
+se pincer,tëccu
+être vacciné,ñakku
+se cacher,laqu
+être anémié,libbët
+répondre,addu
+défoncer,dajji
+enjamber,jéggi
+secourir,wàllu
+nom,sannar
+habituer,tammal
+nom,Daŋŋar
+déboucher,saññi
+jaloux,iñaan
+jaloux,añaan
+or,urus
+bailler,óbbëli
+s'essuyer la bouche,ommeeku
+se blottir,uufu
+faire maigrir,oosal
+se retrousser les manches,ëñu
+obligeance,itte
+ouvrir,ubbi
+séparer,atté
+juger,atté
+se gratter,okkatu
+retrousser,ëñ
+frapper,itt
+envelopper,ëmb
+limite,app
+maladie,opp
+amener,ëndi
+canari,ndaa
+plante de pied,testën
+piocheur,gabbkat
+aller mourir,deei
+semence,jiu
+aller rire,reei
+mourir en groupe,deeo
+mourir ensemble,deeo
+mourir ensemble,deewoo
+aller semer,jii
+aller semer,jiyi
+mourir pour ,déeal
+mourir pour ,deeal
+se renverser,juutu
+devancer,jitu
+se brouiller définitivement,dogoo
+livre,téeré
+frayer ensemble,duggo
+fruit,ndugóor
+faire courir,dawal
+rire en même temps,reeaale
+mourir en même temps,deaale
+feindre en riant,reewaale
+rire en même temps de,reewaale
+expliquer en même temps,sawaale
+semer en même temps,jiyaale
+rire encore avec quelqu'un,reeaatle
+s'épanouir,leqaliku
+déboucher,fatarñi
+déserter,gent
+recouvrir,saŋg
+tête,boppa
+boucher,fatta
+planter,samp
+planter,sampa
+être obstrué,Fattu
+mâle,góor
+boeuf,nag
+tambour,sabar
+femme,jigéen
+femelle,jigéen
+sentir,xeeñ
+abandonner,wàcc
+laisser tomber,wàcc
+partir,dem
+il part,dem-na
+le départ,dem-bi
+précéder,jiitu
+mettre en tête,fital
+méchant,soxor
+méchanceté,coxor
+musulman,sëriñ
+l'état de musulman,cëriñ
+islam,cëriñ
+baobab,guy
+fruit du baobab,buy
+cheval,fas
+petit cheval,pas
+être allié,far
+alliance,par
+habitant du Lof,wàlaf
+pays du Lof,jolof
+pays wolof,jolof
+je suis allié,far naa
+habitant de l'intérieur,ajoor
+jalousie,kañaan
+arachide,aaréen
+petite quantité d'arachide,kaaréen
+parole,kaddu
+tonnerre,kaddu
+instrument de mesure,andaar
+le même instrument,kandaar
+la maison,néeg bi
+la petite maison,néeg si
+le fait de partir,ndem
+départ,ndem
+désirer,bëgg
+désir,mbëgg
+faire une réunion,géew
+assemblée,ngéew
+homme,góor
+bravoure,ngóor
+manant,baadolo
+état de manant,mbaadolo
+être bon,baax
+bonté,mbaax
+allié,far
+alliance,mpar
+trahison,nkor
+porter sur le dos,boot
+la manière de porter sur le dos,bootaay
+laid,ñaaw
+la laideur,ñaawaay
+piquant,saf
+l'acidité,safaay
+le piquant,safaay
+illuminer,xuyy
+brûler,lakk
+aller,dem
+manière d'aller,demin
+l'état,demin
+façon de parler,waxin
+accent,waxin
+capacité,mënin
+changer,wecci
+petite monnaie,weccit
+morceau,daggit
+constituer un résidu,des
+résidus,desit
+travail,liggéey
+travailleur,liggéeykat
+bavard,waxkat
+locuteur,waxkat
+traire,ratt
+celui qui trait,rattkat
+s'épandre,law
+toute plante proliférante,lawtan
+amer,wex
+bile,wextan
+se courber,sëgg
+attendre,sëgg
+héritier du pouvoir,sëggtéef
+vilenie,ñaawtéef
+s'asseoir,toog
+siège,toogukaay
+manger,lekk
+plat,lekkukaay
+ignorer,xamadi
+ignorance,xamadi
+insolence,xamadi
+abstinence devant la nourriture,lekkadi
+manquer de noblesse,goreedi
+indignité,goreedi
+goûter,mos
+faire goûter,mosal
+pourboire,mosal
+voir,gis
+faire voir,gistal
+exhibitionnisme,gistal
+manquer un but,mooy
+dévier,mooy
+détournement,moyaal
+quemande,moyaal
+travailler,liggéey
+détenir en commun,bokk
+louer,wày
+louer,wàyaan
+quémander,wàyaan
+se moquer,reetaan
+ricaner,reetaan
+ricanement,reetaan
+causer,wax
+causer,waxtaan
+causerie,waxtaan
+regarder,seet
+sonder,seet
+spectacle,seetaan
+concurrencer,jamaale
+concurrent,jamaale
+marchander,waxaale
+marchandage,waxaale
+accompagner,demaale
+compagnon,demaale
+contribuer à un cadeau fait par quelqu'un,mayle
+estimer hautement,naw
+pair,nawle
+un égal,nawle
+sortir,génn
+voisiner,dend
+aller ensemble,ànd
+aller en groupe,àndandoo
+cohorte,àndandoo
+être impoli,reew
+impolitesse,reewande
+laideur,ñaawande
+attente,toogandi
+patienter,muñ
+patience,muñandi
+se rappeler,fattaliku
+ne pouvoir se rappeler,fattalikondi
+regarder,xool
+se regarder,xoolante
+aimer,bëgg
+s'aimer,bëggante
+amour,bëggante
+saluer,nuyu
+se saluer,nuyonte
+s'imposer à quelqu'un,duggu
+se lier,duggonte
+s'acquoquiner,duggonte
+faire semblant de manger,lekkantu
+rapide,gaaw
+avoir sommeil,gëmmentu
+jouer,fo
+jeu,fo
+jeu,po
+jouer,po
+jouer,fontu
+manquer de sérieux,fontu
+déboucher,fattarñi
+avaler de travers,fot
+arracher,fottarñi
+découper,daggat
+morceau,daggat
+morceau,xott
+déchiqueter,xottat
+morceau,xottat
+vieux,maggat
+vieillesse,maggat
+vieillir,maggat
+sucer,macc
+suçoter,maccaat
+filtrer,segg
+filtrer une fois encore,seggaat
+aimer,nob
+estimer,sopp
+estimer,soppaate
+demander,ñaan
+fouiller dans le sol,jéex
+lécher,maccaatu
+devoir aller,demi
+aller dire,waxi
+devoir répondre à l'avenir,adduji
+arranger,defar
+se crisper le visage,gaññ
+crispation du visage,gaññar
+manger avec,lekke
+se dresser,jóg
+venir de,jógé
+se redresser grâce à,jógé
+voir,gisé
+entrevue,gisé
+ami,soppe
+estimer à cause de,soppe
+ennemi,bañeel
+sol,suuf
+le bas,suuf
+rabaisser,suuféel
+deux,ñaar
+confier,déey
+se concerter,déeyóo
+confidence,déeyóo
+se disputer,wàñoo
+déchirement,wàñoo
+rupture,dogoo
+siège,toogu
+se mirer,seetu
+miroir,seetu
+plier,lem
+se plier,lemu
+se parler,waxtu
+jouer les devins,jabar
+charlatanisme,jabartu
+retourner,wàññi
+enlever,dindi
+se détacher,dindéeku
+lâcher,dindéeku
+se détacher,dindiku
+se retourner,waññiku
+être humain,nit
+un bout d'homme,as nit
+mouton,war
+un petit mouton,as xar
+un petit poulet,as gane
+griot,géwél
+un petit griot,as géwél
+donner naissance,jur
+parents,waa jur
+parents,waajur
+pays,réew
+nationaux,waaréw
+nationaux,waa réew
+arrière-pays,joor
+haut,kaw
+région du Sénégal,Lof
+habitant du Lof,waa Lof
+village sénégalais,Raw
+habitant de Rao,waa Raw
+habitant de Rao,waaraw
+équitation,ngawar
+brûlé,daay
+endroit déserté,daay
+émigrer,gaddaay
+émigration,gaddaay
+verre,sax
+pousse,sax
+ver de terre,gasax
+être agréable,neex
+plaisir,banneex
+avoir honte,rus
+honorer,rucci
+relever d'une honte,rucci
+attacher,yeew
+détacher,yewwi
+salé,wex
+dessaler,weqi
+nier,weddi
+agréable,neex
+désagréable,naqadi
+dénicher,taggi
+turbulent,sop
+turbulence,copte
+ami,coppe
+étonner,yéem
+merveille,kéemtaan
+spectacle,ceetaan
+être acide,saf
+acidité,cafka
+le fait de se mirer,ceetu
+se regarder dans le miroir,ceetu
+couvercle,kubéer
+recouvrir,odd
+manière de s'habiller,kodday
+vase en argile,and
+vase qui sert à mesurer,kandar
+maigre,om
+maigreur,komre
+variété d'herbe aromatique,cemp
+portion extraite,cempit
+homme d'action,jëfkat
+manière de porter sur le dos,bootaay
+association,mbootaay
+pourboire,dogal
+destin,ndogal
+piquer,jam
+emporter un enjeu,jam
+concurrence,njamaale
+arrêter,dog
+juge,aji dogal
+qui peut décider,aji dogal
+esprit constructif,aji-defar
+agent,defarkat
+constructeur,defarkat
+estimer à cause de quelqu'un,soppal
+s'épauler dans l'estime,soppalante
+changer,soppi
+changement,coppeeku
+manière de changer,coppalin
+manière de changer,coppeekuwaay
+dire,wax
+qui nie,weddikat
+rendre,naqadil
+se faire de petits cadeaux,dogalante
+concession mutuelle,ndogalante
+mettre en tête,jiital
+se mettre en rang,jiitëlante
+série,jiitalante
+succession,jiitalante
+faire marchander,waxaalelu
+qui fait marchander,waxalelukat
+essayer,jéem
+s'exercer,jëmentu
+terrain d'essai,jëmentalukaay
+être en tête,jiitu
+se substituer,wuutu
+substituer,wuutal
+bonne fortune,xéewal
+bénéficier d'un sort,xéewlu
+événement,xew
+piqûre,jam-jam
+percer,xar
+fente,xar-xar
+désir,bëgg-bëgg
+humidité,tooy-tooy
+événement,xew-xew
+nom de région,waalo
+habitant du Oualo,waalo-waalo
+chef de province,sax-sax
+jeune pousse,sax-sax
+noir,ñuul
+ventre,biir
+méchant,ñuulbiir
+méchanceté,ñuulbiir
+esclave,jaam
+roi,buur
+homme libre,jaambur
+cimetière,sëg
+chance,wërsëg
+homme libre,jambuur
+habitant de la région des hommes libres,jambuur-jambuur
+pas de cheval,kërbët
+galop de cheval,kërbët kërbët
+femme qui ne se porte pas bien,jigéenu wérul
+femme enceinte,jigéenu wérul
+prestation obligatoire,waru gar
+dot,waru gar
+littéralement maure mâle,naaru góor
+cheval pur sang arabe,naaru góor
+deux rythmes,ñaari goroŋ
+figures de danse,ñaari goroŋ
+indépendance,moom-sa-réew
+rentrer en possession de son pays,moom-sa-réew
+qu'il vende,na jaay
+oncle,na jaay
+femme qui épouse son oncle,jarabibaat
+bon,bax
+faire semblant d'être gentil,baxbax-lu
+se conduire en homme,góorgóor-lu
+va et vient,wër-wër
+aller à droite et à gauche,wër wër lu
+science,xam-xam
+jouer au savant,xam xam lu
+fendre,xar
+simuler l'agonie,xar xar le
+trépidation,daŋ-daŋ
+trépigner,daŋ daŋ
+trépigner,daŋ daŋ lu
+fracas,raŋ-raŋ
+faire du vacarme,raŋ raŋ lu
+habitant du Diambour,jaambur-jaambur
+jouer au sage,jaambur jaamburlu
+fente,xar xar
+agoniser,xarxarle
+qui simule l'agonie,xarxarlekat
+chance,wër sëg
+bénéficier de quelque chose,wërsëglóo
+trépidation,daŋ daŋ
+aller s'exciter quelque part,daŋdaŋluji
+courtisan,bëkknéeg
+se conduire en courtisan,bëkknéegu
+dot,warugar
+considérer comme une obligation,warugarloo
+figure de danse,ñaari goroŋ
+aller danser le naari,ñaari goroŋi
+être humain de sexe masculin,nit ku góor
+homme,nit ku góor
+hommes,nit ñu góor
+êtres humains de sexe masculin,nit ñu góor
+moi,man
+lui,moom
+nous,ñun
+vous,yéen
+eux,ñoom
+ce n'est pas lui !,du moom !
+me,ma
+te,ka
+vous,leen
+les,leen
+que je,na ma
+que je,naa
+qu'il,na mu
+qu'il,na
+celui,ki
+lequel,ku
+celui,mi
+celui,ma
+lequel,mu
+quiconque,mu
+celui,gi
+celui,ga
+lequel,gu
+quiconque,gu
+celui,kookii
+celui,kooka
+quiconque,kooku
+lequel,kooku
+celui,moomii
+celui,mooma
+lequel,moomu
+quiconque,moomu
+celui,googii
+celui,googa
+lequel,googu
+quiconque,googu
+lequel,kii
+celui-ci tout près,kuu
+celui-là,mee
+celle-ci,kile
+celle-ci,kule
+celle-ci,male
+lequel,mii
+celui-là,mii
+celle-ci,muu
+celui-là,mile
+lequel,mile
+celle-ci,mule
+celui-ci,kookii
+celui-ci près de toi,kookii
+celle-ci,kookuu
+celle-ci près de toi,kookuu
+celle-ci,kookee
+celui-ci,moomile
+celle-ci,moomule
+celle-ci,moomale
+ceux-ci,nii
+ceux-ci,nuu
+ceux-ci près de toi,nuu
+ceux-là,ñooñee
+celles-ci,yi
+celles-ci,yuu
+celles-là,joyee
+celles-ci,ñooñii
+celles-ci,ñooñuu
+celles-là,ñooñale
+celles-ci,yooyii
+celles-là,yooyale
+qui,yan
+lequel,yan
+qui,ñan
+lequel,ñan
+le tout,képp
+tout,képp
+chaque,képp
+le tout,mépp
+tout,mépp
+chaque,mépp
+le tout,lépp
+tout,lépp
+chaque,lépp
+le tout,wépp
+tout,wépp
+chaque,wépp
+le tout,sépp
+tout,sépp
+chaque,sépp
+le tout,bépp
+tout,bépp
+chaque,bépp
+le tout,gépp
+tout,gépp
+chaque,gépp
+le tout,jépp
+tout,jépp
+chaque,jépp
+tous,ñépp
+la totalité,ñépp
+tous,yépp
+la totalité,yépp
+un seul homme,kenn
+un seul homme,kennu nit
+quelques-uns parmi les hommes,ñenn
+quelques-uns parmi les hommes,yenn
+certaines gens,ñenn
+certaines gens,yenn
+certaines gens,ñennu nit
+certaines gens,yennu nit
+quelques-uns parmi les hommes,ñennu nit
+quelques-uns parmi les hommes,yennu nit
+un mâle,kenn ku góor ki
+une autre femme,keneen ku jigéen
+une autre femelle,keneen ku jigéen
+là où,fi
+alors que,fi
+dès que,fi
+là,foofa
+alors,foofa
+à ce moment,foofa
+ici,fu
+où,fu
+là,foofu
+alors à ce moment,foofu
+là où,fa
+à l'intérieur,ci
+dedans,ci
+parmi,ci
+sur,ci
+à l'intérieur,cu
+à l'intérieur,ca
+à cet endroit-là,ca
+sur,ca
+ce que,li
+ce qui,li
+ceci,looli
+le fait que,looli
+ce que,lu
+qu'est-ce qui,lu
+ce fait,loolu
+cela,la
+cela,loola
+ce fait-là,loola
+ici,fii
+là a cet endroit,foofii
+là a cet endroit,file
+là a cet endroit,foofile
+ici,fuu
+là tout près de toi,foofuu
+là tout près de toi alors,foofuu
+là tout près de toi,fule
+là tout près de toi alors,fule
+là tout près de toi,foofale
+là tout près de toi alors,foofale
+là-bas,fee
+là-bas,foofee
+à ce moment-là,foofee
+à ce moment-là,fale
+là-bas,fale
+là-bas,foofale
+à ce moment-là,foofale
+comme ci,nii
+ainsi,nii
+comme ça,noonii
+ainsi,noonii
+de cette,nile
+comme ci,nuu
+comme ça,noonuu
+ainsi,noonuu
+de cette manière,nule
+comme cela,nee
+de cette manière-là,nee
+comme cela,noonee
+de,nale
+de cette manière-ci,noonile
+de cette manière-là,noonule
+de cette manière-là,noonale
+ceci,lii
+ceci,loolii
+ceci,lile
+ce fait,loolule
+ceci,luu
+ceci,looluu
+ceci,lule
+ce fait-ci,loolule
+cela là-bas,le
+cela,loolee
+cela,lale
+là-bas,lale
+de fait-là,lale
+ce,loolale
+comment,fan
+de quelle manière,fan
+de quelle manière,naan
+comment,naan
+en un lieu,fenn
+nulle part,fenn
+en aucune manière,nenn
+une façon,nenn
+une chose,lenn
+de toute façon,népp
+l'autre,leneen li
+l'autre partie,leneen li
+l'un là-basMark,lenn lale
+l'une des parties qui est là-bas,lenn lale
+l'une des choses qui est là-bas,lenn lale
+l'une des choses là-bas,lenn lale
+tout cela,lepp loolu
+cela qui fut,loolu woon
+ce qui fut,li woon
+le fait passé,li woon
+cet endroit là,fa woon
+cet endroit là fut,fa woon
+de la manière dont ce fut,na woon
+tout cela,lépp loolu woon
+cet autre fait-là,leneen loolee woon
+cet autre chose qui fut,leneen loolee woon
+autre chose seulement,leneen rekk
+cela seulement,loolu doŋŋ
+comme dès que,naka
+du moment que,naka
+derrière,gannaaw
+après que,gannaaw
+du moment que,gannaaw
+après,gannaaw
+tant que,soobeek
+après que,ba
+jusqu'au moment où,ba
+lorsque,bi
+au moment où,bi
+lorsque,bu
+quand,bu
+lorsque,su
+si,su
+sans que,te
+alors que,te
+mais,te
+afin que,ndax
+est-ce que,ndax
+afin aussi,ndax itam
+sauf si,walla
+à moins que,ba itam
+ou alors que,ba itam
+que,ni
+si,ndegam
+dans ce cas,kon nag
+alors,kon nag
+dans,ci
+avec,ak
+en compagnie de,ak
+grâce à,ak
+avant que,balaa
+et,te
+et aussi,te
+aussi,itam
+avec,ag
+ou,walla
+ou bien,walla
+cependant,waaye
+toutefois,wante
+cependant,wante
+mais,wante
+mais aussi,te itam
+et aussi,ag itam
+et encore,ag itam
+ou alors,walla nak
+ou enfin,walla nak
+alors,te
+alors,noona nak
+de ce fait,noona nak
+de ce fait,te
+sur ce,te
+sur ce,noona nak
+mais,ndeke
+cependant,ndeke
+toutefois,ndeke
+mais,waaye
+toutefois,waaye
+que ne pas,bu
+que,na
+et pourtant,moontin
+cependant,moontin
+quoi qu'il en soit,moontin
+en fait,moontin
+et pourtant,moontin dey
+en dépit de tout,moontin nag
+dans ce cas,bon nag
+alors,bon nag
+s'il en est ainsi,kon nag
+dans ce cas alors,kon nag dey
+malheureusement,waaye
+par contre,waaye sax
+d'ailleurs,waaye sax
+du reste,waaye sax
+d'ailleurs,waaye nag
+toutefois,waaye nag
+malheureusement,waaye nag
+mais (avec menace),waaye de
+mais aussi,wante itam
+mais non plus,wante itam
+mais,wande nag
+oui,waaw
+alors,waaw
+et puis,waaw
+ainsi,moom nag
+ainsi,ba
+de sorte que,ba nag
+ainsi donc,ba nag
+et surtout,te kat
+alors,foofu
+en cet endroit,foofu
+en ce moment,foofu
+à ce moment,foofu nak
+alors,foofu nak
+ainsi,noonu
+alors,noonu itam
+sur ces entrefaites,noonu itam
+tu as été ?,dem ŋga ?
+non !,déedéed !
+bien sur !,xanaa !
+peut-être !,xëyna !
+un homme,nit
+au roi,buur
+un quidam,jaambur
+un certain individu,jaambur
+beauté,rafet
+pour la beauté,rafet
+personne,kenn
+celui-là,kookuu
+boubou,mbubb
+un boubou,mbubb
+à l'intérieur,ci biir
+vers celui-ci,ci biir
+vers dedans,ci biir
+le voici,mi ŋgile
+de n'être pas belle,rafet
+d'être pas belle,rafet
+celui-là,kooku
+de l'autre,keneen ki
+vers eux,ca ñoom
+à cause de,ndax
+grâce à,ndax
+comme tel,na
+aussi,na
+à cause de,ŋgir
+grâce à,ŋgir
+sauf,gannaaw
+excepté,gannaaw
+au sujet,ci
+de,cu
+à,ca
+parmi,ca
+à,ba
+jusqu'à,ba
+par,ak
+ensuite,te
+or,te
+ou bien,mbaa
+ou alors,mbaa
+actuel,amees
+aoriste,ameef
+inactuel,amoon
+passé défini,amoon
+combinaison,àndandoo
+son,addu
+phonème,addu
+entité phonique,mbóoleem-addu
+phonétique,addooku
+science phonétique,addooku
+phonéticien,adducaakoon
+phonéticien,fonetikkat
+phonème,araf
+lettre,araf
+géminée,araf céex
+gémination,araf céexal
+géminée,araf céexal
+gémination,araf séexal
+géminée,araf séexal
+gémination,araf wu séex
+géminée,araf wu séex
+consonne,araféef
+prolongement morphologique,araf raññee
+élément de « classé »,araf raññee
+prolongement morphologique simple,araféef raññee
+fricative,araf wu ubbéeku
+fricative,araf ubbéeku
+occlusive,araf wu tëju
+occlusive,araf tëju
+consonne sonore,araféef wu léer
+consonne sourde,araféef wu tëx
+phonème médian,arafu digg
+phonème initial,arafu ndorte
+phonème final,arafu geen
+apico-dental,apiko-dantaal
+apicovélaire,apiko-weller
+catégorie de l'actuel,raññe ameef
+"montrer, élucider, mettre en évidence, identifier","birël, leeral, génne, wàne"
+pluriel,bares
+catégorie de pluriel,raññe bares
+singulier,bareedi
+ramasser des ordures pour quelqu'un,anal
+obtenir quelque chose pour quelqu'un,amal
+montrer quelque chose,wànal
+montrer quelque chose à quelqu'un de la part de quelqu'un d'autre,wànal
+toucher,dac
+entrer en contact avec,dac
+user par frottement,dad
+se briser la tête mutuellement,xaañoo
+clignoter,raf
+bouger de façon subreptice,raf
+prendre dans un filet,laaw
+écorché,dar
+usé par frottement,dar
+s'étendre,law
+bande d'étoffe grimpante,laf
+accaparer quelque chose pour quelqu'un,siifal
+abandonner le faj domicile conjugal,fay
+mordre à pleines dents,xamp
+battre quelqu'un à plusieurs,sat
+manque de gêne,sañ
+faire preuve d'audace excessive,sañ
+s'exiler plus ou moins définitivement,laŋ
+faire de la place à quelqu'un,xajal
+frayer un chemin à quelqu'un,xajjal
+adopter une attitude de serviteur vis-à-vis de quelqu'un,dagu
+être sur le point de s'épuiser,jëxi
+terrain sablonneux,joor
+être de connivence,maŋkoo
+pencher d'un côté,weŋgalu
+jointure,teŋxu
+articulation,teŋxu
+connaître un mauvais sort pied,toskare
+habitant de l'Hinterland,waa joor
+habitant des régions sablonneuse,Waa joor
+couper pour quelqu'un,dogal
+halte,dogal
+marché de bétail,dogal
+accomplir une démarche pour quelqu'un,demal
+louer son travail à l'extérieur,liggéeyaan
+copropriété,bokkaan
+posséder en commun,bokkaan
+émoustiller,jam
+stimuler,jam
+sortir ensemble,génnandoo
+sortie collective,génnandoo
+voisiner,dendandoo
+voisin,dendandoo
+voisinage,dendandoo
+se dépêcher,gaawantu
+empressement,gaawantu
+amourette,nobaate
+nourrir une petite passion,nobaate
+quémander,ñaanaatu
+mendier,ñaanaatu
+quémande,ñaanaatu
+fouiller le sol avec insistance,jéexaatu
+parler avec,waxé
+parler à partir d'un lieu donné,waxé
+annoblir,goreel
+ennoblissement,goreel
+libération,goreel
+deuxième épouse,ñaareel
+prendre une seconde femme,ñaareel
+retournement,wàññeeku
+se retourner,wàññeeku
+habitants de l'arrière-pays,waa joor
+habitants de l'arrière-pays,waajoor
+habitant de l'intérieur,waa kaw
+habitant de l'intérieur,waakaw
+rendre désagréable,naqadil
+bénéficier d'un sort favorable,xéewlu
+fracas,daŋŋ-daŋŋ
+de bruits et de mouvement,daŋŋ-daŋŋ
+fracas,raŋŋ-raŋŋ
+de bruits et de mouvement,raŋŋ-raŋŋ
+de bruits et de mouvement,kër-kër
+fracas,kër-kër
+aller danser le naari goroŋ,ñaari goroŋi
+celui,ka
+lesquels,ñi
+auxquels,ñi
+lesquels,ña
+auxquels,ña
+lesquels,ñooña
+auxquels,ñooña
+lesquels,ñu
+auxquels,ñu
+lesquels,ñooñu
+auxquels,ñooñu
+lesquels,yi
+auxquels,yi
+lesquels,ya
+auxquels,ya
+lesquels,yooya
+auxquels,yooya
+lesquels,yu
+auxquels,yu
+lesquels,yooyu
+auxquels,yooyu
+certaines gens,ñenn nit
+quelques-uns parmi les hommes,ñenn nit
+certaines paroles,yenniy kaddu
+de cette manière,nile
+de cette manière ci,nule
+de cette manière-là,nale
+ce fait-là,loolale
+et aussi,te itam
+et surtout,te itam
+et,te nak
+et aussi,te nak
+et encore,te nak
+et surtout,te nak
+et sans que,te nak
+et enfin,te nak
+mais aussi,ag it
+et aussi,ag it
