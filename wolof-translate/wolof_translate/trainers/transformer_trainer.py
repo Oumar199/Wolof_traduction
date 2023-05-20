@@ -11,6 +11,7 @@ from torch.nn import utils
 from torch import optim
 from typing import *
 from torch import nn
+import numpy as np
 import string
 import torch
 import json
@@ -51,11 +52,15 @@ class ModelRunner:
         model: nn.Module,
         optimizer = optim.AdamW,
         seed: Union[int, None] = None, 
-        evaluation: Union[TranslationEvaluation, None] = None
+        evaluation: Union[TranslationEvaluation, None] = None,
+        version: int = 1
     ):
 
         # Initialisation de la graine du générateur
         self.seed = seed
+        
+        # Initialisation de la version
+        self.version = version
 
         # Recuperate the evaluation metric
         self.evaluation = evaluation
@@ -79,9 +84,8 @@ class ModelRunner:
     
     def batch_train(self, input_: torch.Tensor, input_mask: torch.Tensor,
                     labels: torch.Tensor, labels_mask: torch.Tensor, pad_token_id: int = 3):
-
         if self.hugging_face: # Nous allons utilise un modèle text to text de hugging face (but only for fine-tuning)
-          
+
           # effectuons un passage vers l'avant
           outputs = self.model(input_ids = input_, attention_mask = input_mask, 
                                labels = labels)
@@ -110,6 +114,11 @@ class ModelRunner:
         # mettons à jour les paramètres
         self.optimizer.step()
 
+        # Réduction du taux d'apprentissage à chaque itération si nécessaire
+        if not self.lr_scheduling is None:
+
+            self.lr_scheduling.step()
+
         # reinitialisation des gradients
         self.optimizer.zero_grad()
 
@@ -123,10 +132,9 @@ class ModelRunner:
           # effectuons un passage vers l'avant
           outputs = self.model(input_ids = input_, attention_mask = input_mask, 
                                labels = labels)
-          
           # recuperate the predictions and the loss
           preds, loss = outputs.logits, outputs.loss
-
+        
         else:
 
           # effectuons un passage vers l'avant
@@ -279,21 +287,29 @@ class ModelRunner:
 
         ##################### Training ########################################################
 
-        modes = ['train', 'test'] if not self.test_loader is None else ['train']
+        modes = ['train', 'test'] 
+        
+        if self.test_loader is None: modes = ['train']
 
         for epoch in tqdm(range(start_epoch, start_epoch + epochs)):
 
             # Print the actual learning rate
             print(f"For epoch {epoch + 1}: {{Learning rate: {self.lr_scheduling.get_lr()}}}")
-
+            
             self.metrics = {}
         
             for mode in modes:
-
+            
                 with torch.set_grad_enabled(mode == "train"):
-
+                  
                     # Initialize the loss of the current mode
                     self.metrics[f'{mode}_loss'] = 0
+
+                    # Let us initialize the predictions
+                    predictions_ = []
+
+                    # Let us initialize the labels
+                    labels_ = []
 
                     if mode == "train":
 
@@ -308,10 +324,10 @@ class ModelRunner:
                         loader = list(iter(self.test_loader))
                     
                     with trange(len(loader), unit = "batches", position = 0, leave = True) as pbar:
-
+                      
                       for i in pbar:
                         
-                        pbar.set_description(f"{mode[0].upper() + mode[1:]} batch number {i}")
+                        pbar.set_description(f"{mode[0].upper() + mode[1:]} batch number {i + 1}")
                         
                         data = loader[i]
 
@@ -320,6 +336,10 @@ class ModelRunner:
                         input_mask = data[1].to(self.device)
 
                         labels = data[2].long().to(self.device)
+
+                        if self.hugging_face:
+
+                          labels[labels == self.tokenizer.pad_token_id] == -100
 
                         labels_mask = data[3].to(self.device)
                         
@@ -332,48 +352,52 @@ class ModelRunner:
                             else self.batch_eval(input_, input_mask, labels, labels_mask, pad_token_id)
                         )
 
-                        n_attr = 0
-
                         self.metrics[f"{mode}_loss"] += loss.item()
+                        
+                        # let us add the predictions and labels in the list of predictions and labels after their determinations
+                        if mode == "test":
 
-                        # Réduction du taux d'apprentissage à chaque itération si nécessaire
-                        if not self.lr_scheduling is None:
+                            if self.predict_with_generate:
 
-                            self.model.train()
+                              if self.hugging_face:
 
-                            self.lr_scheduling.step()
+                                  preds = self.model.generate(input_, attention_mask = input_mask)
 
-                        if not self.evaluation is None and mode == "test":
-                          
-                          if self.predict_with_generate:
+                              else:
 
-                            if self.hugging_face:
+                                  preds = self.model.generate(input_, input_mask, pad_token_id = pad_token_id)
 
-                                preds = self.model.generate(input_, attention_mask = input_mask)
+                                  labels = labels.masked_fill_(labels_mask == 0, -100)
 
                             else:
 
-                                preds = self.model.generate(input_, input_mask, pad_token_id = pad_token_id)
+                              if self.hugging_face:
 
-                          else:
+                                  preds = torch.argmax(preds, dim = -1)
 
-                            if self.hugging_face:
+                              else:
 
-                                preds = torch.argmax(preds, dim = -1)
+                                  labels = labels.masked_fill_(labels_mask == 0, -100)
 
-                          # labels = labels.masked_fill_(labels_mask == 0, -100)
-                          
-                          self.metrics.update(self.evaluation.compute_metrics((preds.cpu(), labels.cpu())))
+                            predictions_.extend(preds.detach().cpu().tolist())
+
+                            labels_.extend(labels.detach().cpu().tolist())
                       
-                      # torch.cuda.empty_cache()
+            if not self.evaluation is None and mode == 'test':
+              
+              self.metrics.update(self.evaluation.compute_metrics((np.array(predictions_), np.array(labels_))))
 
             self.metrics[f"train_loss"] = self.metrics[f"train_loss"] / len(self.train_loader)
+            
+            if not self.test_loader is None:
+            
+                self.metrics[f"test_loss"] = self.metrics[f"test_loss"] / len(self.test_loader)
 
-            for metric in self.metrics:
+            # for metric in self.metrics:
 
-               if metric != 'train_loss':
+            #    if metric != 'train_loss':
 
-                self.metrics[metric] = self.metrics[metric] / len(self.test_loader)
+            #     self.metrics[metric] = self.metrics[metric] / len(self.test_loader)
 
             # Affichage des métriques
             if not log_step is None and (epoch + 1) % log_step == 0:
@@ -382,7 +406,7 @@ class ModelRunner:
               
               if not self.logging_dir is None:
                   
-                  with SummaryWriter(self.logging_dir) as writer:
+                  with SummaryWriter(os.path.join(self.logging_dir, f'version_{self.version}')) as writer:
                       
                       for metric in self.metrics:
                           
@@ -397,7 +421,7 @@ class ModelRunner:
             # Save the model in the end of the current epoch. Sauvegarde du modèle à la fin d'une itération
             if auto_save:
 
-                self.current_epoch = epoch
+                self.current_epoch = epoch + 1
                 
                 if save_best:
 
@@ -409,6 +433,10 @@ class ModelRunner:
                   elif metric_objective == 'minimize':
 
                     last_score = best_score > self.metrics[metric_for_best_model]
+                  
+                  else:
+                      
+                      raise ValueError("The metric objective can only be in ['maximize', 'minimize'] !")
                   
                   # recuperate the best score
                   if last_score: 
@@ -442,13 +470,13 @@ class ModelRunner:
               "metrics": self.metrics,
               "best_score": self.best_score,
               "best_epoch": self.best_epoch,
-              "lr_scheduler_state_dict": self.lr_scheduling.state_dict()
+              "lr_scheduler_state_dict": self.lr_scheduling.state_dict() if not self.lr_scheduling is None else None
           }
 
           torch.save(checkpoints, file_path)
 
           # update metrics and the best score dict
-          self.metrics['current_epoch'] = self.current_epoch + 1
+          self.metrics['current_epoch'] = self.current_epoch + 1 if not self.current_epoch is None else self.current_epoch
 
           best_score_dict = {"best_score": self.best_score, "best_epoch": self.best_epoch}
 
@@ -488,7 +516,9 @@ class ModelRunner:
 
             self.best_epoch = checkpoints["best_epoch"]
 
-            self.lr_scheduling.load_state_dict(checkpoints["lr_scheduler_state_dict"])
+            if not self.lr_scheduling is None:
+                
+                self.lr_scheduling.load_state_dict(checkpoints["lr_scheduler_state_dict"])
 
         else:
 
@@ -497,63 +527,81 @@ class ModelRunner:
             )
     
     def evaluate(self, test_dataset, batch_size: int = 16, loader_kwargs: dict = {}):
-
+        
+        self.model.eval()
+        
         test_loader = list(iter(DataLoader(
             test_dataset,
             batch_size,
             shuffle=False,
             **loader_kwargs,
         )))
+        
+        # Let us initialize the predictions
+        predictions_ = []
 
-        metrics = {'test_loss': 0}
+        # Let us initialize the labels
+        labels_ = []
+        
+        metrics = {'test_loss': 0.0}
 
         results = {'original_sentences': [], 'translations': [], 'predictions': []}
 
         with torch.no_grad():
 
-          with trange(len(test_loader), unit = "batches", position = 0, leave = True) as pbar:
+            with trange(len(test_loader), unit = "batches", position = 0, leave = True) as pbar:
 
-            for i in pbar:
-              
-              pbar.set_description(f"Evaluation batch number {i}")
-              
-              data = test_loader[i]
-                          
-              try:
-                  input_ = data[0].float().to(self.device)
-              except AttributeError:
-                  input_ = data[0]
-              
-              input_mask = data[1].to(self.device)
-
-              labels = data[2].long().to(self.device)
-
-              labels_mask = data[3].to(self.device)
-
-              preds, loss = self.batch_eval(input_, input_mask, labels, labels_mask, test_dataset.tokenizer.pad_token_id)
-
-              self.metrics[f"test_loss"] += loss.item()
-
-              # let us recuperate the original sentences
-              results['original_sentences'].extend(test_dataset.tokenizer.batch_decode(input_, skip_special_tokens = True))
-
-              results['translations'].extend(test_dataset.tokenizer.batch_decode(labels, skip_special_tokens = True))
-
-              results['predictions'].extend(test_dataset.tokenizer.batch_decode(preds, skip_special_tokens = True))
-
-              if not self.evaluation is None:
+                for i in pbar:
                 
-                # labels = labels.masked_fill_(labels_mask == 0, -100)
+                    pbar.set_description(f"Evaluation batch number {i + 1}")
+                    
+                    data = test_loader[i]
+                                
+                    try:
+                        input_ = data[0].float().to(self.device)
+                    except AttributeError:
+                        input_ = data[0]
+                    
+                    input_mask = data[1].to(self.device)
 
-                metrics.update(self.evaluation.compute_metrics((preds.cpu(), labels.cpu())))
+                    labels = data[2].long().to(self.device)
 
-          for metric in self.metrics:
+                    labels_mask = data[3].to(self.device)
 
-            self.metrics[metric] = self.metrics[metric] / len(self.test_loader)
+                    preds, loss = self.batch_eval(input_, input_mask, labels, labels_mask, test_dataset.tokenizer.pad_token_id)
 
-          return self.metrics, results
+                    metrics[f"test_loss"] += loss.item()
+                
+                    if self.hugging_face:
+
+                        preds = self.model.generate(input_, attention_mask = input_mask)
+                        
+                        labels_.extend(labels.detach().cpu().tolist())
+
+                    else:
+
+                        preds = self.model.generate(input_, input_mask, pad_token_id = pad_token_id)
+
+                        labels__ = labels.masked_fill_(labels_mask == 0, -100)
+                        
+                        labels_.extend(labels__.detach().cpu().tolist())
+                    
+                    predictions_.extend(preds.detach().cpu().tolist())
+                    
+                    # let us recuperate the original sentences
+                    results['original_sentences'].extend(test_dataset.tokenizer.batch_decode(input_, skip_special_tokens = True))
+
+                    results['translations'].extend(test_dataset.tokenizer.batch_decode(labels, skip_special_tokens = True))
+
+                    results['predictions'].extend(test_dataset.tokenizer.batch_decode(preds, skip_special_tokens = True))
+
+            if not self.evaluation is None:
+              
+                metrics.update(self.evaluation.compute_metrics((np.array(predictions_), np.array(labels_))))
+
+            metrics["test_loss"] = metrics["test_loss"] / len(test_loader)
+
+            return metrics, results
         
-            
-            
             
             

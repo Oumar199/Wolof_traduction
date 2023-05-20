@@ -64,11 +64,15 @@ class T5SentenceDataset(Dataset):
         # apply transformers if necessary
         if not self.cp1_transformer is None:
             
-            sentence_1 = self.cp1_transformer(sentence_1) 
+            sentence_1 = self.cp1_transformer(sentence_1)[0]
         
         if not self.cp2_transformer is None:
             
-            sentence_2 = self.cp2_transformer(sentence_2)
+            sentence_2 = self.cp2_transformer(sentence_2)[0]
+        
+        sentence_1 = sentence_1 + self.tokenizer.eos_token
+        
+        sentence_2 = sentence_2 + self.tokenizer.eos_token
         
         # let us encode the sentences (we provide the second sentence as labels to the tokenizer)
         data = self.tokenizer(
@@ -78,7 +82,6 @@ class T5SentenceDataset(Dataset):
             padding='max_length', 
             return_tensors="pt",
             text_target=sentence_2)
-            
         
         return data.input_ids.squeeze(0), data.attention_mask.squeeze(0), data.labels.squeeze(0)
         
@@ -140,11 +143,15 @@ class SentenceDataset(T5SentenceDataset):
         # apply transformers if necessary
         if not self.cp1_transformer is None:
             
-            sentence_1 = self.cp1_transformer(sentence_1) 
+            sentence_1 = self.cp1_transformer(sentence_1)[0] 
         
         if not self.cp2_transformer is None:
             
-            sentence_2 = self.cp2_transformer(sentence_2)
+            sentence_2 = self.cp2_transformer(sentence_2)[0]
+        
+        sentence_1 = sentence_1 + self.tokenizer.eos_token
+        
+        sentence_2 = sentence_2 + self.tokenizer.eos_token
         
         # let us encode the sentences (we provide the second sentence as labels to the tokenizer)
         data = self.tokenizer(

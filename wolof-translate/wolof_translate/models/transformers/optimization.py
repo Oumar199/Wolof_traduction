@@ -2,13 +2,14 @@
 from torch.optim.lr_scheduler import _LRScheduler
 from torch import optim
 from typing import *
+
 class TransformerScheduler(_LRScheduler):
     
-    def __init__(self, optimizer: Union[optim.AdamW, optim.Adam], scale_factor = 1.0, lr_warmup_step = 100, **kwargs):
-
+    def __init__(self, optimizer: Union[optim.AdamW, optim.Adam], d_model = 512, lr_warmup_step = 100, **kwargs):
+        
         self._optimizer = optimizer
-
-        self._scale_factor = scale_factor
+        
+        self._dmodel = d_model
         
         self._lr_warmup = lr_warmup_step
 
@@ -24,7 +25,7 @@ class TransformerScheduler(_LRScheduler):
         _step_num = self._step_count
         
         # calculate the learning rate
-        lr = self._scale_factor ** -0.5 * min(_step_num ** -0.5, 
+        lr = self._dmodel ** -0.5 * min(_step_num ** -0.5, 
                                               _step_num * self._lr_warmup ** -1.5)
         # provide the corresponding learning rate of each parameter vector
         # for updating
