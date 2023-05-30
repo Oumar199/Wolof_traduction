@@ -11,6 +11,7 @@ from torch.nn import utils
 from torch import optim
 from typing import *
 from torch import nn
+import pandas as pd
 import numpy as np
 import string
 import torch
@@ -250,10 +251,9 @@ class ModelRunner:
             log_step (int, optional): Le nombre d'itération avant d'afficher les performances. Defaults to 1.
             saving_directory (str, optional): Le dossier de sauvegarde du modèle. Defaults to "inception_package/storage".
             file_name (str, optional): Le nom du fichier de sauvegarde. Defaults to "checkpoints".
-            save_best_only (bool): Une varible booléenne indiquant si l'on souhaite ne sauvegarder que le meilleur modèle. Defaults to True.
+            save_best (bool): Une varible booléenne indiquant si l'on souhaite sauvegarder le meilleur modèle. Defaults to True.
             metric_for_best_model (str): Le nom de la métrique qui permet de choisir le meilleur modèle. Defaults to 'eval_loss'.
             metric_objective (str): Indique si la métrique doit être maximisée 'maximize' ou minimisée 'minimize'. Defaults to 'minimize'.
-            add_to_wandb (bool): Indique si les métrique seront ajouté à un projet dans wandb. Defaults to False. 
 
         Raises:
             Exception: L'entraînement implique d'avoir déja initialisé les paramètres
@@ -557,14 +557,15 @@ class ModelRunner:
                     
                     data = test_loader[i]
                                 
-                    try:
-                        input_ = data[0].float().to(self.device)
-                    except AttributeError:
-                        input_ = data[0]
-                    
+                    input_ = data[0].long().to(self.device)
+                        
                     input_mask = data[1].to(self.device)
 
                     labels = data[2].long().to(self.device)
+
+                    if self.hugging_face:
+
+                        labels[labels == self.tokenizer.pad_token_id] == -100
 
                     labels_mask = data[3].to(self.device)
 
@@ -601,7 +602,7 @@ class ModelRunner:
 
             metrics["test_loss"] = metrics["test_loss"] / len(test_loader)
 
-            return metrics, results
+            return metrics, pd.DataFrame(results)
         
             
             

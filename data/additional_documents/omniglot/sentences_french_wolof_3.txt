@@ -1,0 +1,34 @@
+alaam maaleekum.	 Peace be upon you.
+Maaleekum salaam 		Que la paix soit avec toi aussi.
+Jaama ngaam ?		Es-tu en paix ?
+Jamma rek.			Paix seulement.
+Ana waa kër gi ?		Comment va ta famille ?
+Ana waa kër gi ?		Où sont les membres de ta famille ?
+Ñunga fa.			Ils sont là-bas.
+Mbaa defuñu dara.		J'espère qu'ils vont bien.
+Mbaa defuñu dara.		Rien ne va mal avec eux.
+Déedéet, defuñu dara.		Non, ils vont bien.
+Déedéet, defuñu dara.		Rien ne va mal chez-eux.
+Naka ligéey bi ?			Comment se passe le travail ?
+Maangi ci kowam, ndanka, ndanka.		J'y suis avec, pas à pas. 
+Maangi ci kowam, ndanka, ndanka.		J'y suis avec, petit à petit.
+Nanga def ?			Comment vas-tu ?
+Noo def ?			Comment vas-tu ?
+Naka waa kër ga ?		Comment vont les gens de la maison ?
+Naka njaboot gi ?		Comment va la famille ?
+Maangi fi rek.		Je vais bien.
+Lan nga indi?		Qu'est-ce que tu as rapporté ?
+Xibaar laa indi.		J'ai rapporté des nouvelles.
+Maangi ci nég bi.		Je suis dans la maison.
+Ñungi taxaw ci biti.		Ils se tiennent dehors.
+Jaama nga fanaan ?			As-tu passé la nuit en paix ?
+Naka subba si ?			Comment se passe la matinée ?
+Subba sangi fi rek.		La matinée se passe bien.
+Jaama nga endu?			As-tu passé la matinée en paix ?
+Naka bëcëk bi ?			Comment se passe l'après-midi ?
+Bëcëk baangi fi rek.		L'après-midi se passe bien.
+Naka ngoon si ?			Comment se passes la soirée ?
+Ngoon saangi fi rek.		La soirée se passe bien.
+Naka guddi gi ?			Comment se passe la nuit ?
+Guddi gaangi fi rek		La nuit se passe bien.
+Noo ... ?			Comment ...? 

@@ -1,11 +1,11 @@
 
 from wolof_translate.models.transformers.position import PositionalEncoding
 from wolof_translate.models.transformers.size import SizePredict
+from torch.nn.utils.rnn import pad_sequence
 from torch import nn
+from typing import *
 import torch
 import copy
-
-
 # new Exception for that transformer
 class TargetException(Exception):
     
@@ -30,7 +30,8 @@ class Transformer(nn.Module):
                  n_features: int = 100,
                  n_layers: int = 2,
                  n_poses_max: int = 500,
-                 projection_type: str = "embedding"):
+                 projection_type: str = "embedding",
+                 max_len: Union[int, None] = None):
         
         super(Transformer, self).__init__()
         
@@ -70,12 +71,15 @@ class Transformer(nn.Module):
             normalization=True, # we always use normalization
             drop_out=self.dropout
             )
-      
+
         self.classifier = nn.Linear(self.dec_embed_dim, vocab_size)
 
         # let us share the weights between the embedding layer and classification
         # linear layer
         self.classifier.weight.data = self.embedding_layer.weight.data
+
+        self.max_len = max_len
+        
         
     def forward(self, input_, input_mask = None, target = None, target_mask = None, 
                 pad_token_id:int = 3):
@@ -90,7 +94,7 @@ class Transformer(nn.Module):
         input_embed = self.pe(input_embed)
         
         # recuperate the input mask for pytorch encoder
-        pad_mask1 = (input_mask == 0).bool().to(next(self.parameters()).device) if not input_mask is None else None
+        pad_mask1 = (input_mask == 0).to(next(self.parameters()).device, dtype = torch.bool) if not input_mask is None else None
         
         # let us compute the states
         input_embed = input_embed.type_as(next(self.encoder.parameters()))
@@ -104,7 +108,7 @@ class Transformer(nn.Module):
         target_embed = self.embedding_layer(target)
         
         # recuperate target mask for pytorch decoder            
-        pad_mask2 = (target_mask == 0).bool().to(next(self.parameters()).device) if not target_mask is None else None
+        pad_mask2 = (target_mask == 0).to(next(self.parameters()).device, dtype = torch.bool) if not target_mask is None else None
         
         # define the attention mask
         targ_mask = self.get_target_mask(target_embed.size(1))
@@ -202,32 +206,37 @@ class Transformer(nn.Module):
         input_embed = input_embed.type_as(next(self.encoder.parameters()))
         
         states = self.encoder(input_embed, src_key_padding_mask = pad_mask1)
-   
+
         # ---> Decoder prediction
-        # let's predict the size of the target, the target and the target mask
-        target_size = self.size_prediction(states).mean(axis = 1).round().clip(1, input_.size(1))
+        # let us recuperate the maximum length
+        max_len = self.max_len if not self.max_len is None else 0
+
+        # let's predict the size of the target and the target mask
+        if max_len > 0:
+
+          target_size = self.size_prediction(states).mean(axis = 1).round().clip(1, max_len)
+        
+        else:
+
+          target_size = torch.max(self.size_prediction(states).mean(axis = 1).round(), torch.tensor(1.0))
 
         target_ = copy.deepcopy(target_size.cpu())
 
-        target_ = [int(size[0])*[1] + [0] * (input_.size(1) - int(size[0])) for size in target_.tolist()]
+        target_mask = [torch.tensor(int(size[0])*[1] + [0] * max(max_len - int(size[0]), 0)) for size in target_.tolist()]
 
-        target = torch.tensor(target_.copy()).long().to(next(self.parameters()).device)
+        if max_len > 0:
 
-        target_mask = torch.tensor(target_.copy()).bool().to(next(self.parameters()).device)
-        
-        target_embed = self.embedding_layer(target)
-        
+          target_mask = torch.stack(target_mask).to(next(self.parameters()).device, dtype = torch.bool)
+
+        else:
+
+          target_mask = pad_sequence(target_, batch_first = True).to(next(self.parameters()).device, dtype = torch.bool)
+      
         # recuperate target mask for pytorch decoder            
-        pad_mask2 = (target_mask == 0).bool().to(next(self.parameters()).device) if not target_mask is None else None
+        pad_mask2 = (target_mask == 0).to(next(self.parameters()).device, dtype = torch.bool) if not target_mask is None else None
         
         # define the attention mask
-        targ_mask = self.get_target_mask(target_embed.size(1))
-
-        # let's concatenate the last input and the target shifted from one position to the right (new seq dim = target seq dim)
-        target_embed = torch.cat((last_input, target_embed[:, :-1]), dim = 1)
-        
-        # add position to target embed
-        target_embed = self.pe(target_embed)
+        targ_mask = self.get_target_mask(target_mask.size(1))
             
         # if we are in evaluation mode we will not use the target but the outputs to make prediction and it is
         # sequentially done (see comments)
@@ -236,7 +245,7 @@ class Transformer(nn.Module):
         outputs = last_input.type_as(next(self.encoder.parameters()))
         
         # for each target that we want to predict
-        for t in range(target.size(1)):
+        for t in range(target_mask.size(1)):
             
             # recuperate the target mask of the current decoder input
             current_targ_mask = targ_mask[:t+1, :t+1] # all attentions between the elements before the last target
@@ -256,13 +265,8 @@ class Transformer(nn.Module):
         
         # let's take only the predictions (the last input will not be taken)
         outputs = outputs[:, 1:]
-        
-        # let us add padding index to the outputs
-        if not target_mask is None: 
-          target = copy.deepcopy(target.cpu())
-          target = target.to(target_mask.device).masked_fill_(target_mask == 0, -100)
 
-        # ---> Final predictions
+        # ---> Predictions
         outputs = self.classifier(outputs)
 
         # calculate the resulted outputs with temperature
@@ -274,7 +278,7 @@ class Transformer(nn.Module):
 
           outputs = torch.softmax(outputs, dim = -1)
 
-        # calculate the predictions
+        # calculate the predictionos
         outputs = copy.deepcopy(outputs.detach().cpu())
         predictions = torch.argmax(outputs, dim = -1).to(target_mask.device).masked_fill_(target_mask == 0, pad_token_id)
 
@@ -283,4 +287,4 @@ class Transformer(nn.Module):
 
     def get_target_mask(self, attention_size: int):
         
-        return torch.triu(torch.ones((attention_size, attention_size), dtype = bool), diagonal = 1).to(next(self.parameters()).device)
+        return torch.triu(torch.ones((attention_size, attention_size)), diagonal = 1).to(next(self.parameters()).device, dtype = torch.bool)

@@ -1,7 +1,6 @@
 
 from torch import nn
 import torch
-
 class SizePredict(nn.Module):
     
     def __init__(self, input_size: int, target_size: int = 1, n_features: int = 100, n_layers: int = 1, normalization: bool = True, drop_out: float = 0.1):
@@ -15,9 +14,9 @@ class SizePredict(nn.Module):
             self.layers.append(
                 nn.Sequential(
                     nn.Linear(input_size if l == 0 else n_features, n_features),
+                    nn.LayerNorm(n_features) if normalization else nn.Identity(),
                     nn.ReLU(),
                     nn.Dropout(drop_out),
-                    nn.LayerNorm(n_features) if normalization else nn.Identity(),
                 )
             )
         

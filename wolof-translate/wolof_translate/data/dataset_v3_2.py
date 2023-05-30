@@ -14,7 +14,7 @@ class T5SentenceDataset(Dataset):
         tokenizer: PreTrainedTokenizerFast,
         corpus_1: str = "french",
         corpus_2: str = "wolof",
-        max_len: int = 60,
+        max_len: int = 38,
         truncation: bool = False,
         file_sep: str = ",",
         cp1_transformer: Union[TransformerSequences, None] = None,
@@ -37,7 +37,7 @@ class T5SentenceDataset(Dataset):
         self.length = len(self.sentences_1)
         
         # let us recuperate the max len
-        self.max_len = max_len + max_len // 6
+        self.max_len = max_len + max_len // 5
         
         # let us recuperate the truncation argument
         self.truncation = truncation
@@ -108,7 +108,7 @@ class SentenceDataset(T5SentenceDataset):
         tokenizer: PreTrainedTokenizerFast,
         corpus_1: str = "french",
         corpus_2: str = "wolof",
-        max_len: int = 42,
+        max_len: int = 38,
         truncation: bool = False,
         file_sep: str = ",",
         cp1_transformer: Union[TransformerSequences, None] = None,

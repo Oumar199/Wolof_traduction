@@ -4,14 +4,14 @@ from sklearn.model_selection import train_test_split
 import pandas as pd
 import os
 
-def split_data(random_state: int = 50, data_directory: str = "data/extractions/new_data"):
+def split_data(random_state: int = 50, data_directory: str = "data/extractions/new_data", csv_file: str = "sentences.csv"):
   """Split data between train, validation and test sets
 
   Args:
     random_state (int): the seed of the splitting generator. Defaults to 50
   """
   # load the corpora and split into train and test sets
-  corpora = pd.read_csv(os.path.join(data_directory, "sentences.csv"))
+  corpora = pd.read_csv(os.path.join(data_directory, csv_file))
 
   train_set, test_set = train_test_split(corpora, test_size=0.1, random_state=random_state)
 

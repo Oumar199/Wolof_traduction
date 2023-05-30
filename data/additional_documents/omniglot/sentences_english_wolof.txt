@@ -1,0 +1,73 @@
+Welcome	Merhbe
+Hello (General greeting)	Na nga def (sg)
+Na ngeen def (pl)
+Salaam aleekum
+How are you?	Jaam nga am? (Have you peace?)
+Na nga def?
+Reply to 'How are you?'	Jaam rek, Yow nag? (Peace only, and you?)
+Mangi fi rekk, na nga def?
+Long time no see	Gej na la giis
+What's your name?	Naka-nga sant?
+Na nga tudd?
+Noo tudd?
+My name is ...	Maa ngi tudd ...
+... laa tudd
+Where are you from?	Fan nga joge? (sg)
+Fan ngeen joge? (pl)
+I'm from ...	Maa ngi joge ...
+... laa joge
+Pleased to meet you	Am nàa mbekte ci guiss la
+Good morning
+(Morning greeting)	Jaam nga fanane
+Good afternoon
+(Afternoon greeting)	Jamm nga yendoo
+Good evening
+(Evening greeting)	Naka ngon si
+Goodbye
+(Parting phrases)	Ba beneen
+Mangi dem
+Good luck!	Màa ngui lay nianal weurseuk
+Cheers! Good Health!
+(Toasts used when drinking)	Wer gu yaram!
+Have a nice day	Yendu ak jàam
+Bon appetit /
+Have a nice meal	Naci jàam bari
+Bon voyage /
+Have a good journey	Yônu jàam
+Do you understand?	Dégg nga?
+I understand	Dégg naa
+I don't understand	Dégguma
+I don't know	Xamu mako
+Please speak more slowly	Ndax mën nga wax ndànk su la neexee?
+Please say that again	Ndax mën nga ko waxaat su la neexee?
+Please write it down	Ndax mën nga ko bind su la neexee?
+Do you speak English?	Ndax dégg nga angale?
+Do you speak Wolof?	Deg nga Wolof?
+Yes, a little
+(reply to 'Do you speak ...?')	Wau, degg naa tuuti Wolof
+How do you say ... in Wolof?	Naka lanuy waxee lii ci wolof?
+Excuse me	Baal ma!
+How much is this?	Ñaata lay jar?
+Sorry	Baal ma
+Please	La neexee
+Thank you	Jai-rruh-jef
+Reply to thank you	Agsil (sg)
+Agsileen ak jaam (pl)
+Where's the toilet / bathroom?	Ana wanaag wi?
+This gentleman will pay for everything	Góor gu bàax bi dina fay lepp
+This lady will pay for everything	Jigéen gui dina fay lépp
+Would you like to dance with me?	Buga nga fecc?
+Ndax beugue nga fecc ak man?
+I miss you	Namm naa la
+I love you	Begg naa la (general)
+Sopp naa la (I admire you - when courting)
+Nopp naa la (between partners)
+Get well soon	Tanéel ak jáam
+Go away!	Deemal!
+Deemal waay!
+Leave me alone!	Bayyi ma!
+May ma jaam!
+Help!	Wóoy!
+Fire!	Táal!
+Stop!	Taxawal!
+Call the police!	Wooyal ma alkaati!

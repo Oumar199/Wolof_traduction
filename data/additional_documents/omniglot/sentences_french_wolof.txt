@@ -1,0 +1,75 @@
+Bienvenue	    	Merhbe
+Salut			    Na nga def 
+Salut			    Na ngeen def 
+Salut			   Salaam aleekum
+Comment vas-tu ?		Jaam nga am ? 
+Es-tu en paix ?		Jaam nga am ?
+Comment vas-tu ?		Na nga def?	
+Paix seulement, et toi ? 	Jaam rek, Yow nag ? 
+Je suis seulement toi, comment vas-tu ? 		Mangi fi rekk, na nga def ?
+Ça fait longtemps que je ne t'ai pas vu		Gej na la giis
+Comment t'appelles-tu ?		Naka-nga sant ?
+Comment t'appelles-tu ?		Na nga tudd ?
+Comment t'appelles-tu ? 	Noo tudd ?
+Mon nom est ...	Maa ngi tudd ...
+Mon nom est ...		... laa tudd
+Je m'appelles ... 	Maa ngi tudd ...
+D'où viens-tu ?		Fan nga joge ? 
+D'où venez-vous ?		Fan ngeen joge ?
+Je viens de ...		Maa ngi joge ...
+Je viens de ...		 ... laa joge
+Plaisir de te rencontrer	Am nàa mbekte ci guiss la
+Content de te rencontrer	Am nàa mbekte ci guiss la
+Je suis content de te rencontrer		Am nàa mbekte ci guiss la
+Bon matin		Jaam nga fanane
+Bonne après-midi		Jamm nga yendoo
+Bonne soirée		Naka ngon si
+Au revoir			Ba beneen
+Au revoir			Mangi dem
+Bonne chance !		Màa ngui lay nianal weurseuk
+Bonne santé !		Wer gu yaram!
+Aies une bonne journée		Yendu ak jàam
+Bon voyage 			Yônu jàam
+Comprends-tu ?		Dégg nga?
+Je comprends		Dégg naa
+Je ne comprends pas		Dégguma
+Je ne le connais pas		Xamu mako
+Je ne le sais pas		Xamu mako
+S'il te plaît, parles plus lentement !	Ndax mën nga wax ndànk su la neexee ?
+Répètes s'il te plaît !		Ndax mën nga ko waxaat su la neexee ?
+Ecris s'il te plaît !	Ndax mën nga ko bind su la neexee ?
+Parles-tu anglais	?	Ndax dégg nga angale ?
+Parles-tu Wolof ?		Deg nga Wolof?
+Oui, un peu		Wau, degg naa tuuti Wolof
+Comment dis t-on ceci en Wolof ?	Naka lanuy waxee lii ci wolof?
+Excuse-moi !	Baal ma !
+Combien ça coute ?	Ñaata lay jar ?
+Sorry		Baal ma
+Please	La neexee
+Thank you		Jai-rruh-jef
+Viens		Agsil
+Venez en paix		Agsileen ak jaam 
+Où sont les toilettes ?	 		Ana wanaag wi?
+Ce garçon peut te payer pour n'import quoi		Góor gu bàax bi dina fay lepp
+Cette jeune fille va tout payer	    Jigéen gui dina fay lépp
+Accepte-tu de danser avec moi ?		Buga nga fecc ?
+Accepte-tu de danser avec moi ? 		Ndax beugue nga fecc ak man?
+Tu me manques		Namm naa la
+Je t'aimes			Begg naa la
+Je t'admires		Nopp naa la
+Je t'aimes 			Nopp naa la
+Je te souhaites de récupérer tôt	Tanéel ak jáam
+Vas t'en !		Deemal !
+Vas t'en !		Deemal waay!
+Laisses moi tranquille !		Bayyi ma!
+Laisses moi tranquille !		May ma jaam !
+À l'aide !		Wóoy !
+Feu !			Táal !
+Arrête !		Taxawal !
+Appelle la police !	Wooyal ma alkaati!
+Mes voeux de noël		Mangui lay ndioukeul ci Noël bi
+Mes voeux de nouvel an		Mangui lay ndokkel ci att bu bess bi
+Mes voeux de paques		Mangui lay ndokkel ci pâques bi
+Mes voeux de tabaski		Mangui lay ndokkel ci tabaski bi
+Mes voeux d'anniversaire	Mangui lay ndokkel ci sa bess bu délu si bi
+Mon aéroglisseur est plein d'anguilles		Sama aéroglisseur fèèss neu ak anguilles

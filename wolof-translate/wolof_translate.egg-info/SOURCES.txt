@@ -11,6 +11,7 @@ wolof_translate/data/__init__.py
 wolof_translate/data/dataset_v1.py
 wolof_translate/data/dataset_v2.py
 wolof_translate/data/dataset_v3.py
+wolof_translate/data/dataset_v3_2.py
 wolof_translate/data/__pycache__/__init__.cpython-310.pyc
 wolof_translate/data/__pycache__/dataset_v1.cpython-310.pyc
 wolof_translate/data/__pycache__/dataset_v2.cpython-310.pyc
@@ -36,6 +37,7 @@ wolof_translate/tokenizers/t5_tokenizers/fr_tokenizer_v1.json
 wolof_translate/tokenizers/t5_tokenizers/tokenizer_v1.json
 wolof_translate/tokenizers/t5_tokenizers/tokenizer_v2.json
 wolof_translate/tokenizers/t5_tokenizers/tokenizer_v3.json
+wolof_translate/tokenizers/t5_tokenizers/tokenizer_v4.json
 wolof_translate/tokenizers/t5_tokenizers/wf_tokenizer_v1.json
 wolof_translate/trainers/__init__.py
 wolof_translate/trainers/transformer_trainer.py
@@ -57,3 +59,5 @@ wolof_translate/utils/__pycache__/sent_transformers.cpython-310.pyc
 wolof_translate/utils/__pycache__/sent_unification.cpython-310.pyc
 wolof_translate/utils/__pycache__/split_with_valid.cpython-310.pyc
 wolof_translate/utils/__pycache__/tokenize_text.cpython-310.pyc
+wolof_translate/utils/improvements/__init__.py
+wolof_translate/utils/improvements/end_marks.py
