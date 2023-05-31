@@ -9,4 +9,9 @@ transformers
 sphinx-autobuild
 pandas
 numpy
-sklearn
+scikit-learn
+matplotlib
+plotly
+evaluate
+sacrebleu
+tensorboard
