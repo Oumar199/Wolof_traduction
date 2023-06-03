@@ -504,17 +504,11 @@ class ModelRunner:
 
         if os.path.exists(file_path):
 
-            checkpoints = torch.load(file_path)
+            checkpoints = torch.load(file_path) if torch.device == torch.device('cuda') else torch.load(file_path, map_location = 'cpu')
 
-            if self.device == torch.device('cuda'):
+            self.model.load_state_dict(checkpoints["model_state_dict"])
 
-                self.model.load_state_dict(checkpoints["model_state_dict"])
-                self.optimizer.load_state_dict(checkpoints["optimizer_state_dict"])
-            
-            else:
-
-                self.model.load_state_dict(checkpoints["model_state_dict"], map_location = 'cpu')
-                self.optimizer.load_state_dict(checkpoints["optimizer_state_dict"], map_location = 'cpu')
+            self.optimizer.load_state_dict(checkpoints["optimizer_state_dict"])
 
             self.current_epoch = checkpoints["current_epoch"]
 
