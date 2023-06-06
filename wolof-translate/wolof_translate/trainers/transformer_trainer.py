@@ -294,7 +294,10 @@ class ModelRunner:
         for epoch in tqdm(range(start_epoch, start_epoch + epochs)):
 
             # Print the actual learning rate
-            print(f"For epoch {epoch + 1}: {{Learning rate: {self.lr_scheduling.get_lr()}}}")
+            # Print the actual learning rate
+            print(f"For epoch {epoch + 1}: ")
+            
+            if self.lr_scheduling: print(f"{{Learning rate: {self.lr_scheduling.get_lr()}}}")
             
             self.metrics = {}
         
