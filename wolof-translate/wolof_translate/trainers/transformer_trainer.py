@@ -327,7 +327,7 @@ class ModelRunner:
                         loader = list(iter(self.test_loader))
                     
                     with trange(len(loader), unit = "batches", position = 0, leave = True) as pbar:
-                      
+                    # for i in tqdm(range(len(loader))):
                       for i in pbar:
                         
                         pbar.set_description(f"{mode[0].upper() + mode[1:]} batch number {i + 1}")
@@ -553,7 +553,7 @@ class ModelRunner:
         with torch.no_grad():
 
             with trange(len(test_loader), unit = "batches", position = 0, leave = True) as pbar:
-
+            # for i in tqdm(range(len(test_loader))):
                 for i in pbar:
                 
                     pbar.set_description(f"Evaluation batch number {i + 1}")

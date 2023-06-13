@@ -82,7 +82,7 @@ def delete_guillemet_space(sentences: Union[list, str]):
 
 def add_mark_space(sentences: Union[list, str], marks: list = ['?', '!', '–', ':']):
     
-    if type(sentences) is str: sentences = [sentence]
+    if type(sentences) is str: sentences = [sentences]
     
     for s in range(len(sentences)):
         
@@ -112,7 +112,7 @@ def add_mark_space(sentences: Union[list, str], marks: list = ['?', '!', '–', 
 
 def remove_mark_space(sentences: Union[list, str], marks: list = ["'", "-"]):
     
-    if type(sentences) is str: sentences = [sentence]
+    if type(sentences) is str: sentences = [sentences]
     
     for s in range(len(sentences)):
         
@@ -148,7 +148,7 @@ def remove_mark_space(sentences: Union[list, str], marks: list = ["'", "-"]):
     
 def delete_much_space(sentences: Union[list, str]):
     
-    if type(sentences) is str: sentences = [sentence]
+    if type(sentences) is str: sentences = [sentences]
     
     for i in range(len(sentences)):
         
