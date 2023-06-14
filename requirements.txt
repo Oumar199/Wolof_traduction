@@ -17,3 +17,4 @@ sacrebleu
 tensorboard
 nlpaug
 wandb
+pytorch_lightning
