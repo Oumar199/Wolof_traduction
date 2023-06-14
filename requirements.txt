@@ -15,3 +15,5 @@ plotly
 evaluate
 sacrebleu
 tensorboard
+nlpaug
+wandb
