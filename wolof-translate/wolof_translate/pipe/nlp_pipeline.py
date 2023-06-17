@@ -1,5 +1,5 @@
 
-from wolof_translate.utils import tokenization
+from wolof_translate.utils.tokenize_text import tokenization
 from nlp_project.processing.utils import get_n_grams, guess_limitations, wordcloud
 from nlp_project import *
     

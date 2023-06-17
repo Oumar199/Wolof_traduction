@@ -14,7 +14,7 @@ class T5SentenceDataset(Dataset):
         tokenizer: PreTrainedTokenizerFast,
         corpus_1: str = "french",
         corpus_2: str = "wolof",
-        max_len: int = 52,
+        max_len: int = 50,
         truncation: bool = False,
         file_sep: str = ",",
         cp1_transformer: Union[TransformerSequences, None] = None,
