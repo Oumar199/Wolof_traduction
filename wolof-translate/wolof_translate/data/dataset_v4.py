@@ -137,6 +137,7 @@ class SentenceDataset(T5SentenceDataset):
             tuple: The `sentence to translate' ids`, `the attention mask of the sentence to translate`
             `the labels' ids`
         """
+        print(index)
         sentence_1 = self.sentences_1[index]
         
         sentence_2 = self.sentences_2[index]
