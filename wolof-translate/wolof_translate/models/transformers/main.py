@@ -5,7 +5,8 @@ from torch.nn.utils.rnn import pad_sequence
 from torch import nn
 from typing import *
 import torch
-import copy# new Exception for that transformer
+import copy
+# new Exception for that transformer
 class TargetException(Exception):
     
     def __init__(self, error):
@@ -30,7 +31,8 @@ class Transformer(nn.Module):
                  n_layers: int = 2,
                  n_poses_max: int = 500,
                  projection_type: str = "embedding",
-                 max_len: Union[int, None] = None):
+                 max_len: Union[int, None] = None, 
+                 share_weight: bool = False):
         
         super(Transformer, self).__init__()
         
@@ -71,14 +73,13 @@ class Transformer(nn.Module):
             drop_out=self.dropout
             )
 
-        # let us define a final layer normalization and a classifier layer
-        self.final_normalization = nn.LayerNorm(self.dec_embed_dim)
-
         self.classifier = nn.Linear(self.dec_embed_dim, vocab_size)
 
         # let us share the weights between the embedding layer and classification
         # linear layer
-        self.classifier.weight.data = self.embedding_layer.weight.data
+        if share_weight:
+          
+          self.classifier.weight.data = self.embedding_layer.weight.data
 
         self.max_len = max_len
         
@@ -158,9 +159,6 @@ class Transformer(nn.Module):
             # let's take only the predictions (the last input will not be taken)
             outputs = outputs[:, 1:]
         
-        # normalize the outputs
-        outputs = self.final_normalization(outputs)
-
         # let us add padding index to the outputs
         if not target_mask is None: 
           target = copy.deepcopy(target.cpu())
@@ -270,9 +268,6 @@ class Transformer(nn.Module):
         
         # let's take only the predictions (the last input will not be taken)
         outputs = outputs[:, 1:]
-
-        # normalize the outputs of the decoder layer
-        outputs = self.final_normalization(outputs)
 
         # ---> Predictions
         outputs = self.classifier(outputs)

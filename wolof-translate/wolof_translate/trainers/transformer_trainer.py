@@ -458,7 +458,7 @@ class ModelRunner:
     def save(
         self,
         directory: str = "data/checkpoints/last_checkpoints",
-        file_name: str = "checkpoints"
+        file_name: str = "checkpoints",
     ):
 
           if not os.path.exists(directory):
