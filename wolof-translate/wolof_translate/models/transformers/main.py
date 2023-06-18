@@ -5,8 +5,7 @@ from torch.nn.utils.rnn import pad_sequence
 from torch import nn
 from typing import *
 import torch
-import copy
-# new Exception for that transformer
+import copy# new Exception for that transformer
 class TargetException(Exception):
     
     def __init__(self, error):
@@ -71,6 +70,9 @@ class Transformer(nn.Module):
             normalization=True, # we always use normalization
             drop_out=self.dropout
             )
+
+        # let us define a final layer normalization and a classifier layer
+        self.final_normalization = nn.LayerNorm(self.dec_embed_dim)
 
         self.classifier = nn.Linear(self.dec_embed_dim, vocab_size)
 
@@ -156,6 +158,9 @@ class Transformer(nn.Module):
             # let's take only the predictions (the last input will not be taken)
             outputs = outputs[:, 1:]
         
+        # normalize the outputs
+        outputs = self.final_normalization(outputs)
+
         # let us add padding index to the outputs
         if not target_mask is None: 
           target = copy.deepcopy(target.cpu())
@@ -265,6 +270,9 @@ class Transformer(nn.Module):
         
         # let's take only the predictions (the last input will not be taken)
         outputs = outputs[:, 1:]
+
+        # normalize the outputs of the decoder layer
+        outputs = self.final_normalization(outputs)
 
         # ---> Predictions
         outputs = self.classifier(outputs)

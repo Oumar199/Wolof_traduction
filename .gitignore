@@ -1,2 +1,13 @@
 .venv
 access_token.txt
+data/checkpoints
+data/*.pkl
+data/*.gz
+data/*.en
+data/*.fr
+data/*.pdf
+data/*.docx
+data/extractions/images
+data/extractions/texts
+*/*.zip
+*/*/*.zip
