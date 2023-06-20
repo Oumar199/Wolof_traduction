@@ -211,7 +211,7 @@ class TextPipeProcessing:
     
         bottom_ = self._frequency[self._frequency['frequency'].isin(f_values[:bottom])]
         
-        fig = px.histogram(data_frame = bottom_, x = 'frequency', title=f"Frequency histogram for {bottom} frequency on the bottom")
+        fig = px.histogram(data_frame = bottom_, x = 'frequency', title=f"Frequency histogram for {bottom} frequency on the bottom", text_auto = True, color_discrete_sequence = ['indianred'])
         
         fig.show()
         
