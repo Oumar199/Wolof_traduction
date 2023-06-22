@@ -86,7 +86,9 @@ class ModelRunner:
     def batch_train(self, input_: torch.Tensor, input_mask: torch.Tensor,
                     labels: torch.Tensor, labels_mask: torch.Tensor, pad_token_id: int = 3):
         if self.hugging_face: # Nous allons utilise un modèle text to text de hugging face (but only for fine-tuning)
-
+          
+          # concatenate the input and the label 
+          
           # effectuons un passage vers l'avant
           outputs = self.model(input_ids = input_, attention_mask = input_mask, 
                                labels = labels)
@@ -162,6 +164,7 @@ class ModelRunner:
         predict_with_generate: bool = False,
         logging_dir: Union[str, None] = None,
         hugging_face: bool = False,
+        decoder_only: bool = False,
     ):
 
         if self.seed:
@@ -231,6 +234,8 @@ class ModelRunner:
         # Initialize the attribute which indicate if the model is from huggingface
         self.hugging_face = hugging_face
         
+        # Initialize the hugging face model type
+        self.decoder_only = decoder_only
 
     def train(
         self,
@@ -341,7 +346,17 @@ class ModelRunner:
                         labels = data[2].long().to(self.device)
 
                         if self.hugging_face:
-
+                          
+                          # concatenate the input with the labels and the two attention masks if we only use a decoder
+                          if self.decoder_only:
+                              
+                              input_ = torch.concat((input_, labels), dim=1)
+                              
+                              # the new labels are equal to the inputs
+                              labels = copy.deepcopy(input_)
+                              
+                              input_mask = torch.concat((input_mask, data[3].to(self.device)), dim=1)
+                          
                           labels[labels == self.tokenizer.pad_token_id] == -100
 
                         labels_mask = data[3].to(self.device)
@@ -567,7 +582,12 @@ class ModelRunner:
                     labels = data[2].long().to(self.device)
 
                     if self.hugging_face:
-
+                        
+                        # concatenate the input with the labels and the two attention masks if we only use a decoder
+                        if self.decoder_only:
+                            
+                            labels = torch.concat((input_, labels))
+                        
                         labels[labels == self.tokenizer.pad_token_id] == -100
 
                     labels_mask = data[3].to(self.device)
@@ -597,7 +617,7 @@ class ModelRunner:
 
                     results['translations'].extend(test_dataset.tokenizer.batch_decode(labels, skip_special_tokens = True))
 
-                    results['predictions'].extend(test_dataset.tokenizer.batch_decode(preds, skip_special_tokens = True))
+                    results['predictions'].extend(test_dataset.decode(preds))
 
             if not self.evaluation is None:
               

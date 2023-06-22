@@ -80,7 +80,7 @@ def delete_guillemet_space(sentences: Union[list, str]):
     
     return sentences
 
-def add_mark_space(sentences: Union[list, str], marks: list = ['?', '!', '–', ':']):
+def add_mark_space(sentences: Union[list, str], marks: list = ['?', '!', '–', ':', ';']):
     
     if type(sentences) is str: sentences = [sentences]
     

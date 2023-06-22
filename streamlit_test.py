@@ -6,7 +6,6 @@ import pandas as pd
 import torch
 import os
 
-
 # Let us define the main page
 st.markdown("Translation page 🔠")
 

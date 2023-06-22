@@ -14,11 +14,12 @@ class T5SentenceDataset(Dataset):
         tokenizer: PreTrainedTokenizerFast,
         corpus_1: str = "french",
         corpus_2: str = "wolof",
-        max_len: int = 50,
+        max_len: int = 21,
         truncation: bool = False,
         file_sep: str = ",",
         cp1_transformer: Union[TransformerSequences, None] = None,
         cp2_transformer: Union[TransformerSequences, None] = None,
+        decoder_only: bool = False,
         **kwargs):
         
         # let us recuperate the data frame
@@ -46,6 +47,9 @@ class T5SentenceDataset(Dataset):
         self.cp1_transformer = cp1_transformer
         
         self.cp2_transformer = cp2_transformer
+        
+        # get the type of hugging face model
+        self.decoder_only = decoder_only
         
     def __getitem__(self, index):
         """Recuperate ids and attention masks of sentences at index
@@ -149,7 +153,8 @@ class SentenceDataset(T5SentenceDataset):
             
             sentence_2 = self.cp2_transformer(sentence_2)[0]
         
-        sentence_1 = sentence_1 + self.tokenizer.eos_token
+        sentence_1 = sentence_1 + self.tokenizer.eos_token if not self.decoder_only else\
+            self.tokenizer.bos_token + sentence_1 + self.tokenizer.sep_token
         
         sentence_2 = sentence_2 + self.tokenizer.eos_token
         
@@ -173,3 +178,28 @@ class SentenceDataset(T5SentenceDataset):
                 data.attention_mask.squeeze(0), 
                 labels.input_ids.squeeze(0),
                 labels.attention_mask.squeeze(0))
+    
+    def decode(self, preds: torch.Tensor):
+        
+        if not self.decoder_only:
+            
+            sentences = super().decode(preds)
+        
+        else:
+            
+            preds = self.tokenizer.batch_decode(preds)
+            
+            sentences = []
+            
+            for pred in preds:
+                
+                sentences.append(re.findall('<sep>(.*)', pred)[-1]\
+                    .replace(self.tokenizer.pad_token, "")\
+                        .replace(self.tokenizer.eos_token, "")\
+                            .replace(self.tokenizer.sep_token, "")\
+                                .replace(self.tokenizer.bos_token, "").strip())
+
+        return sentences
+        
+        
+        
