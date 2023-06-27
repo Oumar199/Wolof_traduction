@@ -191,6 +191,10 @@ class ModelRunner:
 
             self.lr_scheduling = lr_scheduler(self.optimizer, **lr_scheduler_kwargs)
 
+        # initialize the datasets and the loaders
+        self.train_set = train_dataset
+        self.test_set = test_dataset
+
         self.train_loader = DataLoader(
             train_dataset,
             shuffle=True,
@@ -299,7 +303,6 @@ class ModelRunner:
         for epoch in tqdm(range(start_epoch, start_epoch + epochs)):
 
             # Print the actual learning rate
-            # Print the actual learning rate
             print(f"For epoch {epoch + 1}: ")
             
             if self.lr_scheduling: print(f"{{Learning rate: {self.lr_scheduling.get_lr()}}}")
@@ -340,22 +343,34 @@ class ModelRunner:
                         data = loader[i]
 
                         input_ = data[0].long().to(self.device)
+
+                        # let us initialize a fake input
+                        # input__ = None
                         
                         input_mask = data[1].to(self.device)
+
+                        # let us initialize a fake input mask
+                        # input_mask_ = None
 
                         labels = data[2].long().to(self.device)
 
                         if self.hugging_face:
                           
                           # concatenate the input with the labels and the two attention masks if we only use a decoder
-                          if self.decoder_only:
+                          # if self.decoder_only:
                               
-                              input_ = torch.concat((input_, labels), dim=1)
+                          #     # let us modify the fake input to the first sentence
+                          #     input__ = copy.deepcopy(input_)
+
+                          #     input_ = torch.concat((input_, labels), dim=1)
                               
-                              # the new labels are equal to the inputs
-                              labels = copy.deepcopy(input_)
+                          #     # the new labels are equal to the inputs
+                          #     labels = copy.deepcopy(input_)
                               
-                              input_mask = torch.concat((input_mask, data[3].to(self.device)), dim=1)
+                          #     # let us modify the fake input mask to mask of the first sentence
+                          #     input_mask_ = copy.deepcopy(input_mask)
+
+                          #     input_mask = torch.concat((input_mask, data[3].to(self.device)), dim=1)
                           
                           labels[labels == self.tokenizer.pad_token_id] == -100
 
@@ -365,9 +380,11 @@ class ModelRunner:
                         pad_token_id = 3 if self.tokenizer is None else self.tokenizer.pad_token_id
 
                         preds, loss = (
-                            self.batch_train(input_, input_mask, labels, labels_mask, pad_token_id)
+                            self.batch_train(input_, input_mask,
+                             labels, labels_mask, pad_token_id)
                             if mode == "train"
-                            else self.batch_eval(input_, input_mask, labels, labels_mask, pad_token_id)
+                            else self.batch_eval(input_, input_mask,
+                             labels, labels_mask, pad_token_id)
                         )
 
                         self.metrics[f"{mode}_loss"] += loss.item()
@@ -379,7 +396,15 @@ class ModelRunner:
 
                               if self.hugging_face:
 
-                                  preds = self.model.generate(input_, attention_mask = input_mask)
+                                  # preds = self.model.generate(input_ if not self.decoder_only else input__,
+                                  #  attention_mask = input_mask if not self.decoder_only else input_mask_,
+                                  #   max_new_tokens = self.train_set.max_len, pad_token_id = self.test_set.tokenizer.eos_token_id)
+                                  
+                                  preds = self.model.generate(input_, attention_mask = input_mask, max_length = self.train_set.max_len,
+                                   eos_token_id = self.train_set.tokenizer.eos_token_id,
+                                   forced_eos_token_id = self.train_set.tokenizer.eos_token_id,
+                                   pad_token_id = self.train_set.tokenizer.pad_token_id
+                                   )
 
                               else:
 
@@ -403,7 +428,7 @@ class ModelRunner:
                       
             if not self.evaluation is None and mode == 'test':
               
-              self.metrics.update(self.evaluation.compute_metrics((np.array(predictions_), np.array(labels_))))
+              self.metrics.update(self.evaluation.compute_metrics((np.array(predictions_, dtype = object), np.array(labels_, dtype = object))))
 
             self.metrics[f"train_loss"] = self.metrics[f"train_loss"] / len(self.train_loader)
             
@@ -584,9 +609,9 @@ class ModelRunner:
                     if self.hugging_face:
                         
                         # concatenate the input with the labels and the two attention masks if we only use a decoder
-                        if self.decoder_only:
+                        # if self.decoder_only:
                             
-                            labels = torch.concat((input_, labels))
+                        #     labels = torch.concat((input_, labels))
                         
                         labels[labels == self.tokenizer.pad_token_id] == -100
 
@@ -598,8 +623,14 @@ class ModelRunner:
                 
                     if self.hugging_face:
 
-                        preds = self.model.generate(input_, attention_mask = input_mask)
+                        # preds = self.model.generate(input_, attention_mask = input_mask, max_new_tokens = self.train_set.max_len * 2, pad_token_id = test_dataset.tokenizer.eos_token_id)
                         
+                        preds = self.model.generate(input_, attention_mask = input_mask, max_length = self.train_set.max_len,
+                                   eos_token_id = self.train_set.tokenizer.eos_token_id,
+                                   forced_eos_token_id = self.train_set.tokenizer.eos_token_id,
+                                   pad_token_id = self.train_set.tokenizer.pad_token_id
+                                   )
+
                         labels_.extend(labels.detach().cpu().tolist())
 
                     else:

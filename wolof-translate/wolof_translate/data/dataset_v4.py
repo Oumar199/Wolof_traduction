@@ -14,7 +14,7 @@ class T5SentenceDataset(Dataset):
         tokenizer: PreTrainedTokenizerFast,
         corpus_1: str = "french",
         corpus_2: str = "wolof",
-        max_len: int = 21,
+        max_len: int = 50,
         truncation: bool = False,
         file_sep: str = ",",
         cp1_transformer: Union[TransformerSequences, None] = None,
@@ -112,7 +112,7 @@ class SentenceDataset(T5SentenceDataset):
         tokenizer: PreTrainedTokenizerFast,
         corpus_1: str = "french",
         corpus_2: str = "wolof",
-        max_len: int = 52,
+        max_len: int = 50,
         truncation: bool = False,
         file_sep: str = ",",
         cp1_transformer: Union[TransformerSequences, None] = None,
@@ -153,8 +153,7 @@ class SentenceDataset(T5SentenceDataset):
             
             sentence_2 = self.cp2_transformer(sentence_2)[0]
         
-        sentence_1 = sentence_1 + self.tokenizer.eos_token if not self.decoder_only else\
-            self.tokenizer.bos_token + sentence_1 + self.tokenizer.sep_token
+        sentence_1 = sentence_1 + self.tokenizer.eos_token 
         
         sentence_2 = sentence_2 + self.tokenizer.eos_token
         
@@ -179,27 +178,25 @@ class SentenceDataset(T5SentenceDataset):
                 labels.input_ids.squeeze(0),
                 labels.attention_mask.squeeze(0))
     
-    def decode(self, preds: torch.Tensor):
+    # def decode(self, preds: torch.Tensor):
         
-        if not self.decoder_only:
+    #     if not self.decoder_only:
             
-            sentences = super().decode(preds)
+    #         sentences = super().decode(preds)
         
-        else:
+    #     else:
             
-            preds = self.tokenizer.batch_decode(preds)
+    #         preds = self.tokenizer.batch_decode(preds)
             
-            sentences = []
+    #         sentences = []
             
-            for pred in preds:
+    #         for pred in preds:
                 
-                sentences.append(re.findall('<sep>(.*)', pred)[-1]\
-                    .replace(self.tokenizer.pad_token, "")\
-                        .replace(self.tokenizer.eos_token, "")\
-                            .replace(self.tokenizer.sep_token, "")\
-                                .replace(self.tokenizer.bos_token, "").strip())
+    #             sentences.append(re.findall('<sep>(.*)', pred)[-1]\
+    #                 .replace(self.tokenizer.pad_token, "")\
+    #                     .replace(self.tokenizer.eos_token, "")\
+    #                         .replace(self.tokenizer.sep_token, "")\
+    #                             .replace(self.tokenizer.bos_token, "").strip())
 
-        return sentences
-        
-        
-        
+    #     return sentences
+

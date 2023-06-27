@@ -13,11 +13,11 @@ def split_data(random_state: int = 50, data_directory: str = "data/extractions/n
   # load the corpora and split into train and test sets
   corpora = pd.read_csv(os.path.join(data_directory, csv_file))
 
-  train_set, test_set = train_test_split(corpora, test_size=0.1, random_state=random_state)
+  train_set, test_valid_set = train_test_split(corpora, test_size=0.2, random_state=random_state)
 
   # let us save the final training set when performing
 
-  train_set, valid_set = train_test_split(train_set, test_size=0.1, random_state=random_state)
+  test_set, valid_set = train_test_split(test_valid_set, test_size=0.5, random_state=random_state)
 
   train_set.to_csv(os.path.join(data_directory, "final_train_set.csv"), index=False)
 
@@ -37,11 +37,11 @@ def split_data_kaggle(random_state: int, data_directory: str, split_directory: s
   # load the corpora and split into train and test sets
   corpora = pd.read_csv(os.path.join(data_directory, csv_file))
 
-  train_set, test_set = train_test_split(corpora, test_size=0.1, random_state=random_state)
+  train_set, test_valid_set = train_test_split(corpora, test_size=0.2, random_state=random_state)
 
   # let us save the final training set when performing
 
-  train_set, valid_set = train_test_split(train_set, test_size=0.1, random_state=random_state)
+  test_set, valid_set = train_test_split(test_valid_set, test_size=0.5, random_state=random_state)
 
   train_set.to_csv(os.path.join(split_directory, "final_train_set.csv"), index=False)
 
