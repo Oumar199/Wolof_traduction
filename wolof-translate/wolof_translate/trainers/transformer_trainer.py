@@ -652,7 +652,7 @@ class ModelRunner:
 
             if not self.evaluation is None:
               
-                metrics.update(self.evaluation.compute_metrics((np.array(predictions_), np.array(labels_))))
+                metrics.update(self.evaluation.compute_metrics((np.array(predictions_, dtype = object), np.array(labels_, dtype = object))))
 
             metrics["test_loss"] = metrics["test_loss"] / len(test_loader)
 
