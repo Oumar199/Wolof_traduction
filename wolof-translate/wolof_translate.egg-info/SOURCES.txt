@@ -21,9 +21,12 @@ wolof_translate/data/__pycache__/dataset_v2.cpython-310.pyc
 wolof_translate/data/__pycache__/dataset_v3.cpython-310.pyc
 wolof_translate/data/__pycache__/dataset_v3.cpython-311.pyc
 wolof_translate/data/__pycache__/dataset_v4.cpython-310.pyc
+wolof_translate/data/__pycache__/dataset_v4.cpython-311.pyc
 wolof_translate/models/__init__.py
 wolof_translate/models/__pycache__/__init__.cpython-310.pyc
 wolof_translate/models/__pycache__/__init__.cpython-311.pyc
+wolof_translate/models/french/tfidfaug_w2idf.txt
+wolof_translate/models/french/tfidfaug_w2tfidf.txt
 wolof_translate/models/transformers/__init__.py
 wolof_translate/models/transformers/main.py
 wolof_translate/models/transformers/optimization.py
@@ -39,11 +42,15 @@ wolof_translate/models/transformers/__pycache__/position.cpython-310.pyc
 wolof_translate/models/transformers/__pycache__/position.cpython-311.pyc
 wolof_translate/models/transformers/__pycache__/size.cpython-310.pyc
 wolof_translate/models/transformers/__pycache__/size.cpython-311.pyc
+wolof_translate/models/wolof/tfidfaug_w2idf.txt
+wolof_translate/models/wolof/tfidfaug_w2tfidf.txt
 wolof_translate/pipe/__init__.py
 wolof_translate/pipe/nlp_pipeline.py
 wolof_translate/tokenizers/__init__.py
 wolof_translate/tokenizers/adverse_tokenizer.json
+wolof_translate/tokenizers/t5_tokenizers.zip
 wolof_translate/tokenizers/tokenizer_v1.json
+wolof_translate/tokenizers/tokenizer_v3_2.json
 wolof_translate/tokenizers/__pycache__/__init__.cpython-310.pyc
 wolof_translate/tokenizers/t5_tokenizers/fr_tokenizer_v1.json
 wolof_translate/tokenizers/t5_tokenizers/re_tokenizer_v3.json
@@ -64,6 +71,7 @@ wolof_translate/trainers/__pycache__/transformer_trainer.cpython-311.pyc
 wolof_translate/utils/__init__.py
 wolof_translate/utils/database_manager.py
 wolof_translate/utils/evaluation.py
+wolof_translate/utils/extract_new_sentences.py
 wolof_translate/utils/extract_poems.py
 wolof_translate/utils/extract_sentences.py
 wolof_translate/utils/sent_corrections.py
@@ -73,8 +81,10 @@ wolof_translate/utils/split_with_valid.py
 wolof_translate/utils/tokenize_text.py
 wolof_translate/utils/__pycache__/__init__.cpython-310.pyc
 wolof_translate/utils/__pycache__/__init__.cpython-311.pyc
+wolof_translate/utils/__pycache__/database_manager.cpython-310.pyc
 wolof_translate/utils/__pycache__/evaluation.cpython-310.pyc
 wolof_translate/utils/__pycache__/evaluation.cpython-311.pyc
+wolof_translate/utils/__pycache__/extract_new_sentences.cpython-310.pyc
 wolof_translate/utils/__pycache__/sent_corrections.cpython-310.pyc
 wolof_translate/utils/__pycache__/sent_corrections.cpython-311.pyc
 wolof_translate/utils/__pycache__/sent_transformers.cpython-310.pyc
