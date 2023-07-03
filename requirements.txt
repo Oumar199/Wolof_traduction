@@ -4,6 +4,7 @@ Sphinx==6.2.1
 nbsphinx
 streamlit
 tokenizers
+evaluate
 torch
 transformers
 sphinx-autobuild
@@ -12,12 +13,13 @@ numpy
 scikit-learn
 matplotlib
 plotly
-evaluate
 sacrebleu
 tensorboard
 nlpaug
 wandb
 pytorch_lightning
 selenium
+jax 
+jaxlib
 trax
 -e wolof-translate
