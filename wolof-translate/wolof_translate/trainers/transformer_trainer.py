@@ -400,11 +400,7 @@ class ModelRunner:
                                   #  attention_mask = input_mask if not self.decoder_only else input_mask_,
                                   #   max_new_tokens = self.train_set.max_len, pad_token_id = self.test_set.tokenizer.eos_token_id)
                                   
-                                  preds = self.model.generate(input_, attention_mask = input_mask, max_length = self.train_set.max_len,
-                                   eos_token_id = self.train_set.tokenizer.eos_token_id,
-                                   forced_eos_token_id = self.train_set.tokenizer.eos_token_id,
-                                   pad_token_id = self.train_set.tokenizer.pad_token_id
-                                   )
+                                  preds = self.model.generate(input_, attention_mask = input_mask, max_length = self.train_set.max_len)
 
                               else:
 
@@ -625,11 +621,7 @@ class ModelRunner:
 
                         # preds = self.model.generate(input_, attention_mask = input_mask, max_new_tokens = self.train_set.max_len * 2, pad_token_id = test_dataset.tokenizer.eos_token_id)
                         
-                        preds = self.model.generate(input_, attention_mask = input_mask, max_length = self.train_set.max_len,
-                                   eos_token_id = self.train_set.tokenizer.eos_token_id,
-                                   forced_eos_token_id = self.train_set.tokenizer.eos_token_id,
-                                   pad_token_id = self.train_set.tokenizer.pad_token_id
-                                   )
+                        preds = self.model.generate(input_, attention_mask = input_mask, max_length = self.train_set.max_len)
 
                         labels_.extend(labels.detach().cpu().tolist())
 
@@ -651,7 +643,7 @@ class ModelRunner:
                     results['predictions'].extend(test_dataset.decode(preds))
 
             if not self.evaluation is None:
-              
+                print(f'predictions_: {predictions_}')
                 metrics.update(self.evaluation.compute_metrics((np.array(predictions_, dtype = object), np.array(labels_, dtype = object))))
 
             metrics["test_loss"] = metrics["test_loss"] / len(test_loader)

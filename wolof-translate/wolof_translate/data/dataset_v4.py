@@ -14,12 +14,12 @@ class T5SentenceDataset(Dataset):
         tokenizer: PreTrainedTokenizerFast,
         corpus_1: str = "french",
         corpus_2: str = "wolof",
-        max_len: int = 50,
+        max_len: int = 52,
         truncation: bool = False,
         file_sep: str = ",",
         cp1_transformer: Union[TransformerSequences, None] = None,
         cp2_transformer: Union[TransformerSequences, None] = None,
-        decoder_only: bool = False,
+        add_bos_token: bool = False,
         **kwargs):
         
         # let us recuperate the data frame
@@ -48,8 +48,11 @@ class T5SentenceDataset(Dataset):
         
         self.cp2_transformer = cp2_transformer
         
-        # get the type of hugging face model
-        self.decoder_only = decoder_only
+        # see if we add a beginning of the sentence
+        self.add_bos = add_bos_token
+        
+        # let us recuperate the special tokens
+        self.special_tokens = tokenizer.convert_ids_to_tokens(tokenizer.all_special_ids)
         
     def __getitem__(self, index):
         """Recuperate ids and attention masks of sentences at index
@@ -101,7 +104,7 @@ class T5SentenceDataset(Dataset):
 
         sentences = self.tokenizer.batch_decode(labels, skip_special_tokens=True)
 
-        return sentences
+        return [re.sub('|'.join(self.special_tokens), '', sentence) for sentence in sentences]
 
 
 class SentenceDataset(T5SentenceDataset):
@@ -117,6 +120,7 @@ class SentenceDataset(T5SentenceDataset):
         file_sep: str = ",",
         cp1_transformer: Union[TransformerSequences, None] = None,
         cp2_transformer: Union[TransformerSequences, None] = None,
+        add_bos_token: bool = False,
         **kwargs):
         
         super().__init__(data_path, 
@@ -128,6 +132,7 @@ class SentenceDataset(T5SentenceDataset):
                         file_sep,
                         cp1_transformer,
                         cp2_transformer,
+                        add_bos_token,
                         **kwargs)
         
     def __getitem__(self, index):
@@ -153,9 +158,12 @@ class SentenceDataset(T5SentenceDataset):
             
             sentence_2 = self.cp2_transformer(sentence_2)[0]
         
-        sentence_1 = sentence_1 + self.tokenizer.eos_token 
+        # initialize the bos token
+        bos_token = '' if not self.add_bos else self.tokenizer.bos_token
         
-        sentence_2 = sentence_2 + self.tokenizer.eos_token
+        sentence_1 = sentence_1 
+        
+        sentence_2 = sentence_2
         
         # let us encode the sentences (we provide the second sentence as labels to the tokenizer)
         data = self.tokenizer(
@@ -178,25 +186,3 @@ class SentenceDataset(T5SentenceDataset):
                 labels.input_ids.squeeze(0),
                 labels.attention_mask.squeeze(0))
     
-    # def decode(self, preds: torch.Tensor):
-        
-    #     if not self.decoder_only:
-            
-    #         sentences = super().decode(preds)
-        
-    #     else:
-            
-    #         preds = self.tokenizer.batch_decode(preds)
-            
-    #         sentences = []
-            
-    #         for pred in preds:
-                
-    #             sentences.append(re.findall('<sep>(.*)', pred)[-1]\
-    #                 .replace(self.tokenizer.pad_token, "")\
-    #                     .replace(self.tokenizer.eos_token, "")\
-    #                         .replace(self.tokenizer.sep_token, "")\
-    #                             .replace(self.tokenizer.bos_token, "").strip())
-
-    #     return sentences
-

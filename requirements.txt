@@ -19,4 +19,5 @@ nlpaug
 wandb
 pytorch_lightning
 selenium
+trax
 -e wolof-translate
