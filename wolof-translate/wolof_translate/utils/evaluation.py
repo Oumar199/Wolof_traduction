@@ -37,7 +37,7 @@ class TranslationEvaluation:
 
         labels = np.where(labels != -100, labels, self.tokenizer.pad_token_id)
 
-        decoded_labels = self.tokenizer.batch_decode(labels, skip_special_tokens=True) if not self.decoder else self.decoder(preds)
+        decoded_labels = self.tokenizer.batch_decode(labels, skip_special_tokens=True) if not self.decoder else self.decoder(labels)
 
         decoded_preds, decoded_labels = self.postprocess_text(decoded_preds, decoded_labels)
         
