@@ -11,7 +11,7 @@ class SequenceLengthBatchSampler(Sampler):
 
     def __iter__(self):
         indices = list(range(len(self.dataset)))  # Get indices of the dataset
-        sorted_indices = sorted(indices, key=lambda i: len(self.dataset[i][0]))  # Sort indices based on sequence length
+        sorted_indices = sorted(indices, key=lambda i: max(len(self.dataset[i][0]), len(self.dataset[i][1])))  # Sort indices based on sequence length
         self.batches = []
 
         # Group indices into batches of sequences with the same length
