@@ -1,67 +1,37 @@
 
 import torch
-from torch.utils.data import DataLoader
+from torch.utils.data import Sampler
 from torch.nn.utils.rnn import pad_sequence
 
-class SameLengthBatchSampler(torch.utils.data.Sampler):
-    def __init__(self, data_source, batch_size):
-        self.data_source = data_source
-        self.batch_size = batch_size
+class SequenceLengthBatchSampler(Sampler):
+    def __init__(self, dataset, boundaries, batch_sizes):
+        self.dataset = dataset
+        self.boundaries = boundaries
+        self.batch_sizes = batch_sizes
 
     def __iter__(self):
-        indices = list(range(len(self.data_source)))
-        indices.sort(key=lambda i: len(self.data_source[i][0]), reverse=True)
-        for i in range(0, len(indices), self.batch_size):
-            print('here here')
-            yield indices[i:i + self.batch_size]
+        indices = list(range(len(self.dataset)))  # Get indices of the dataset
+        sorted_indices = sorted(indices, key=lambda i: len(self.dataset[i][0]))  # Sort indices based on sequence length
+        self.batches = []
+
+        # Group indices into batches of sequences with the same length
+        for boundary in self.boundaries:
+            batch = [i for i in sorted_indices if len(self.dataset[i][0]) <= boundary]  # Filter indices based on length boundary
+            self.batches.append(batch)
+            sorted_indices = [i for i in sorted_indices if i not in batch]  # Remove processed indices
+
+        # Add remaining indices to the last batch
+        self.batches.append(sorted_indices)
+
+        # Yield batches with the corresponding batch sizes
+        for batch_indices, batch_size in zip(self.batches, self.batch_sizes):
+            for i in range(0, len(batch_indices), batch_size):
+                yield batch_indices[i:i + batch_size]
 
     def __len__(self):
-        return len(self.data_source) // self.batch_size
-
-# class SameLengthBatchSampler(torch.utils.data.Sampler):
-#     def __init__(self, data_source, boundaries, batch_sizes):
-#         self.data_source = data_source
-#         self.boundaries = boundaries
-#         self.batch_sizes = batch_sizes
-
-#     def __iter__(self):
-#         indices = list(range(len(self.data_source)))
-#         indices.sort(key=lambda i: len(self.data_source[i][0]), reverse=True)
-#         batches = []
-#         current_batch = []
-#         current_bucket_index = 0
-#         for i in indices:
-#             length = len(self.data_source[i][0])
-#             if length > self.boundaries[current_bucket_index]:
-#                 if current_bucket_index < len(self.batch_sizes):
-#                     batches.extend([current_batch] * self.batch_sizes[current_bucket_index])
-#                 else:
-#                     batches.append(current_batch)
-#                 current_batch = [i]
-#                 current_bucket_index += 1
-#             else:
-#                 current_batch.append(i)
-#         if current_batch:
-#             if current_bucket_index < len(self.batch_sizes):
-#                 batches.extend([current_batch] * self.batch_sizes[current_bucket_index])
-#             else:
-#                 batches.append(current_batch)
-#         for batch in batches:
-#             print(batch)
-
-#     def __len__(self):
-#         num_batches = 0
-#         for i in range(len(self.batch_sizes)):
-#             if i < len(self.boundaries):
-#                 num_batches += len(self.data_source) // self.batch_sizes[i]
-#             else:
-#                 num_batches += len(self.data_source) // self.batch_sizes[-1]
-#         return num_batches
+        return sum(len(batch) // batch_size + 1 for batch, batch_size in zip(self.batches, self.batch_sizes))
 
 def collate_fn(batch):
-    # Sort the batch based on input sequence length (descending order)
-    batch.sort(key=lambda x: len(x[0]), reverse=True)
-    
     # Separate the input sequences, target sequences, and attention masks
     input_seqs, input_masks, target_seqs, target_masks = zip(*batch)
 
