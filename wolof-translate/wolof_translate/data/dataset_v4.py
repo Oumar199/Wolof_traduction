@@ -185,8 +185,7 @@ class SentenceDataset(T5SentenceDataset):
                 data.attention_mask.squeeze(0), 
                 labels.input_ids.squeeze(0),
                 labels.attention_mask.squeeze(0))
-        
-        
+    
 class SentenceDatasetBucket(T5SentenceDataset):
 
     def __init__(
@@ -255,4 +254,3 @@ class SentenceDatasetBucket(T5SentenceDataset):
                 data.attention_mask.squeeze(0), 
                 labels.input_ids.squeeze(0),
                 labels.attention_mask.squeeze(0))
-    
