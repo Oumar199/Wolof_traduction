@@ -3,9 +3,11 @@ Nous allons créer des classes supplémentaire qui vont supporter la classe d'en
 """
 
 from wolof_translate.utils.evaluation import TranslationEvaluation
+from torch.utils.data.distributed import DistributedSampler
 from torch.utils.tensorboard import SummaryWriter
 from torch.utils.data import Dataset, DataLoader
 from tokenizers import Tokenizer
+import torch.distributed as dist
 from tqdm import tqdm, trange
 from torch.nn import utils
 from torch import optim
@@ -83,6 +85,13 @@ class ModelRunner:
 
     # ------------------------------ Training staffs (Partie entraînement et compilation) --------------------------
     
+    def _average_gradients(self): # link: https://github.com/aws/amazon-sagemaker-examples/blob/main/sagemaker-python-sdk/pytorch_mnist/mnist.py
+      # average the gradients
+      size = float(self.dist.get_world_size())
+      for param in self.model.parameters():
+          self.dist.all_reduce(param.grad.data, op=self.dist.reduce_op.SUM)
+          param.grad.data /= size
+
     def batch_train(self, input_: torch.Tensor, input_mask: torch.Tensor,
                     labels: torch.Tensor, labels_mask: torch.Tensor, pad_token_id: int = 3):
         if self.hugging_face: # Nous allons utilise un modèle text to text de hugging face (but only for fine-tuning)
@@ -107,13 +116,18 @@ class ModelRunner:
         # effectuons un passage vers l'arrière
         loss.backward()
 
+        # average the gradients if the training is distributed over multi machine cpu
+        if self.distributed and not self.device == torch.device('cuda'):
+
+          self._average_gradients()
+
         # forcons les valeurs des gradients à se tenir dans un certain interval si nécessaire
         if not self.clipping_value is None:
 
             utils.clip_grad_value_(
                 self.model.parameters(), clip_value=self.clipping_value
             )
-
+        
         # mettons à jour les paramètres
         self.optimizer.step()
 
@@ -154,8 +168,8 @@ class ModelRunner:
         train_dataset: Dataset,
         test_dataset: Union[Dataset, None] = None,
         tokenizer: Union[Tokenizer, None] = None,
-        train_loader_kwargs: dict = {"batch_size": 16},
-        test_loader_kwargs: dict = {"batch_size": 16},
+        train_loader_kwargs: dict = {"batch_size": 16, 'shuffle': True},
+        test_loader_kwargs: dict = {"batch_size": 16, 'shuffle': False},
         optimizer_kwargs: dict = {"lr": 1e-4, "weight_decay": 0.4},
         model_kwargs: dict = {'class_criterion': nn.CrossEntropyLoss(label_smoothing=0.1)},
         lr_scheduler_kwargs: dict = {'d_model': 512, 'lr_warmup_step': 100},
@@ -164,7 +178,8 @@ class ModelRunner:
         predict_with_generate: bool = False,
         logging_dir: Union[str, None] = None,
         hugging_face: bool = False,
-        decoder_only: bool = False,
+        is_distributed: bool = False,
+        dist = None
     ):
 
         if self.seed:
@@ -179,6 +194,15 @@ class ModelRunner:
         
             self.model = copy.deepcopy(self.orig_model(**model_kwargs)).to(self.device)
 
+        # add distribution if available
+        if is_distributed and self.device == torch.device('cuda'):
+
+          self.model = torch.nn.parallel.DistributedDataParallel(self.model)
+        
+        else:
+
+          self.model = torch.nn.parallel.DataParallel(self.model)
+        
         # Initialisation des paramètres de l'optimiseur
         self.optimizer = self.orig_optimizer(
             self.model.parameters(), **optimizer_kwargs
@@ -191,20 +215,46 @@ class ModelRunner:
 
             self.lr_scheduling = lr_scheduler(self.optimizer, **lr_scheduler_kwargs)
 
-        # initialize the datasets and the loaders
+        # Initialize the datasets and the loaders
         self.train_set = train_dataset
         self.test_set = test_dataset
 
+        # If the data is distributed over multiple gpus we will parallelize it
+        if is_distributed:
+
+          # We verify if the train loader kwargs already contains a sampler and
+          # if it is the case add it to the parallel sampler object
+          sampler = None
+          if 'batch_sampler' in train_loader_kwargs:
+            
+            sampler = 'batch_sampler'
+          
+          elif 'sampler' in train_loader_kwargs:
+
+            sampler = 'sampler'
+          
+          if not sampler is None:
+
+            sampler = DistributedSampler(train_loader_kwargs[sampler])
+
+            distributed_sampler = sampler
+
+            train_loader_kwargs[sampler] = distributed_sampler
+          
+          else:
+
+            distributed_sampler = DistributedSampler(train_dataset)
+          
+            train_loader_kwargs['sampler'] = distributed_sampler
+
         self.train_loader = DataLoader(
             train_dataset,
-            shuffle = True,
             **train_loader_kwargs,
         )
         
         if test_dataset:
           self.test_loader = DataLoader(
               test_dataset,
-              shuffle = False,
               **test_loader_kwargs,
           )
         
@@ -237,9 +287,10 @@ class ModelRunner:
 
         # Initialize the attribute which indicate if the model is from huggingface
         self.hugging_face = hugging_face
-        
-        # Initialize the hugging face model type
-        self.decoder_only = decoder_only
+
+        # Initialize the torch distributed module and distribution option
+        self.distributed = is_distributed
+        self.dist = dist
 
     def train(
         self,
@@ -250,7 +301,8 @@ class ModelRunner:
         file_name: str = "checkpoints",
         save_best: bool = True,
         metric_for_best_model: str = 'test_loss',
-        metric_objective: str = 'minimize'
+        metric_objective: str = 'minimize',
+        add_bleu_only: bool = True
     ):
         """Entraînement du modèle
 
@@ -263,6 +315,8 @@ class ModelRunner:
             save_best (bool): Une varible booléenne indiquant si l'on souhaite sauvegarder le meilleur modèle. Defaults to True.
             metric_for_best_model (str): Le nom de la métrique qui permet de choisir le meilleur modèle. Defaults to 'eval_loss'.
             metric_objective (str): Indique si la métrique doit être maximisée 'maximize' ou minimisée 'minimize'. Defaults to 'minimize'.
+            add_bleu_only (bool): Indique si l'on souhaite n'ajouter la métrique BLEU. Si c'est le cas l'évaluation se fera à la fin des
+            itérations. Defaults to True.
 
         Raises:
             Exception: L'entraînement implique d'avoir déja initialisé les paramètres
@@ -308,9 +362,15 @@ class ModelRunner:
             if self.lr_scheduling: print(f"{{Learning rate: {self.lr_scheduling.get_lr()}}}")
             
             self.metrics = {}
+
+            i = {}
         
             for mode in modes:
-            
+
+                if mode == 'test' and (epoch + 1) % log_step != 0:
+
+                  continue
+
                 with torch.set_grad_enabled(mode == "train"):
                   
                     # Initialize the loss of the current mode
@@ -326,21 +386,22 @@ class ModelRunner:
 
                         self.model.train()
 
-                        loader = list(iter(self.train_loader))
+                        loader = tqdm(self.train_loader)
 
                     else:
 
                         self.model.eval()
 
-                        loader = list(iter(self.test_loader))
+                        loader = tqdm(self.test_loader)
                     
-                    with trange(len(loader), unit = "batches", position = 0, leave = True) as pbar:
-                    # for i in tqdm(range(len(loader))):
-                      for i in pbar:
+                    # with trange(len(loader), unit = "batches", position = 0, leave = True) as pbar:
+                    i[mode] = 0
+                    for data in loader: 
+
+                        i[mode] += 1
+                        loader.set_description(f"{mode[0].upper() + mode[1:]} batch number {i[mode] + 1}")
                         
-                        pbar.set_description(f"{mode[0].upper() + mode[1:]} batch number {i + 1}")
-                        
-                        data = loader[i]
+                        # data = loader[i]
 
                         input_ = data[0].long().to(self.device)
 
@@ -400,11 +461,11 @@ class ModelRunner:
                                   #  attention_mask = input_mask if not self.decoder_only else input_mask_,
                                   #   max_new_tokens = self.train_set.max_len, pad_token_id = self.test_set.tokenizer.eos_token_id)
                                   
-                                  preds = self.model.generate(input_, attention_mask = input_mask, max_length = self.train_set.max_len)
+                                  preds = self.model.module.generate(input_, attention_mask = input_mask, max_length = labels.shape[1])
 
                               else:
 
-                                  preds = self.model.generate(input_, input_mask, pad_token_id = pad_token_id)
+                                  preds = self.model.module.generate(input_, input_mask, pad_token_id = pad_token_id, max_len = labels.shape[1])
 
                             else:
 
@@ -412,20 +473,47 @@ class ModelRunner:
 
                                   preds = torch.argmax(preds, dim = -1)
 
-                            predictions_.extend(preds.detach().cpu().tolist())
+                            # if add_bleu_only:
 
-                            labels_.extend(labels.detach().cpu().tolist())
-                      
-            if not self.evaluation is None and mode == 'test':
+                              # predictions_.extend(preds.detach().cpu().tolist())
+
+                              # labels_.extend(labels.detach().cpu().tolist())
+                            
+                            # else:
+                                
+                            if not self.evaluation is None and mode == 'test':
+                              
+                              # calculate the metrics on the current predictions and labels
+                              metrics = self.evaluation.compute_metrics((preds.cpu().detach().numpy(), labels.cpu().detach().numpy()), bleu = True, accuracy = True)
+
+                              for metric in metrics:
+                                
+                                if metric != f'{mode}_loss': 
+
+                                    self.metrics[metric] = self.metrics[metric] + metrics[metric] if metric in self.metrics else metrics[metric]
+
+            if not self.evaluation is None and not self.test_loader is None:
               
-              self.metrics.update(self.evaluation.compute_metrics((np.array(predictions_), np.array(labels_))))
+              # # if add_bleu_only:
 
-            self.metrics[f"train_loss"] = self.metrics[f"train_loss"] / len(self.train_loader)
-            
-            if not self.test_loader is None:
-            
-                self.metrics[f"test_loss"] = self.metrics[f"test_loss"] / len(self.test_loader)
+              #   self.metrics.update(self.evaluation.compute_metrics((np.array(predictions_, dtype = object), np.array(labels_, dtype = object))))
+                
+              #   self.metrics['test_loss'] = self.metrics['test_loss'] / i['test']
 
+              # else:
+
+              for metric in self.metrics:
+
+                if metric != 'train_loss':
+
+                  self.metrics[metric] = self.metrics[metric] / i['test']
+
+            elif not self.test_loader is None:
+
+              self.metrics["test_loss"] = self.metrics["test_loss"] / i['test']
+
+            self.metrics["train_loss"] = self.metrics["train_loss"] / i['train']
+            
             # for metric in self.metrics:
 
             #    if metric != 'train_loss':
@@ -559,16 +647,14 @@ class ModelRunner:
                 f"Le fichier {file_path} est introuvable. Vérifiez si le chemin fourni est correct!"
             )
     
-    def evaluate(self, test_dataset, batch_size: int = 16, loader_kwargs: dict = {}):
+    def evaluate(self, test_dataset, loader_kwargs: dict = {}):
         
         self.model.eval()
         
-        test_loader = list(iter(DataLoader(
+        test_loader = tqdm(DataLoader(
             test_dataset,
-            batch_size,
-            shuffle=False,
             **loader_kwargs,
-        )))
+        ))
         
         # Let us initialize the predictions
         predictions_ = []
@@ -582,13 +668,15 @@ class ModelRunner:
 
         with torch.no_grad():
 
-            with trange(len(test_loader), unit = "batches", position = 0, leave = True) as pbar:
+            i = 0
+            for data in test_loader:
+            # with trange(len(test_loader), unit = "batches", position = 0, leave = True) as pbar:
             # for i in tqdm(range(len(test_loader))):
-                for i in pbar:
-                
-                    pbar.set_description(f"Evaluation batch number {i + 1}")
+                # for i in pbar:
+                    i += 1
+                    test_loader.set_description(f"Evaluation batch number {i + 1}")
                     
-                    data = test_loader[i]
+                    # data = test_loader[i]
                                 
                     input_ = data[0].long().to(self.device)
                         
@@ -615,28 +703,42 @@ class ModelRunner:
 
                         # preds = self.model.generate(input_, attention_mask = input_mask, max_new_tokens = self.train_set.max_len * 2, pad_token_id = test_dataset.tokenizer.eos_token_id)
                         
-                        preds = self.model.generate(input_, attention_mask = input_mask, max_length = self.train_set.max_len)
+                        preds = self.model.module.generate(input_, attention_mask = input_mask, max_length = labels.shape[1])
 
                     else:
 
-                        preds = self.model.generate(input_, input_mask, pad_token_id = test_dataset.tokenizer.pad_token_id)
+                        preds = self.model.module.generate(input_, input_mask, pad_token_id = test_dataset.tokenizer.pad_token_id, max_len = labels.shape[1])
 
-                    labels_.extend(labels.detach().cpu().tolist())
+                    if not self.evaluation is None:
+                              
+                      # calculate the metrics on the current predictions and labels
+                      mets = self.evaluation.compute_metrics((preds.cpu().detach().numpy(), labels.cpu().detach().numpy()),
+                                                                accuracy = True, bleu = True)
 
-                    predictions_.extend(preds.detach().cpu().tolist())
+                      for metric in mets:
+                        
+                        if metric != 'test_loss': 
+
+                          metrics[metric] = metrics[metric] + mets[metric] if metric in metrics else mets[metric]
+
+                    # labels_.extend(labels.detach().cpu().tolist())
+
+                    # predictions_.extend(preds.detach().cpu().tolist())
                     
                     # let us recuperate the original sentences
-                    results['original_sentences'].extend(test_dataset.tokenizer.batch_decode(input_, skip_special_tokens = True))
+                    results['original_sentences'].extend(test_dataset.decode(input_))
 
-                    results['translations'].extend(test_dataset.tokenizer.batch_decode(labels, skip_special_tokens = True))
+                    results['translations'].extend(test_dataset.decode(labels))
 
                     results['predictions'].extend(test_dataset.decode(preds))
 
             if not self.evaluation is None:
 
-                metrics.update(self.evaluation.compute_metrics((np.array(predictions_), np.array(labels_))))
+              metrics = {metric: value / i for metric, value in metrics.items()}
+            
+            else:
 
-            metrics["test_loss"] = metrics["test_loss"] / len(test_loader)
+              metrics["test_loss"] = metrics["test_loss"] / i
 
             return metrics, pd.DataFrame(results)
         

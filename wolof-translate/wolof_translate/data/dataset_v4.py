@@ -97,10 +97,10 @@ class T5SentenceDataset(Dataset):
         return self.length
     
     def decode(self, labels: torch.Tensor):
-        
-        if labels.ndim < 2:
-            
-            labels = labels.unsqueeze(0)
+
+        if labels.ndim < 2 and not type(labels[0]) is list:
+          
+            labels = labels.unsqueeze(0) if isinstance(labels, torch.Tensor) else labels[None, :]
 
         sentences = self.tokenizer.batch_decode(labels, skip_special_tokens=True)
 

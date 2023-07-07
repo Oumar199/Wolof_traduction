@@ -29,9 +29,9 @@ class Transformer(nn.Module):
                 #  size_criterion = nn.MSELoss(),
                 #  n_features: int = 100,
                 #  n_layers: int = 2,
-                 n_poses_max: int = 500,
+                 n_poses_max: int = 2000,
                  projection_type: str = "embedding",
-                 max_len: Union[int, None] = None, 
+                 max_len: int = 20, 
                  share_weight: bool = False):
         
         super(Transformer, self).__init__()
@@ -187,11 +187,14 @@ class Transformer(nn.Module):
 
         return {'loss': loss, 'preds': predictions}
     
-    def generate(self, input_, input_mask = None, temperature: float = 0, pad_token_id:int = 3):
+    def generate(self, input_, input_mask = None, temperature: float = 0, pad_token_id:int = 3, max_len: Union[int, None] = None):
 
         if self.training:
 
           raise GenerationException("You cannot generate when the model is on training mode!")
+
+        # recuperate the max len
+        max_len = max_len if not max_len is None else self.max_len
 
         # ---> Encoder prediction
         input_embed = self.embedding_layer(input_)
@@ -239,7 +242,7 @@ class Transformer(nn.Module):
         # pad_mask2 = (target_mask == 0).to(next(self.parameters()).device, dtype = torch.bool) if not target_mask is None else None
         
         # define the attention mask
-        targ_mask = self.get_target_mask(self.max_len)
+        targ_mask = self.get_target_mask(max_len)
             
         # if we are in evaluation mode we will not use the target but the outputs to make prediction and it is
         # sequentially done (see comments)
@@ -248,7 +251,7 @@ class Transformer(nn.Module):
         outputs = last_input.type_as(next(self.encoder.parameters()))
         
         # for each target that we want to predict
-        for t in range(self.max_len):
+        for t in range(max_len):
             
             # recuperate the target mask of the current decoder input
             current_targ_mask = targ_mask[:t+1, :t+1] # all attentions between the elements before the last target

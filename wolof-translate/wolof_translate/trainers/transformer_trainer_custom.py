@@ -154,8 +154,8 @@ class ModelRunner:
         train_dataset: Dataset,
         test_dataset: Union[Dataset, None] = None,
         tokenizer: Union[Tokenizer, None] = None,
-        train_loader_kwargs: dict = {"batch_size": 16},
-        test_loader_kwargs: dict = {"batch_size": 16},
+        train_loader_kwargs: dict = {"batch_size": 16, 'shuffle': True},
+        test_loader_kwargs: dict = {"batch_size": 16, 'shuffle': False},
         optimizer_kwargs: dict = {"lr": 1e-4, "weight_decay": 0.4},
         model_kwargs: dict = {'class_criterion': nn.CrossEntropyLoss(label_smoothing=0.1)},
         lr_scheduler_kwargs: dict = {'d_model': 512, 'lr_warmup_step': 100},
@@ -197,14 +197,12 @@ class ModelRunner:
 
         self.train_loader = DataLoader(
             train_dataset,
-            shuffle = True,
             **train_loader_kwargs,
         )
         
         if test_dataset:
           self.test_loader = DataLoader(
               test_dataset,
-              shuffle = False,
               **test_loader_kwargs,
           )
         
@@ -342,7 +340,7 @@ class ModelRunner:
                         
                         data = loader[i]
 
-                        input_ = data[0].long().to(self.device)
+                        input_ = data[0].to(self.device)
 
                         # let us initialize a fake input
                         # input__ = None
@@ -352,7 +350,7 @@ class ModelRunner:
                         # let us initialize a fake input mask
                         # input_mask_ = None
 
-                        labels = data[2].long().to(self.device)
+                        labels = data[2].to(self.device)
 
                         if self.hugging_face:
                           
@@ -406,6 +404,8 @@ class ModelRunner:
 
                                   preds = self.model.generate(input_, input_mask, pad_token_id = pad_token_id)
 
+                                  labels = labels.masked_fill_(labels_mask == 0, -100)
+
                             else:
 
                               if self.hugging_face:
@@ -418,7 +418,7 @@ class ModelRunner:
                       
             if not self.evaluation is None and mode == 'test':
               
-              self.metrics.update(self.evaluation.compute_metrics((np.array(predictions_), np.array(labels_))))
+              self.metrics.update(self.evaluation.compute_metrics((np.array(predictions_), np.array(labels_, dtype = object))))
 
             self.metrics[f"train_loss"] = self.metrics[f"train_loss"] / len(self.train_loader)
             
@@ -589,12 +589,12 @@ class ModelRunner:
                     pbar.set_description(f"Evaluation batch number {i + 1}")
                     
                     data = test_loader[i]
-                                
-                    input_ = data[0].long().to(self.device)
+                            
+                    input_ = data[0].to(self.device)
                         
                     input_mask = data[1].to(self.device)
 
-                    labels = data[2].long().to(self.device)
+                    labels = data[2].to(self.device)
 
                     if self.hugging_face:
                         
@@ -621,8 +621,10 @@ class ModelRunner:
 
                         preds = self.model.generate(input_, input_mask, pad_token_id = test_dataset.tokenizer.pad_token_id)
 
+                        # labels__ = labels.masked_fill_(labels_mask == 0, -100)
+                        
                     labels_.extend(labels.detach().cpu().tolist())
-
+                    
                     predictions_.extend(preds.detach().cpu().tolist())
                     
                     # let us recuperate the original sentences
@@ -634,7 +636,7 @@ class ModelRunner:
 
             if not self.evaluation is None:
 
-                metrics.update(self.evaluation.compute_metrics((np.array(predictions_), np.array(labels_))))
+                metrics.update(self.evaluation.compute_metrics((np.array(predictions_), np.array(labels_, dtype = object))))
 
             metrics["test_loss"] = metrics["test_loss"] / len(test_loader)
 
