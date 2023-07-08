@@ -18,7 +18,7 @@ def transfer_model(artifact_dir: str, model_name: str):
     # delete the artifact
     shutil.rmtree(artifact_dir)
 
-def download_artifact(artifact_name: str, model_name: str, type: str = 'dataset'):
+def download_artifact(artifact_name: str, model_name: str, type_: str = 'dataset'):
     """This function download an artifact from weights and bias and store it into a directory
     
     Args:
@@ -28,7 +28,7 @@ def download_artifact(artifact_name: str, model_name: str, type: str = 'dataset'
     """
     # download wandb model
     run = wandb.init()
-    artifact = run.use_artifact(artifact, type=type)
+    artifact = run.use_artifact(artifact_name, type=type_)
     artifact_dir = artifact.download()
     
     # transfer the artifact into another directory
