@@ -1,7 +1,7 @@
 from wolof_translate import *
+import warnings
 
 def train(config: dict):
-    
     
     # ---------------------------------------
     # add distribution if necessary (https://github.com/aws/amazon-sagemaker-examples/blob/main/sagemaker-python-sdk/pytorch_mnist/mnist.py)
@@ -57,7 +57,7 @@ def train(config: dict):
     evaluation = TranslationEvaluation(tokenizer, train_dataset.decode)
 
     # let us initialize the trainer
-    trainer = ModelRunner(model = Transformer, seed = 0, evaluation = evaluation, optimizer = Adafactor)
+    trainer = ModelRunner(model = Transformer, version=config['version'], seed = 0, evaluation = evaluation, optimizer = Adafactor)
 
     # initialize the encoder and the decoder layers
     encoder_layer = nn.TransformerEncoderLayer(config['d_model'],
