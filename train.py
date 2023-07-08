@@ -56,7 +56,7 @@ def main(args):
         'continue': args.continue_, # --------------------------> Must be changed when continuing training
         'logging_dir': args.logging_dir,
         'save_best': args.save_best,
-        'tokenizer_path': args.tokenizer_path,
+        'tokenizer_path': args.training['tokenizer'],
         'version': args.version,
         # in the case of a distributed training
         'backend': args.backend,
