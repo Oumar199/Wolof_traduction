@@ -195,7 +195,7 @@ class Transformer(nn.Module):
 
         # recuperate the max len
         max_len = max_len if not max_len is None else self.max_len
-        print('embedding')
+        
         # ---> Encoder prediction
         input_embed = self.embedding_layer(input_)
         

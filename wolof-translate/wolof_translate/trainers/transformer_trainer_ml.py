@@ -660,10 +660,10 @@ class ModelRunner:
         
         self.model.eval()
         
-        test_loader = list(iter(DataLoader(
+        test_loader = DataLoader(
             test_dataset,
             **loader_kwargs,
-        )))
+        )
         
         # Let us initialize the predictions
         predictions_ = []
@@ -683,11 +683,11 @@ class ModelRunner:
             # for data in test_loader:
             with trange(len(test_loader), unit = "batches", position = 0, leave = True) as pbar:
             # for i in tqdm(range(len(test_loader))):
-                for i in pbar:
+                for i, data in enumerate(test_loader, 1):
                     # i += 1
                     pbar.set_description(f"Evaluation batch number {i + 1}")
                     
-                    data = test_loader[i]
+                    # data = test_loader[i]
                                 
                     input_ = data[0].long().to(self.device)
                         
@@ -743,7 +743,7 @@ class ModelRunner:
 
                     results['predictions'].extend(test_dataset.decode(preds))
 
-                    # progress_bar.update(1)
+                    pbar.update()
                     
             if not self.evaluation is None:
 
