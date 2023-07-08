@@ -1,5 +1,5 @@
 from wolof_translate.utils.training import train
-from libraries import *
+import pytorch_lightning as lt
 import argparse
 import logging
 import json
@@ -23,6 +23,8 @@ def main(args):
     config = {
         'epochs': args.epochs,
         'log_step': args.log_step,
+        'metric_for_best_model': args.metric,
+        'metric_objective': args.metric_objective,
         'corpus_1': args.corpus_1,
         'corpus_2': args.corpus_2,
         'train_file': args.training['train'],
@@ -81,6 +83,12 @@ if __name__ == '__main__':
     
     # log step
     parse.add_argument('--log_step', type=int, default=10, help='Print log every log_step', metavar='ls')
+    
+    # metric for best model
+    parse.add_argument('--metric', type=str, default='bleu', help='Metric for best model', metavar='m')
+    
+    # metric objective
+    parse.add_argument('--metric_objective', type=str, default='maximize', help='Metric objective', metavar='mo')
     
     # corpus_1
     parse.add_argument('--corpus_1', type=str, default='french', help='Path to first language', metavar='c1')

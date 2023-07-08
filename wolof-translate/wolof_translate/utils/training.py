@@ -1,4 +1,4 @@
-from libraries import *
+from wolof_translate import *
 
 def train(config: dict):
     
@@ -41,14 +41,20 @@ def train(config: dict):
     # ---------------------------------------
     
     # split the data
-    split_data(config['random_state'], config['data_directory'], config['data_file'])
+    if config['include_split']: split_data(config['random_state'], config['data_directory'], config['data_file'])
 
+    # recuperate the tokenizer
+    tokenizer = T5TokenizerFast(config['tokenizer_path'])
+    
     # recuperate train and test set
     train_dataset, test_dataset = recuperate_datasets(config['char_p'],
                                                         config['word_p'], config['max_len'],
-                                                        config['end_mark'])
+                                                        config['end_mark'], tokenizer, config['corpus_1'],
+                                                        config['corpus_2'],
+                                                        config['train_file'], config['test_file'])
+    
     # initialize the evaluation object
-    evaluation = TranslationEvaluation(config['tokenizer'], train_dataset.decode)
+    evaluation = TranslationEvaluation(tokenizer, train_dataset.decode)
 
     # let us initialize the trainer
     trainer = ModelRunner(model = Transformer, seed = 0, evaluation = evaluation, optimizer = Adafactor)
@@ -133,7 +139,7 @@ def train(config: dict):
                         'num_workers': config['num_workers'], 'pin_memory': config['pin_memory']}
 
     # Add the datasets and hyperparameters to trainer
-    trainer.compile(train_dataset, test_dataset, config['tokenizer'], train_loader_args,
+    trainer.compile(train_dataset, test_dataset, tokenizer, train_loader_args,
                     test_loader_args, optimizer_kwargs = optimizer_args,
                     model_kwargs = model_args,
                     # lr_scheduler=get_linear_schedule_with_warmup,
@@ -144,8 +150,12 @@ def train(config: dict):
                     dist=dist
                     )
 
+    # load the model
+    trainer.load(config['model_dir'], load_best = not config['continue'])
+    
     # Train the model
-    trainer.train(config['epochs'], auto_save = True, log_step = config['log_step'], saving_directory=config['new_model_dir'], save_best = config['save_best'])
+    trainer.train(config['epochs'] - trainer.current_epoch, auto_save = True, log_step = config['log_step'], saving_directory=config['new_model_dir'], save_best = config['save_best'],
+                  metric_for_best_model = config['metric_for_best_model'], metric_objective = config['metric_objective'])
     
     if config['return_trainer']:
         

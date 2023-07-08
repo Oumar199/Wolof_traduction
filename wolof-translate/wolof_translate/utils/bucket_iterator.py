@@ -17,11 +17,13 @@ class SequenceLengthBatchSampler(Sampler):
             length = max(len(data[0]), len(data[2]))
             self.data_info[i] = {"index": i, "length": length}
 
-    def __iter__(self):
-        indices = list(self.data_info.keys())  # Get indices from the data_info dictionary
-        np.random.shuffle(indices)  # Shuffle the indices
-        sorted_indices = sorted(indices, key=lambda i: self.data_info[i]["length"])  # Sort indices based on element length
+        self.calculate_length()
+
+    def calculate_length(self):
         self.batches = []
+
+        # Sort indices based on element length
+        sorted_indices = sorted(self.data_info.keys(), key=lambda i: self.data_info[i]["length"])
 
         # Group indices into batches of sequences with the same length
         for boundary in self.boundaries:
@@ -32,34 +34,41 @@ class SequenceLengthBatchSampler(Sampler):
         # Add remaining indices to the last batch
         self.batches.append(sorted_indices)
 
+        # Calculate the total length of the data loader
+        self.length = sum(ceil(len(batch) / batch_size) for batch, batch_size in zip(self.batches, self.batch_sizes))
+
+    def __iter__(self):
+        indices = list(self.data_info.keys())  # Get indices from the data_info dictionary
+        np.random.shuffle(indices)  # Shuffle the indices
+
         # Yield batches with the corresponding batch sizes
         for batch_indices, batch_size in zip(self.batches, self.batch_sizes):
             num_batches = len(batch_indices) // batch_size
-            
+
             for i in range(num_batches):
-                
-                # recuperate the current bucket
+                # Recuperate the current bucket
                 current_bucket = batch_indices[i * batch_size: (i + 1) * batch_size]
-                
-                # shuffle the current bucket
+
+                # Shuffle the current bucket
                 np.random.shuffle(current_bucket)
-                
-                # yield the current bucket
+
+                # Yield the current bucket
                 yield [self.data_info[i]["index"] for i in current_bucket]
 
             remaining_indices = len(batch_indices) % batch_size
             if remaining_indices > 0:
-                # recuperate the current bucket
+                # Recuperate the current bucket
                 current_bucket = batch_indices[-remaining_indices:]
-                
-                # shuffle the current bucket
+
+                # Shuffle the current bucket
                 np.random.shuffle(current_bucket)
-                
-                # yield the current bucket
+
+                # Yield the current bucket
                 yield [self.data_info[i]["index"] for i in batch_indices[-remaining_indices:]]
 
     def __len__(self):
-        return sum(ceil(len(batch) / batch_size) for batch, batch_size in zip(self.batches, self.batch_sizes))
+        return self.length
+
 
 class BucketSampler(Sampler):
     def __init__(self, dataset, batch_size, sort_key=lambda x: max(len(x[0]), len(x[1]))):

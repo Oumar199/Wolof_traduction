@@ -1,11 +1,9 @@
-from wolof_translate.utils.improvements.end_marks import add_end_mark
-from wolof_translate.utils.sent_corrections import *
+from wolof_translate import *
 
-def recuperate_datasets(char_p: float, word_p: float, max_len: int, end_mark: int,
+def recuperate_datasets(char_p: float, word_p: float, max_len: int, end_mark: int, tokenizer: T5TokenizerFast,
                         corpus_1: str = 'french', corpus_2: str = 'wolof', 
-                        data_directory: str = 'data/extractions/new_data/', 
-                        train_file: str = 'train_set.csv', 
-                        test_file: str = 'test_file.csv'):
+                        train_file: str = 'data/extractions/new_data/train_set.csv', 
+                        test_file: str = 'data/extractions/new_data/test_file.csv'):
 
   # Let us recuperate the end_mark adding option
   if end_mark == 1:
@@ -42,7 +40,7 @@ def recuperate_datasets(char_p: float, word_p: float, max_len: int, end_mark: in
     fr_augmentation_2 = TransformerSequences(remove_mark_space, delete_guillemet_space, add_mark_space, end_mark_fn)
     
   # Recuperate the train dataset
-  train_dataset_aug = SentenceDataset(f"{data_directory}{train_file}",
+  train_dataset_aug = SentenceDataset(train_file,
                                         tokenizer,
                                         truncation = False,
                                         cp1_transformer = fr_augmentation_1,
@@ -52,7 +50,7 @@ def recuperate_datasets(char_p: float, word_p: float, max_len: int, end_mark: in
                                         )
 
   # Recuperate the valid dataset
-  valid_dataset = SentenceDataset(f"{data_directory}{test_file}",
+  valid_dataset = SentenceDataset(test_file,
                                         tokenizer,
                                         cp1_transformer = fr_augmentation_2,
                                         cp2_transformer = fr_augmentation_2,

@@ -153,10 +153,10 @@ class ModelRunner:
           preds, loss = outputs.logits, outputs.loss
         
         else:
-
+          
           # effectuons un passage vers l'avant
           outputs = self.model(input_, input_mask, labels, labels_mask, pad_token_id = pad_token_id)
-
+          
           # recuperate the predictions and the loss
           preds, loss = outputs['preds'], outputs['loss']
 
@@ -386,34 +386,38 @@ class ModelRunner:
 
                         self.model.train()
 
-                        loader = tqdm(self.train_loader)
+                        # loader = list(iter(self.train_loader))
+                        loader = self.train_loader
 
                     else:
 
                         self.model.eval()
 
-                        loader = tqdm(self.test_loader)
+                        # loader = list(iter(self.test_loader))
+                        loader = self.test_loader
                     
-                    # with trange(len(loader), unit = "batches", position = 0, leave = True) as pbar:
-                    i[mode] = 0
-                    for data in loader: 
-
-                        i[mode] += 1
-                        loader.set_description(f"{mode[0].upper() + mode[1:]} batch number {i[mode] + 1}")
+                    # progress_bar = trange(len(loader))
+                    
+                    with trange(len(loader), unit="batches", position=0, leave=True) as pbar:
+                    # i[mode] = 0
+                      for i, data in enumerate(loader, 1): 
+                        
+                        # i[mode] += 1
+                        pbar.set_description(f"{mode[0].upper() + mode[1:]} batch number {i + 1}")
                         
                         # data = loader[i]
 
-                        input_ = data[0].long().to(self.device)
-
+                        input_ = data[0].to(self.device)
+                        
                         # let us initialize a fake input
                         # input__ = None
                         
-                        input_mask = data[1].to(self.device)
+                        input_mask = data[1].to(self.device, dtype = torch.bool)
 
                         # let us initialize a fake input mask
                         # input_mask_ = None
 
-                        labels = data[2].long().to(self.device)
+                        labels = data[2].to(self.device)
 
                         if self.hugging_face:
                           
@@ -435,7 +439,7 @@ class ModelRunner:
                           
                           labels[labels == self.tokenizer.pad_token_id] == -100
 
-                        labels_mask = data[3].to(self.device)
+                        labels_mask = data[3].to(self.device, dtype = torch.bool)
                         
                         # Récupération de identifiant token du padding (par défaut = 3)
                         pad_token_id = 3 if self.tokenizer is None else self.tokenizer.pad_token_id
@@ -492,6 +496,8 @@ class ModelRunner:
 
                                     self.metrics[metric] = self.metrics[metric] + metrics[metric] if metric in self.metrics else metrics[metric]
 
+                        pbar.update()
+                          
             if not self.evaluation is None and not self.test_loader is None:
               
               # # if add_bleu_only:
@@ -506,13 +512,16 @@ class ModelRunner:
 
                 if metric != 'train_loss':
 
-                  self.metrics[metric] = self.metrics[metric] / i['test']
+                  # self.metrics[metric] = self.metrics[metric] / i['test']
+                  self.metrics[metric] = self.metrics[metric] / len(loader)
 
             elif not self.test_loader is None:
 
-              self.metrics["test_loss"] = self.metrics["test_loss"] / i['test']
+              # self.metrics["test_loss"] = self.metrics["test_loss"] / i['test']
+              self.metrics["test_loss"] = self.metrics["test_loss"] / len(loader)
 
-            self.metrics["train_loss"] = self.metrics["train_loss"] / i['train']
+            # self.metrics["train_loss"] = self.metrics["train_loss"] / i['train']
+            self.metrics["train_loss"] = self.metrics["train_loss"] / len(loader)
             
             # for metric in self.metrics:
 
@@ -540,7 +549,7 @@ class ModelRunner:
             ##################### Model saving #########################################################
 
             # Save the model in the end of the current epoch. Sauvegarde du modèle à la fin d'une itération
-            if auto_save:
+            if auto_save and not log_step is None and (epoch + 1) % log_step == 0:
 
                 self.current_epoch = epoch + 1
                 
@@ -651,10 +660,10 @@ class ModelRunner:
         
         self.model.eval()
         
-        test_loader = tqdm(DataLoader(
+        test_loader = list(iter(DataLoader(
             test_dataset,
             **loader_kwargs,
-        ))
+        )))
         
         # Let us initialize the predictions
         predictions_ = []
@@ -666,17 +675,19 @@ class ModelRunner:
 
         results = {'original_sentences': [], 'translations': [], 'predictions': []}
 
+        # progress_bar = trange(len(test_loader))
+        
         with torch.no_grad():
 
-            i = 0
-            for data in test_loader:
-            # with trange(len(test_loader), unit = "batches", position = 0, leave = True) as pbar:
+            # i = 0
+            # for data in test_loader:
+            with trange(len(test_loader), unit = "batches", position = 0, leave = True) as pbar:
             # for i in tqdm(range(len(test_loader))):
-                # for i in pbar:
-                    i += 1
-                    test_loader.set_description(f"Evaluation batch number {i + 1}")
+                for i in pbar:
+                    # i += 1
+                    pbar.set_description(f"Evaluation batch number {i + 1}")
                     
-                    # data = test_loader[i]
+                    data = test_loader[i]
                                 
                     input_ = data[0].long().to(self.device)
                         
@@ -732,13 +743,15 @@ class ModelRunner:
 
                     results['predictions'].extend(test_dataset.decode(preds))
 
+                    # progress_bar.update(1)
+                    
             if not self.evaluation is None:
 
-              metrics = {metric: value / i for metric, value in metrics.items()}
+              metrics = {metric: value / len(test_loader) for metric, value in metrics.items()}
             
             else:
 
-              metrics["test_loss"] = metrics["test_loss"] / i
+              metrics["test_loss"] = metrics["test_loss"] / len(test_loader)
 
             return metrics, pd.DataFrame(results)
         

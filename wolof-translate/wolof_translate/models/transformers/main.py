@@ -97,7 +97,7 @@ class Transformer(nn.Module):
         input_embed = self.pe(input_embed)
         
         # recuperate the input mask for pytorch encoder
-        pad_mask1 = (input_mask == 0).to(next(self.parameters()).device, dtype = torch.bool) if not input_mask is None else None
+        pad_mask1 = (input_mask == False).to(next(self.parameters()).device) if not input_mask is None else None
         
         # let us compute the states
         input_embed = input_embed.type_as(next(self.encoder.parameters()))
@@ -111,7 +111,7 @@ class Transformer(nn.Module):
         target_embed = self.embedding_layer(target)
         
         # recuperate target mask for pytorch decoder            
-        pad_mask2 = (target_mask == 0).to(next(self.parameters()).device, dtype = torch.bool) if not target_mask is None else None
+        pad_mask2 = (target_mask == False).to(next(self.parameters()).device) if not target_mask is None else None
         
         # define the attention mask
         targ_mask = self.get_target_mask(target_embed.size(1))
@@ -195,7 +195,7 @@ class Transformer(nn.Module):
 
         # recuperate the max len
         max_len = max_len if not max_len is None else self.max_len
-
+        print('embedding')
         # ---> Encoder prediction
         input_embed = self.embedding_layer(input_)
         
@@ -206,7 +206,7 @@ class Transformer(nn.Module):
         input_embed = self.pe(input_embed)
         
         # recuperate the input mask for pytorch encoder
-        pad_mask1 = (input_mask == 0).to(next(self.parameters()).device) if not input_mask is None else None
+        pad_mask1 = (input_mask == False).to(next(self.parameters()).device) if not input_mask is None else None
         
         # let us compute the states
         input_embed = input_embed.type_as(next(self.encoder.parameters()))
