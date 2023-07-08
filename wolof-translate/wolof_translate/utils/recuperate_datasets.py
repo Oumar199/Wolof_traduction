@@ -3,7 +3,9 @@ from wolof_translate.utils.sent_corrections import *
 
 def recuperate_datasets(char_p: float, word_p: float, max_len: int, end_mark: int,
                         corpus_1: str = 'french', corpus_2: str = 'wolof', 
-                        data_directory: str = 'data/extractions/new_data/'):
+                        data_directory: str = 'data/extractions/new_data/', 
+                        train_file: str = 'train_set.csv', 
+                        test_file: str = 'test_file.csv'):
 
   # Let us recuperate the end_mark adding option
   if end_mark == 1:
@@ -40,7 +42,7 @@ def recuperate_datasets(char_p: float, word_p: float, max_len: int, end_mark: in
     fr_augmentation_2 = TransformerSequences(remove_mark_space, delete_guillemet_space, add_mark_space, end_mark_fn)
     
   # Recuperate the train dataset
-  train_dataset_aug = SentenceDataset(f"{data_directory}train_set.csv",
+  train_dataset_aug = SentenceDataset(f"{data_directory}{train_file}",
                                         tokenizer,
                                         truncation = False,
                                         cp1_transformer = fr_augmentation_1,
@@ -50,7 +52,7 @@ def recuperate_datasets(char_p: float, word_p: float, max_len: int, end_mark: in
                                         )
 
   # Recuperate the valid dataset
-  valid_dataset = SentenceDataset(f"{data_directory}valid_set.csv",
+  valid_dataset = SentenceDataset(f"{data_directory}{test_file}",
                                         tokenizer,
                                         cp1_transformer = fr_augmentation_2,
                                         cp2_transformer = fr_augmentation_2,
