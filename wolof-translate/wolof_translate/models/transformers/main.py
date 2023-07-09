@@ -62,6 +62,11 @@ class Transformer(nn.Module):
         
         self.class_criterion = class_criterion
         
+        # add dropout to the inputs and outputs of the encoder and decoder
+        self.in_dropout = nn.Dropout(p = self.dropout)
+
+        self.out_dropout = nn.Dropout(p = self.dropout)
+
         # self.size_criterion = size_criterion
         
         # let's initiate the mlp for predicting the target size
@@ -97,12 +102,17 @@ class Transformer(nn.Module):
         input_embed = self.pe(input_embed)
         
         # recuperate the input mask for pytorch encoder
-        pad_mask1 = (input_mask == False).to(next(self.parameters()).device) if not input_mask is None else None
+        pad_mask1 = (input_mask == 0).to(next(self.parameters()).device, dtype = torch.bool) if not input_mask is None else None
         
         # let us compute the states
         input_embed = input_embed.type_as(next(self.encoder.parameters()))
+
+        input_embed = self.in_dropout(input_embed) # apply dropout to the input embed
         
         states = self.encoder(input_embed, src_key_padding_mask = pad_mask1)
+
+        # apply dropout to the states
+        states = self.out_dropout(states)
    
         # ---> Decoder prediction
         # let's predict the size of the target 
@@ -111,7 +121,7 @@ class Transformer(nn.Module):
         target_embed = self.embedding_layer(target)
         
         # recuperate target mask for pytorch decoder            
-        pad_mask2 = (target_mask == False).to(next(self.parameters()).device) if not target_mask is None else None
+        pad_mask2 = (target_mask == 0).to(next(self.parameters()).device, dtype = torch.bool) if not target_mask is None else None
         
         # define the attention mask
         targ_mask = self.get_target_mask(target_embed.size(1))
@@ -126,8 +136,14 @@ class Transformer(nn.Module):
         if self.training:
             
             target_embed = target_embed.type_as(next(self.encoder.parameters()))
+
+            # add dropout to the target
+            target_embed = self.in_dropout(target_embed)
             
             outputs = self.decoder(target_embed, states, tgt_mask = targ_mask, tgt_key_padding_mask = pad_mask2)
+
+            # add dropout to the outputs
+            outputs = self.out_dropout(outputs)
             
         else: ## This part was understand with the help of the professor Bousso.
             

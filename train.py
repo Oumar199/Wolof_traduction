@@ -54,7 +54,7 @@ def main(args):
         'model_dir': args.training['model'],
         'new_model_dir': os.path.join(args.model_dir, args.new_model_dir_),
         'continue': args.continue_, # --------------------------> Must be changed when continuing training
-        'logging_dir': args.logging_dir,
+        'logging_dir': os.path.join(args.output_data_dir, args.logging_dir),
         'save_best': args.save_best,
         'tokenizer_path': args.training['tokenizer'],
         'version': args.version,
