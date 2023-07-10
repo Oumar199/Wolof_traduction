@@ -19,7 +19,5 @@ nlpaug
 wandb
 pytorch_lightning
 selenium
-jax 
-jaxlib
-trax
+sentencepiece
 -e wolof-translate

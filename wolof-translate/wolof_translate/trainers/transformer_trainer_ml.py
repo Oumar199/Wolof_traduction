@@ -389,12 +389,16 @@ class ModelRunner:
                         # loader = list(iter(self.train_loader))
                         loader = self.train_loader
 
+                        dataset = self.train_set
+
                     else:
 
                         self.model.eval()
 
                         # loader = list(iter(self.test_loader))
                         loader = self.test_loader
+
+                        dataset = self.test_set
                     
                     # progress_bar = trange(len(loader))
                     
@@ -451,8 +455,13 @@ class ModelRunner:
                             else self.batch_eval(input_, input_mask,
                              labels, labels_mask, pad_token_id)
                         )
+                        
+                        # let us calculate the weight of the batch
+                        batch_weight = labels.shape[0] / len(dataset)
 
-                        self.metrics[f"{mode}_loss"] += loss.item()
+                        print(batch_weight)
+
+                        self.metrics[f"{mode}_loss"] += loss.item() * batch_weight
                         
                         # let us add the predictions and labels in the list of predictions and labels after their determinations
                         if mode == "test":
@@ -494,11 +503,12 @@ class ModelRunner:
                                 
                                 if metric != f'{mode}_loss': 
 
-                                    self.metrics[metric] = self.metrics[metric] + metrics[metric] if metric in self.metrics else metrics[metric]
+                                    self.metrics[metric] = self.metrics[metric] + metrics[metric] * batch_weight\
+                                     if metric in self.metrics else metrics[metric] * batch_weight
 
                         pbar.update()
                           
-            if not self.evaluation is None and not self.test_loader is None:
+            # if not self.evaluation is None and not self.test_loader is None:
               
               # # if add_bleu_only:
 
@@ -508,20 +518,20 @@ class ModelRunner:
 
               # else:
 
-              for metric in self.metrics:
+              # for metric in self.metrics:
 
-                if metric != 'train_loss':
+                # if metric != 'train_loss':
 
                   # self.metrics[metric] = self.metrics[metric] / i['test']
-                  self.metrics[metric] = self.metrics[metric] / len(loader)
+                  # self.metrics[metric] = self.metrics[metric] / len(loader)
 
-            elif not self.test_loader is None:
+            # elif not self.test_loader is None:
 
               # self.metrics["test_loss"] = self.metrics["test_loss"] / i['test']
-              self.metrics["test_loss"] = self.metrics["test_loss"] / len(loader)
+              # self.metrics["test_loss"] = self.metrics["test_loss"] / len(loader)
 
             # self.metrics["train_loss"] = self.metrics["train_loss"] / i['train']
-            self.metrics["train_loss"] = self.metrics["train_loss"] / len(loader)
+            # self.metrics["train_loss"] = self.metrics["train_loss"] / len(loader)
             
             # for metric in self.metrics:
 
@@ -708,7 +718,10 @@ class ModelRunner:
 
                     preds, loss = self.batch_eval(input_, input_mask, labels, labels_mask, test_dataset.tokenizer.pad_token_id)
 
-                    metrics[f"test_loss"] += loss.item()
+                    # let us calculate the weight of the batch
+                    batch_weight = labels.shape[0] / len(test_dataset)
+
+                    metrics[f"test_loss"] += loss.item() * batch_weight
                 
                     if self.hugging_face:
 
@@ -730,7 +743,8 @@ class ModelRunner:
                         
                         if metric != 'test_loss': 
 
-                          metrics[metric] = metrics[metric] + mets[metric] if metric in metrics else mets[metric]
+                          metrics[metric] = metrics[metric] + mets[metric] * batch_weight\
+                           if metric in metrics else mets[metric] * batch_weight
 
                     # labels_.extend(labels.detach().cpu().tolist())
 
@@ -745,13 +759,13 @@ class ModelRunner:
 
                     pbar.update()
                     
-            if not self.evaluation is None:
+            # if not self.evaluation is None:
 
-              metrics = {metric: value / len(test_loader) for metric, value in metrics.items()}
+              # metrics = {metric: value / len(test_loader) for metric, value in metrics.items()}
             
-            else:
+            # else:
 
-              metrics["test_loss"] = metrics["test_loss"] / len(test_loader)
+              # metrics["test_loss"] = metrics["test_loss"] / len(test_loader)
 
             return metrics, pd.DataFrame(results)
         
