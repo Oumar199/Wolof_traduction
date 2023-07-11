@@ -471,7 +471,6 @@ class ModelRunner:
                                   # preds = self.model.generate(input_ if not self.decoder_only else input__,
                                   #  attention_mask = input_mask if not self.decoder_only else input_mask_,
                                   #   max_new_tokens = self.train_set.max_len, pad_token_id = self.test_set.tokenizer.eos_token_id)
-                                  
                                   preds = self.model.module.generate(input_, attention_mask = input_mask, max_length = labels.shape[1])
 
                               else:
@@ -495,7 +494,7 @@ class ModelRunner:
                             if not self.evaluation is None and mode == 'test':
                               
                               # calculate the metrics on the current predictions and labels
-                              metrics = self.evaluation.compute_metrics((preds.cpu().detach().numpy(), labels.cpu().detach().numpy()), bleu = True, accuracy = True)
+                              metrics = self.evaluation.compute_metrics((preds.cpu().detach().numpy(), labels.cpu().detach().numpy()), bleu = True, accuracy = not self.hugging_face)
 
                               for metric in metrics:
                                 
@@ -735,7 +734,7 @@ class ModelRunner:
                               
                       # calculate the metrics on the current predictions and labels
                       mets = self.evaluation.compute_metrics((preds.cpu().detach().numpy(), labels.cpu().detach().numpy()),
-                                                                accuracy = True, bleu = True)
+                                                                accuracy = not self.hugging_face, bleu = True)
 
                       for metric in mets:
                         
