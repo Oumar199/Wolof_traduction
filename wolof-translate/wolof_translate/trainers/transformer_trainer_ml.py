@@ -459,8 +459,6 @@ class ModelRunner:
                         # let us calculate the weight of the batch
                         batch_weight = labels.shape[0] / len(dataset)
 
-                        print(batch_weight)
-
                         self.metrics[f"{mode}_loss"] += loss.item() * batch_weight
                         
                         # let us add the predictions and labels in the list of predictions and labels after their determinations
